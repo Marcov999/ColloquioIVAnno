@@ -64,6 +64,42 @@
   \end{equation}
   moltiplicando la \eqref{star2} per la prima disuguaglianza della \eqref{star1} troviamo}
   \only<4>{\textit{Traccia della dimostrazione:} $\dfrac{1-|z|}{1-\mathfrak{Re}(z)}<\dfrac{M'}{M}<1$. Tuttavia, ponendo $x=\mathfrak{Re}(z)$ e $y=\mathfrak{Im}(z)$ e riscrivendo la condizione $z \in S(1,\alpha')$ come $y/(1-x)<\tan{\alpha'}$, vediamo facilmente che
-  $$\lim_{\substack{z \longrightarrow 1, \\ z \in S(1,\alpha')}} \frac{1-|z|}{1-\mathfrak{Re}(z)}=1,$$
+  $$\lim_{\substack{z \longrightarrow 1, \\ z \in S(1,\alpha')}} \frac{1-|z|}{1-\mathfrak{Re}(z)}-1=0,$$
   da cui otteniamo una contraddizione. \qed}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Limiti non tangenziali}
+  \begin{defn}
+    Diciamo che una funzione $f:\mathbb{D} \longrightarrow \mathbb{C}$ ha \textit{limite non-tangenziale} $L \in \mathbb{C}$ in $\sigma \in \partial\mathbb{D}$ e scriviamo
+    $$\substack{\text{nt--lim} \\ z \longrightarrow \sigma} \, f(z)=L$$
+    se  per ogni $M>1$ si ha $\displaystyle \lim_{\substack{z \longrightarrow \sigma, \\ z \in K(\sigma,M)}} f(z)=L$.
+  \end{defn}
+  \pause
+  \begin{defn}
+    Date tre funzioni $f,g,h: \mathbb{D} \longrightarrow \mathbb{C}$ scriviamo che $f(z)=g(z)+o\bigl(h(z)\bigr)$ per $z \longrightarrow \sigma$ \textit{non tangenzialmente} se
+    $$\substack{\text{nt--lim} \\ z \longrightarrow \sigma} \, \frac{f(z)-g(z)}{h(z)}=0.$$
+  \end{defn}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Limiti non tangenziali}
+  \only<1-2>{\begin{prop} \label{o^3->o^2}
+    Siano $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$ e $\sigma \in \partial\mathbb{D}$ tali che
+    \begin{equation} \label{o^3}
+      f(z)=\sigma+(z-\sigma)+o\bigl((z-\sigma)^3\bigr)
+    \end{equation}
+    per $z \longrightarrow \sigma$ non tangenzialmente. Allora
+    \begin{equation} \label{o^2}
+      |f^h(z)|=1+o\bigl((z-\sigma)^2\bigr)
+    \end{equation}
+    per $z \longrightarrow \sigma$ non tangenzialmente.
+  \end{prop}}
+  \only<2>{\textit{Traccia della dimostrazione:} senza perdita di generalità $\sigma=1$. Consideriamo $z \in K(1,M) \subset S(1,\alpha)$, dove $\alpha=\arctan{\sqrt{M^2-1}}$. Fissato $\beta>\alpha$, scriviamo $r(z)=\text{dist}\bigl(z, \partial S(1,\beta)\bigr)$ e $C(z)=\partial B\bigl(1,r(z)\bigr)$. Dalla formula integrale di Cauchy applicata alla funzione $f(z)-z$ otteniamo}
+  \only<3>{\textit{Traccia della dimostrazione:}
+  $$f'(z)=1+\frac{1}{2\pi i} \int_{C(z)} \frac{f(w)-w}{(w-z)^2}\diff w=:1+I(z).$$
+  Fissato $\epsilon>0$, esiste $\delta>0$ tale che $|f(w)-w| \le \epsilon|1-w|^3$ per $w \in C(z)$, con $z \in K(1,M)\cap B(1,\delta/2)$. Si ottiene
+  $$|I(z)| \le \frac{\epsilon}{r(z)}\max_{w \in C(z)}|1-w|^3.$$
+  Da considerazioni geometriche si ha $|I(z)| \le \epsilon |z-1|^2\bigl(1+\csc(\beta-\alpha)\bigr)^3$, da cui $f'(z)=1+o\bigl((z-1)^2\bigr)$. Inoltre, dalle ipotesi
+  $$\frac{1-|f(z)|}{1-|z|}=\frac{1-|z|+o\bigl((z-1)^3\bigr)}{1-|z|}=1+o\bigl((z-1)^2\bigr).$$ \qed}
 \end{frame}

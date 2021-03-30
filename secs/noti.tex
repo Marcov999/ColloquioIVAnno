@@ -8,6 +8,10 @@
     \end{itshape}
   \end{block}
   \pause
+  \begin{oss}
+    Se $f \in \text{Aut}(\mathbb{D})$, allora $f(z)=e^{i\theta}\dfrac{z-a}{1-\bar{a}z}$ con $\theta \in \mathbb{R}$ e $a \in \mathbb{D}$.
+  \end{oss}
+  \pause
   Dal lemma, si ha che la quantità $\left|\dfrac{z-w}{1-\bar{w}z}\right|$ è contratta dalle funzioni in $\text{Hol}(\mathbb{D},\mathbb{D})$. A partire da essa è possibile definire una distanza sul disco.
 \end{frame}
 
@@ -19,8 +23,9 @@
     $$\omega(z,w):=\text{arctanh}\bigl(p(z,w)\bigr)=\frac{1}{2}\log\left(\frac{1+p(z,w)}{1-p(z,w)}\right).$$
   \end{defn}
   \pause
-  In termini di $\omega$, il lemma di Schwarz-Pick si riscrive come
+  Per stretta crescenza della tangente iperbolica, in termini di $\omega$ il lemma di Schwarz-Pick si riscrive come
   $$\omega\bigl(f(z),f(w)\bigr) \le \omega(z,w).$$
+  Vale l'uguaglianza in qualche caso se e solo se $f \in \text{Aut}(\mathbb{D})$; in tal caso c'è sempre l'uguaglianza.
 \end{frame}
 
 \begin{frame}
@@ -38,5 +43,5 @@
     \end{cases}$$
   \end{defn}
   \pause
-  Fissato $w \in \mathbb{D}$, la funzione $z \longmapsto f^*(z,w)$ appartiene a $\text{Hol}(\mathbb{D},\mathbb{D})$.
+  Fissato $w \in \mathbb{D}$, la funzione $z \longmapsto f^*(z,w)$ è olomorfa sul disco unitario. Se $f \not\in \text{Aut}(\mathbb{D})$, allora $f^*(\cdot,w) \in \text{Hol}(\mathbb{D},\mathbb{D})$.
 \end{frame}

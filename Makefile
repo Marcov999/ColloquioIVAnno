@@ -1,9 +1,9 @@
 AUXX = $(addprefix build/, main.toc main.aux)
 SECS := $(wildcard secs/*.tex)
 
-all: TesiTriennale.pdf
+all: SlidesColloquio.pdf
 
-TesiTriennale.pdf: $(AUXX) main.tex $(SECS) mstyle.sty
+SlidesColloquio.pdf: $(AUXX) main.tex $(SECS) mstyle.sty
 	cp $(AUXX) .
 	pdflatex main.tex
 	pdflatex main.tex
@@ -11,7 +11,9 @@ TesiTriennale.pdf: $(AUXX) main.tex $(SECS) mstyle.sty
 	mv *.aux build
 	mv *.log build
 	mv *.out build
-	mv main.pdf TesiTriennale.pdf
+	mv *.nav build
+	mv *.snm build
+	mv main.pdf SlidesColloquio.pdf
 
 $(AUXX): main.tex $(SECS)
 	pdflatex main.tex
@@ -21,6 +23,8 @@ $(AUXX): main.tex $(SECS)
 	mv *.aux build
 	mv *.log build
 	mv *.out build
+	mv *.nav build
+	mv *.snm build
 	rm main.pdf
 
 .PHONY: clean

@@ -1,6 +1,8 @@
-\documentclass{article}
+\documentclass{beamer}
 \usepackage{mstyle}
 \usepackage{pgfplots}
+\usetheme{Madrid}
+\usefonttheme{serif}
 \usetikzlibrary{intersections, pgfplots.fillbetween}
 
 \title{Teoremi di rigidità per funzioni olomorfe nel disco}
@@ -8,52 +10,8 @@
 \author{Candidato: Marco Vergamini \qquad Relatore: Prof. Marco Abate}
 
 \begin{document}
-\maketitle
-\newpage
-\tableofcontents
-\newpage
+\frame{\titlepage}
 
-
-\section*{Introduzione}
-\addcontentsline{toc}{section}{Introduzione}
-\input{secs/intro.tex}
-
-\newpage
-
-\section{Prerequisiti}
-
-\subsection{Lemma di Schwarz-Pick e distanza di Poincaré}
 \input{secs/noti.tex}
-
-\subsection{Regioni di Stolz e limiti non tangenziali}
-\input{secs/nontan.tex}
-
-\newpage
-
-\section{Lemmi di Schwarz-Pick multi-punto}
-
-\subsection{Teorema di Beardon-Minda e corollari}
-\input{secs/spmp.tex}
-
-\subsection{Applicazioni dei lemmi di Schwarz-Pick multi-punto}
-\input{secs/appspmp.tex}
-
-\newpage
-
-\section{Dalla disuguaglianza di Golusin al teorema di Burns-Krantz}
-
-\subsection{Rigidità al bordo}
-\input{secs/boundary_schwarz_pick.tex}
-
-\subsection{Teorema di Burns-Krantz}
-\input{secs/burns_krantz.tex}
-
-\newpage
-
-\input{secs/biblio.tex}
-
-\section*{Ringraziamenti}
-\addcontentsline{toc}{section}{Ringraziamenti}
-\input{secs/grazie.tex}
 
 \end{document}

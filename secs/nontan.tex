@@ -49,21 +49,21 @@
     Dato $M>1$, sia $\alpha=\text{\normalfont{arctan}}\sqrt{M^2-1} \in (0,\pi/2)$. Per ogni $\alpha'<\alpha$ esiste $\epsilon>0$ tale che, detto $B(\sigma,\epsilon)=\{z \in \mathbb{C} \mid |\sigma-z|<\epsilon\}$, si ha
     $$S(\sigma,\alpha')\cap B(\sigma,\epsilon) \subset K(\sigma,M) \subset S(\sigma,\alpha).$$
   \end{prop}}
-  \only<2>{\textit{Traccia della dimostrazione:} senza perdita di generalità $\sigma=1$. Possiamo scrivere $S(1,\alpha)=\left\{z \in \mathbb{D} \mid |\mathfrak{Im}(z)|<(\tan{\alpha})\bigl(1-\mathfrak{Re}(z)\bigr)\right\}$. Se $z \in K(1,M)$, da
-  $$M>\frac{|1-z|}{1-|z|}\ge \frac{|1-z|}{1-\mathfrak{Re}(z)}$$
-  troviamo
+  \only<2-5>{\textit{Traccia della dimostrazione:} senza perdita di generalità $\sigma=1$.}\pause \only<3-5>{ Possiamo scrivere $S(1,\alpha)=\left\{z \in \mathbb{D} \mid |\mathfrak{Im}(z)|<(\tan{\alpha})\bigl(1-\mathfrak{Re}(z)\bigr)\right\}$.} \pause \only<4-5>{Se $z \in K(1,M)$, da
+  $$M>\frac{|1-z|}{1-|z|}\ge \frac{|1-z|}{1-\mathfrak{Re}(z)}$$} \pause
+  \only<5>{troviamo
   $$\frac{|\mathfrak{Im}(z)|}{1-\mathfrak{Re}(z)}<\sqrt{M^2-1}=\tan{\alpha};$$
   questo mostra la seconda inclusione.}
-  \only<3>{\textit{Traccia della dimostrazione:} sia $\alpha'<\alpha$ e supponiamo per assurdo che per ogni $\epsilon>0$ esista $z \in S(1,\alpha')\cap B(1,\epsilon)$ tale che $z \not\in K(1,M)$. Si ha allora
-  \begin{equation} \label<3>{star1}
+  \only<6-8>{\textit{Traccia della dimostrazione:} sia $\alpha'<\alpha$ e supponiamo per assurdo che per ogni $\epsilon>0$ esista $z \in S(1,\alpha')\cap B(1,\epsilon)$ tale che $z \not\in K(1,M)$.} \pause \only<7-8>{ Si ha allora
+  \begin{equation} \label<7->{star1}
     \dfrac{1-|z|}{|1-z|} \le \dfrac{1}{M} \text{ e } \frac{|\mathfrak{Im}(z)|}{1-\mathfrak{Re}(z)}<\tan{\alpha'}.
-  \end{equation}
-  Dalla seconda disuguaglianza in \eqref{star1} si ottiene
-  \begin{equation} \label<3>{star2}
+  \end{equation}} \pause
+  \only<8>{Dalla seconda disuguaglianza in \eqref{star1} si ottiene
+  \begin{equation} \label<8->{star2}
     \frac{|1-z|}{1-\mathfrak{Re}(z)}<\sqrt{\tan^2{\alpha'}+1}=:M'<M;
   \end{equation}
   moltiplicando la \eqref{star2} per la prima disuguaglianza della \eqref{star1} troviamo}
-  \only<4>{\textit{Traccia della dimostrazione:} $\dfrac{1-|z|}{1-\mathfrak{Re}(z)}<\dfrac{M'}{M}<1$. Tuttavia, ponendo $x=\mathfrak{Re}(z)$ e $y=\mathfrak{Im}(z)$ e riscrivendo la condizione $z \in S(1,\alpha')$ come $y/(1-x)<\tan{\alpha'}$, vediamo facilmente che
+  \only<9-11>{\textit{Traccia della dimostrazione:} $\dfrac{1-|z|}{1-\mathfrak{Re}(z)}<\dfrac{M'}{M}<1$.} \pause \only<10-11>{ Tuttavia, ponendo $x=\mathfrak{Re}(z)$ e $y=\mathfrak{Im}(z)$ e riscrivendo la condizione $z \in S(1,\alpha')$ come $y/(1-x)<\tan{\alpha'}$,} \pause \only<11>{vediamo facilmente che
   $$\lim_{\substack{z \longrightarrow 1, \\ z \in S(1,\alpha')}} \frac{1-|z|}{1-\mathfrak{Re}(z)}-1=0,$$
   da cui otteniamo una contraddizione. \qed}
 \end{frame}
@@ -96,10 +96,10 @@
     per $z \longrightarrow \sigma$ non tangenzialmente.
   \end{prop}}
   \only<2>{\textit{Traccia della dimostrazione:} senza perdita di generalità $\sigma=1$. Consideriamo $z \in K(1,M) \subset S(1,\alpha)$, dove $\alpha=\arctan{\sqrt{M^2-1}}$. Fissato $\beta>\alpha$, scriviamo $r(z)=\text{dist}\bigl(z, \partial S(1,\beta)\bigr)$ e $C(z)=\partial B\bigl(1,r(z)\bigr)$. Dalla formula integrale di Cauchy applicata alla funzione $f(z)-z$ otteniamo}
-  \only<3>{\textit{Traccia della dimostrazione:}
-  $$f'(z)=1+\frac{1}{2\pi i} \int_{C(z)} \frac{f(w)-w}{(w-z)^2}\diff w=:1+I(z).$$
-  Fissato $\epsilon>0$, esiste $\delta>0$ tale che $|f(w)-w| \le \epsilon|1-w|^3$ per $w \in C(z)$, con $z \in K(1,M)\cap B(1,\delta/2)$. Si ottiene
-  $$|I(z)| \le \frac{\epsilon}{r(z)}\max_{w \in C(z)}|1-w|^3.$$
-  Da considerazioni geometriche si ha $|I(z)| \le \epsilon |z-1|^2\bigl(1+\csc(\beta-\alpha)\bigr)^3$, da cui $f'(z)=1+o\bigl((z-1)^2\bigr)$. Inoltre, dalle ipotesi
+  \only<3->{\textit{Traccia della dimostrazione:}
+  $$f'(z)=1+\frac{1}{2\pi i} \int_{C(z)} \frac{f(w)-w}{(w-z)^2}\diff w=:1+I(z).$$}
+  \pause \only<4->{Fissato $\epsilon>0$, esiste $\delta>0$ tale che $|f(w)-w| \le \epsilon|1-w|^3$ per $w \in C(z)$, con $z \in K(1,M)\cap B(1,\delta/2)$. Si ottiene
+  $$|I(z)| \le \frac{\epsilon}{r(z)}\max_{w \in C(z)}|1-w|^3.$$}
+  \pause \only<5->{Da considerazioni geometriche si ha $|I(z)| \le \epsilon |z-1|^2\bigl(1+\csc(\beta-\alpha)\bigr)^3$, da cui $f'(z)=1+o\bigl((z-1)^2\bigr)$. Inoltre, dalle ipotesi
   $$\frac{1-|f(z)|}{1-|z|}=\frac{1-|z|+o\bigl((z-1)^3\bigr)}{1-|z|}=1+o\bigl((z-1)^2\bigr).$$ \qed}
 \end{frame}

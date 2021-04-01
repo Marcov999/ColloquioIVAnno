@@ -1,284 +1,54 @@
-Adesso possiamo procedere a dimostrare la serie di disuguaglianze di \cite{BM}, che coinvolgono la distanza di Poincaré $\omega$ e le funzioni olomorfe dal disco in sé che non sono automorfismi.
+\begin{frame}
+  \frametitle{Prodotti di Blaschke}
+  \begin{defn}
+    Dati $a_1,\dots,a_n \in \mathbb{D}$ e $\theta \in \mathbb{R}$, chiamiamo \textit{prodotto di Blaschke} di grado $n$ la funzione
+    $$e^{i\theta}\prod_{j=1}^n \frac{z-a_j}{1-\bar{a}_jz}.$$
+    Indichiamo con $\mathcal{B}_n$ i prodotti di Blaschke di grado $n$.
+  \end{defn}
+  \pause
+  Notiamo che $\mathcal{B}_1=\text{Aut}(\mathbb{D})$.
+  \pause
+  \begin{prop}
+    Valgono le seguenti:
+    \begin{enumerate}[(i)]
+      \item si ha che $f \in \mathcal{B}_{n+1}$ se e solo se $f^*(\cdot,w) \in \mathcal{B}_n$, con $w \in \mathbb{D}$ fissato;
+      \item se $f \in \mathcal{B}_2$ allora $f^*\bigl(R_f(w),w\bigr)$, dove $R_f$ è la rotazione attorno al punto in cui $f$ ha molteplicità doppia.
+    \end{enumerate}
+  \end{prop}
+\end{frame}
 
-L'idea generale è la seguente: stiamo studiando $\text{Hol}(\mathbb{D},\mathbb{D})$. Le funzioni di questo insieme che sono anche automorfismi conservano la distanza iperbolica. Sembra dunque ragionevole vedere come si traduce il lemma di Schwarz-Pick in termini iperbolici (abbiamo già visto che contrae $\omega$).
+\begin{frame}
+  \frametitle{Lemma di Schwarz-Pick a tre punti}
+  \begin{thm} \label{31}
+    (Beardon-Minda, 2004) Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w, v \in \mathbb{D}$ vale
+    \begin{equation} \label{3.1}
+      \omega\bigl(f^*(z,v),f^*(w,v)\bigr) \le \omega(z,w).
+    \end{equation}
+    Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$.
+  \end{thm}
+  \pause
+  \textit{Traccia della dimostrazione:} basta applicare il lemma di Schwarz-Pick alla funzione $f^*(\cdot,v)$. \qed
+  \pause
+  \begin{oss}
+    Se $f(0)=0$ troviamo $\omega\bigl(f(z)/z,f'(0)\bigr) \le \omega(z,0)$. Il disco di centro $f'(0)$ e raggio $\omega(z)$ è, in generale, strettamente contenuto in $\mathbb{D}$.
+  \end{oss}
+\end{frame}
 
-\begin{defn}
-  La \textit{rotazione iperbolica} di ordine due attorno a un punto $a \in \mathbb{D}$ è la funzione $r_a \in \text{Aut}(\mathbb{D})\setminus\{\id\}$ tale che $r_a \circ r_a=\id$ e $r_a(a)=a$.
-  Chiamiamo $a$ il \textit{centro di rotazione} di $r_a$.
-\end{defn}
-
-\begin{oss}
-  Le condizioni imposte sono sufficienti a determinare un unico automorfismo $r_a$. Infatti, a meno di coniugare possiamo supporre $a=0$, per cui $r_0$ dev'essere una rotazione di ordine due, cioè di $\pi$. Inoltre, è facile vedere che $r_a$ è caratterizzata dall'equazione $[r_a(z),a]=-[z,a]$.
-\end{oss}
-
-\begin{oss} \label{rotegeo}
-  $z, a$ e $r_a(z)$ appartengono, nell'ordine, alla stessa geodetica. Infatti, a meno di comporre con un opportuno automorfismo possiamo supporre $a=0$; ma poiché $r_0(z)=e^{i\pi}z$, l'affermazione risulta ovvia.
-\end{oss}
-
-\begin{defn}
-  Dati $a_1,\dots,a_n \in \mathbb{D}$ e $\theta \in \mathbb{R}$, chiamiamo \textit{prodotto di Blaschke} di grado $n$ la funzione
-  $$e^{i\theta}\prod_{j=1}^n \frac{z-a_j}{1-\bar{a}_jz}.$$
-  Indichiamo con $\mathcal{B}_n$ i prodotti di Blaschke di grado $n$.
-\end{defn}
-
-\begin{oss}
-  I prodotti di Blaschke sono funzioni olomorfe sul disco unitario, con zeri assegnati. Quelli di grado $1$ sono $\text{Aut}(\mathbb{D})$.
-\end{oss}
-
-\begin{lm} \label{Blaschke-car}
-  Tra le funzioni $f$ continue in $\overline{\mathbb{D}}$ e olomorfe in $\mathbb{D}$, i prodotti di Blaschke di grado $n$ sono caratterizzati dalle seguenti proprietà:
-  \begin{nlist}
-    \item se $|z|=1$ allora $|f(z)|=1$;
-    \item $f$ ha esattamente $n$ zeri in $\mathbb{D}$ contati con molteplicità.
-  \end{nlist}
-\end{lm}
-
-\begin{proof}
-  Se $f$ è un prodotto di Blaschke di grado $n$, che soddisfi (ii) è ovvio e che soddisfi (i) segue dall'Osservazione \ref{dom}.
-
-  Fissiamo ora $f$ che soddisfi (i) e (ii); consideriamo $B$ il prodotto di Blaschke definito con $\theta=0$ e $a_n$ gli zeri in $\mathbb{D}$ di $f$, contati con molteplicità. Allora $f/B$ e $B/f$ sono due funzioni olomorfe su $\mathbb{D}$ e continue in $\overline{\mathbb{D}}$, di modulo $1$ sul bordo. Per il principio del massimo per funzioni olomorfe, deve essere $|f/B| \le 1$ e $|B/f| \le 1$ sul disco unitario, da cui $|f/B|=1$ e $f/B$ è costante in $\mathbb{D}$.
-\end{proof}
-
-\begin{lm} \label{z^2}
-  Sia $f \in \mathcal{B}_2$, esistono $S, T \in \text{Aut}(\mathbb{D})$ tali che $S\circ f\circ T(z)=z^2$.
-\end{lm}
-
-\begin{proof}
-  Per transitività di $\text{Aut}(\mathbb{D})$ su $\mathbb{D}$, ci basta dimostrare che esiste un punto $c \in \mathbb{D}$ tale che $f(z)-c$ abbia uno zero doppio nel disco. È sufficiente trovare $z_0 \in \mathbb{D}$ con $f'(z_0)=0$, dato che sappiamo già $f(z_0) \in \mathbb{D}$. Scriviamo $f(z)=e^{i\theta}\cdot\dfrac{z-a_1}{1-\bar{a}_1z}\cdot\dfrac{z-a_2}{1-\bar{a}_2z}$.
-  Sempre per transitività, usando $T$ possiamo supporre $a_1=0$ e poniamo $a_2=a$. Si ha
-  $$f'(z)=e^{i\theta}\left(\frac{z-a}{1-\bar{a}z}+z\cdot\frac{1-|a|^2}{1-\bar{a}z}\right).$$
-  Con qualche passaggio algebrico, l'equazione $f'(z)=0$ diventa
-  $$\bar{a}z^2-2z+a=0.$$
-  Le soluzioni sono $(1 \pm \sqrt{1-|a|^2})/\bar{a}$; da $|a|<1$, abbiamo che quella con il più sta fuori da $\mathbb{D}$ mentre quella con il meno sta dentro, dunque è la soluzione cercata.
-\end{proof}
-
-Notazione: sia $f \in \mathcal{B}_2$; indichiamo con $R_f$ la rotazione iperbolica di ordine due attorno al punto $z_0$, trovato nella dimostrazione del Lemma \ref{z^2}.
-
-\begin{cor} \label{rotazioni}
-  Sia $f \in \mathcal{B}_2$. Allora $f^*\bigl(R_f(w),w\bigr)=0$.
-\end{cor}
-
-\begin{proof}
-  Siano $S, T \in \text{Aut}(\mathbb{D})$ date dal Lemma \ref{z^2} tali che $S\circ f\circ T=F$ con $F(z)=z^2$. Abbiamo $[R_F(z),0]=-[z,0]$, dunque per l'Osservazione \ref{muu} troviamo $\mu[T\bigl(R_F(z)\bigr),T(0)]=-\mu[T(z),T(0)]$.
-  Per costruzione, $T(0)$ dev'essere il punto attorno al quale avviene la rotazione $R_f$, che quindi è caratterizzata dall'equazione $[R_f(z),T(0)]=-[z,T(0)]$. Ne segue che $T\bigl(R_F(z)\bigr)=R_f\bigl(T(z)\bigr)$. Perciò abbiamo $f=S^{-1}\circ F\circ T^{-1}$ e $R_f=T\circ R_F\circ T^{-1}$, inoltre $F\circ R_F=F$. Ne deduciamo che
-  $$f\circ R_f=S^{-1}\circ F\circ R_F\circ T^{-1}=S^{-1}\circ F\circ T^{-1}=f,$$
-  che implica la tesi.
-\end{proof}
-
-\begin{prop} \label{blaschke-prop}
-  Valgono le seguenti affermazioni:
-  \begin{nlist}
-    \item date $F \in \text{Hol}(\mathbb{D},\mathbb{D})$ e $S \in \text{Aut}(\mathbb{D})$, si ha che $F \in \mathcal{B}_n$ se e solo se $S\circ F \in \mathcal{B}_n$;
-    \item $f \in \mathcal{B}_{n+1}$ se e solo se $f^*(z,w) \in \mathcal{B}_n$, con $w$ un qualsiasi elemento di $\mathbb{D}$ fissato.
-  \end{nlist}
-\end{prop}
-
-\begin{proof}
-  Per dimostrare (i), basta mostrare che $S$ conserva le proprietà del Lemma \ref{Blaschke-car}. La prima segue dall'Osservazione \ref{dom}. Per transitività di $\text{Aut}(\mathbb{D})$, la seconda corrisponde a dover dimostrare che, dato $c \in \mathbb{D}$, l'equazione $F(z)=c$ ha esattamente $n$ zeri contati con molteplicità in $\mathbb{D}$, dove $F \in B_n$. Scriviamo $F(z)=\displaystyle e^{i\theta}\prod_{j=1}^n \frac{z-a_j}{1-\bar{a}_jz}$. Allora $F(z)=c$ si riscrive come
-  \begin{equation} \label{pol-eq}
-    c\prod_{j=1}^n (1-\bar{a}_jz)=e^{i\theta}\prod_{j=1}^n(z-a_j).
-  \end{equation}
-  Stiamo uguagliando due polinomi di grado $n$ con coefficienti direttivi diversi: quello al membro sinistro è di modulo minore di $1$, mentre quello al membro destro ha modulo esattamente $1$. Dunque la nostra equazione ha esattamente $n$ soluzioni, contate con molteplicità, in $\mathbb{C}$.
-  Per l'Osservazione \ref{dom}, se $z \not\in \mathbb{D}$ e $z\not=1/\bar{a}_j$ per $j=1,\dots,n$, si ha $|F(z)| \ge 1$; se $z=1/\bar{a}_j$ per qualche $j$, il membro sinistro di \eqref{pol-eq} è $0$ ma il membro destro no, quindi non ci sono soluzioni in quel caso. Perciò, per $|c|<1$, tutte le soluzioni trovate sono in $\mathbb{D}$ come voluto.
-
-  Per definizione di quoziente iperbolico, $[f(z),f(w)]=[z,w]f^*(z,w)$. Il membro di sinistra è della forma $S\bigl(f(z)\bigr)$, dove $S \in \text{Aut}(\mathbb{D})$ è $S(z)=[z,f(w)]$; scriviamo anche $T(z)=[z,w]$.
-  Se $f^*(z,w) \in \mathcal{B}_n$, allora $T(z)f^*(z,w) \in \mathcal{B}_{n+1}$; dunque $S\circ f \in \mathcal{B}_{n+1}$ e per il punto (i) abbiamo $f \in \mathcal{B}_{n+1}$. Viceversa, se $f \in \mathcal{B}_{n+1}$ si ha $S\circ f \in \mathcal{B}_{n+1}$.
-  Sappiamo anche che $S\bigl(f(w)\bigr)=0$, dunque nel prodotto ci dev'essere il fattore $[z,w]$; segue dunque che $f^*(z,w) \in \mathcal{B}_n$.
-\end{proof}
-
-Il seguente risultato rende chiaro perché nelle varie disuguaglianze si richiede che $f$ non sia un automorfismo.
-
-\begin{prop} \label{24}
-  Siano $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$ e $v \in \mathbb{D}$. Allora per ogni $z \in \mathbb{D}$ si ha che $f^*(z,v) \in \mathbb{D}$ e la funzione $z \longmapsto f^*(z,v)$ è olomorfa.
-\end{prop}
-
-\begin{proof}
-  L'olomorfia l'abbiamo già vista quando abbiamo definito il rapporto iperbolico. Per il lemma di Schwarz-Pick, $|f^*(z,v)| \le 1$; inoltre, vale l'uguaglianza in qualche punto solo se $f$ è un automorfismo. Dunque le ipotesi su $f$ assicurano che vale la disuguaglianza stretta sempre, cioè $f^*(z,v) \in \mathbb{D}$ per ogni $z \in \mathbb{D}$.
-\end{proof}
-
-L'idea dell'articolo di Beardon-Minda è di applicare il lemma di Schwarz-Pick alla funzione $f^*(z,v)$, con $v$ fissato. Per $f \in \text{Aut}(\mathbb{D})$, avremmo una funzione costante di modulo uguale a $1$, in particolare in $\mathcal{O}(\mathbb{D})\setminus\text{Hol}(\mathbb{D},\mathbb{D})$; non potremmo quindi applicare quanto appena detto.
-
-\begin{thm} \label{31}
-  (Beardon-Minda, 2004) Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w, v \in \mathbb{D}$ vale
-  \begin{equation} \label{3.1}
-    \omega\bigl(f^*(z,v),f^*(w,v)\bigr) \le \omega(z,w).
-  \end{equation}
-  Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$.
-\end{thm}
-
-\begin{proof}
-  Poiché $f$ non è un automorfismo, per la Proposizione \ref{24} la funzione $z \longmapsto f^*(z,v)$ è in $\text{Hol}(\mathbb{D}, \mathbb{D})$; perciò il membro sinistro della disuguaglianza \eqref{3.1} è ben definito e la tesi segue dal lemma di Schwarz-Pick e dall'osservazione \ref{oss1}, punto (ii).
-
-  Sempre dal lemma di Schwarz-Pick, si ha l'uguaglianza se e solo se abbiamo $f^*(z,v) \in \text{Aut}(\mathbb{D})=\mathcal{B}_1$. Per il punto (ii) della Proposizione \ref{blaschke-prop}, questo è equivalente a $f \in \mathcal{B}_2$.
-\end{proof}
-
-Vogliamo vedere che questa versione a tre punti è effettivamente un miglioramento rispetto al lemma di Schwarz-Pick.
-
-\begin{ex}
-  Consideriamo una funzione $f \in \text{Hol}(\mathbb{D},\mathbb{D})\setminus\text{Aut}(\mathbb{D})$ tale che $f(0)=0$. Il lemma di Schwarz-Pick diventa semplicemente il lemma di Schwarz e ci dice che $f(z)/z \in \mathbb{D}$. Prendendo invece $w=0$ e $v=0$ in \eqref{3.1}, troviamo $\omega\bigl(f(z)/z,f'(0)\bigr) \le \omega(z,0)$.
-  Dunque $f(z)/z$ appartiene al disco iperbolico di centro $f'(0)$ e raggio $\omega(z,0)$, che è un sottoinsieme di $\mathbb{D}$.
-\end{ex}
-
-\begin{cor} \label{32}
-  Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w, v \in \mathbb{D}$ vale
-  \begin{equation}
-    \omega\bigl(0, f^*(z,v)\bigr) \le \omega\bigl(0,f^*(w,v)\bigr)+\omega(z,w).
-  \end{equation}
-  Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$ e $R_f(v)$, $w$ e $z$ giacciono sulla stessa geodetica, in quest'ordine.
-\end{cor}
-
-\begin{proof}
-  Applicando la disuguaglianza triangolare per $\omega$ e il Teorema \ref{31}, si ha
+\begin{frame}
+  \frametitle{Lemma di Schwarz-Pick a tre punti}
+  \begin{cor} \label{33}
+    Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w, v, u \in \mathbb{D}$ vale
+    \begin{equation} \label{eq33}
+      \omega\bigl(0, f^*(z,v)\bigr) \le \omega\bigl(0, f^*(u,w)\bigr)+\omega(z,w)+\omega(v,u).
+    \end{equation}
+    Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$ e $R_f(v), R_f(u), w$ e $z$ giacciono sulla stessa geodetica, in quest'ordine.
+  \end{cor}
+  \pause
+  \textit{Traccia della dimostrazione:}
   \begin{align*}
-    \omega\bigl(0,f^*(z,v)\bigr) & \le \omega\bigl(0,f^*(w,v)\bigr)+\omega\bigl(f^*(w,v),f^*(z,v)\bigr) \\
-    & \le \omega\bigl(0,f^*(w,v)\bigr)+\omega(z,w).
+    \action<+->{\omega\bigl(0,f^*(z,v)\bigr) & \le \omega\bigl(0,f^*(w,v)\bigr)+\omega\bigl(f^*(w,v),f^*(z,v)\bigr) \\}
+    \action<+->{& \le \omega\bigl(0,f^*(w,v)\bigr)+\omega(w,z) \\}
+    \action<+->{& = \omega\bigl(0,f^*(v,w)\bigr)+\omega(w,z) \\}
+    \action<+->{& \le \omega\bigl(0,f^*(u,w)\bigr)+\omega(u,v)+\omega(w,z). & \qed}
   \end{align*}
-
-  Si ha l'uguaglianza se e solo se vale in entrambe le disuguaglianze appena viste. La seconda è esattamente il caso di uguaglianza del Teorema \ref{31}, che è equivalente a $f \in \mathcal{B}_2$. Sia $T_v(z)=f^*(z,v)$; per il Teorema \ref{blaschke-prop}, $f \in \mathcal{B}_2$ è equivalente a $T_v \in \text{Aut}(\mathbb{D})$. Ricordiamo che $p$, dunque anche $\omega$, è invariante sotto l'azione di $\text{Aut}(\mathbb{D})$.
-  Allora il caso di uguaglianza nella prima delle due disuguaglianze si riscrive come $\omega\bigl(T_v^{-1}(0),z\bigr)=\omega\bigl(T_v^{-1}(0),w\bigr)+\omega(w,z)$; per il Lemma \ref{nellordine}, quest'uguaglianza caratterizza l'appartenenza, nell'ordine, alla stessa geodetica. Per il Corollario \ref{rotazioni} si ha $T_v^{-1}(0)=R_f(v)$.
-\end{proof}
-
-\begin{cor} \label{33}
-  Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w, v, u \in \mathbb{D}$ vale
-  \begin{equation} \label{eq33}
-    \omega\bigl(0, f^*(z,v)\bigr) \le \omega\bigl(0, f^*(u,w)\bigr)+\omega(z,w)+\omega(v,u).
-  \end{equation}
-  Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$ e $R_f(v), R_f(u), w$ e $z$ giacciono sulla stessa geodetica, in quest'ordine.
-\end{cor}
-\begin{proof}
-  Applicando il Corollario \ref{32} si ha
-  \begin{align*}
-    \omega\bigl(0,f^*(z,v)\bigr) & \le \omega\bigl(0,f^*(w,v)\bigr)+\omega(z,w) =\omega\bigl(0,|f^*(w,v)|\bigr)+\omega(z,w) \\
-    & =\omega\bigl(0,|f^*(v,w)|\bigr)+\omega(z,w)=\omega\bigl(0,f^*(v,w)\bigr)+\omega(z,w).
-  \end{align*}
-  Sempre per il Corollario \ref{32} abbiamo
-  $$\omega\bigl(0,f^*(v,w)\bigr) \le \omega\bigl(0,f^*(u,w)\bigr)+\omega(z,w)+\omega(v,u).$$
-  Mettendo assieme le due disuguaglianze otteniamo la \eqref{eq33}.
-
-  Se si ha l'uguaglianza, dobbiamo studiarla nelle due applicazioni del Corollario \ref{32}. In entrambi i casi ci dice che $f \in \mathcal{B}_2$. La prima ci dice anche che $R_f(v), w$ e $z$ appartengono, nell'ordine, alla stessa geodetica. Dalla seconda deduciamo la stessa cosa per $R_f(w), u$ e $v$. Poiché $R_f$ è un automorfismo, abbiamo che lascia invariate le geodetiche e l'ordine dei punti sulle stesse; allora anche $w, R_f(u)$ e $R_f(v)$ stanno, nell'ordine, sulla stessa geodetica. Segue il secondo enunciato della tesi. Viceversa, se valgono tutte queste condizioni è facile vedere che si ha l'uguaglianza.
-\end{proof}
-
-Il risultato seguente non ci servirà nel seguito, ma viene riportato per completezza.
-
-\begin{cor} \label{35}
-  Sia $f \in \normalfont{\text{Hol}}(\mathbb{D},\mathbb{D})$ e siano $z, w \in \mathbb{D}$. Sia $\sigma$ una geodetica con $\sigma(t_1)=z, \sigma(t_2)=v$ e sia $w=\sigma(t)$ con $t_1<t<t_2$. Allora
-  \begin{equation} \label{geod}
-    2\omega\bigl(f(z),f(v)\bigr) \le \log\Bigl(\cosh\bigl(2\omega(z,v)\bigr)+|f^h(w)|\sinh\bigl(2\omega(z,v)\bigr)\Bigr).
-  \end{equation}
-  Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$, $z$ e $v$ giacciono sulla stessa geodetica passante per $c$, il centro di rotazione di $R_f$, e $w=z$ e sta fra $c$ e $v$ oppure $w=v$ e sta fra $c$ e $z$.
-\end{cor}
-
-\begin{proof}
-  Ricordando le definizioni di $\omega$ e $p$, per ogni $z,w \in \mathbb{D}$ abbiamo
-  $$\tanh\bigl(\omega(0,z)\bigr)=|z|\text{ e }\tanh\bigl(\omega(z,w)\bigr)=p(z,w)=\tanh\bigl(\omega(0,[z,w])\bigl).$$
-  Dalla definizioni di $f^*(z,w)$ e $p$ e usando le uguaglianze appena citate, abbiamo
-  \begin{align*}
-    \tanh\Bigl(\omega\bigl(f(z),f(v)\bigr)\Bigr)&=p\bigl(f(z),f(v)\bigr)=p(z,v)|f^*(z,v)| \\
-    &=p(z,v)\tanh\Bigl(\omega\bigl(0,f^*(z,v)\bigr)\Bigr).
-  \end{align*}
-  Applicando il Corollario \ref{33} con $u=w$ e usando il fatto che $z,w$ e $v$ stanno, nell'ordine, sulla stessa geodetica, troviamo
-  $$\omega\bigl(0,f^*(z,v)\bigr) \le \omega\bigl(0,f^h(w)\bigr)+\omega(z,v);$$
-  ricordando che la tangente iperbolica è strettamente crescente e sfruttando la formula $\tanh(a+b)=\frac{\tanh{a}+\tanh{b}}{1+\tanh{a}\tanh{b}}$ e le uguaglianze di prima, si ha
-  $$\tanh\Bigl(\omega\bigl(0,f^*(z,w)\bigr)\Bigr) \le\frac{|f^h(w)|+p(z,v)}{1+|f^h(w)|p(z,v)}.$$
-  Mettendo assieme le varie disuguaglianze, risulta che
-  $$\tanh\Bigl(\omega\bigl(f(z),f(v)\bigr)\Bigr) \le p(z,v)\left(\frac{|f^h(w)|+p(z,v)}{1+|f^h(w)|p(z,v)}\right);$$
-  prendendo $\tanh^{-1}(x)=\frac{1}{2}\log\left(\frac{1+x}{1-x}\right)$ otteniamo
-  \begin{align*}
-    \omega\bigl(f(z),f(v)\bigr) & \le \frac{1}{2}\log\left(\frac{1+p(z,v)|f^h(w)|+p(z,v)(|f^h(w)|+p(z,v))}{1+p(z,v)|f^h(w)|-p(z,v)(|f^h(w)|+p(z,v))}\right) \\
-    & =\frac{1}{2}\left(\frac{1+p^2(z,v)}{1-p^2(z,v)}+|f^h(w)|\frac{2p(z,v)}{1-p^2(z,v)}\right).
-  \end{align*}
-  Usando le uguaglianze
-  $$\frac{1+p^2}{1-p^2}=\cosh(2\omega) \text{ e } \frac{2p}{1-p^2}=\sinh(2\omega)$$
-  otteniamo la disuguaglianza della tesi.
-
-  Il caso di uguaglianza segue dall'uguaglianza nel Corollario \ref{33}: ricordando l'Osservazione \ref{rotegeo}, notiamo che se $w\not=z,v$ non possono essere soddisfatti tutti gli allineamenti richiesti nell'ordine giusto.
-\end{proof}
-
-\begin{oss}
-  Poiché $|f^*| \le 1$, anche $|f^h| \le 1$; per stretta crescenza del logaritmo, otteniamo che la disuguaglianza \eqref{geod} è un altro miglioramento rispetto al lemma di Schwarz-Pick.
-\end{oss}
-
-Vorremmo ora dedurre dei risultati simili al lemma di Schwarz-Pick anche per la derivata iperbolica. In generale $f^h$ non è olomorfa, dunque non è possibile applicare il lemma come si è fatto per $f^*(z,v)$. Tuttavia, quanto visto finora può essere usato per mostrare disuguaglianze che si avvicinano a qualcosa di tipo Schwarz-Pick, a costo di un fattore $2$.
-
-La prima richiede che uno dei due punti sia $0$.
-
-\begin{cor} \label{36}
-  Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$ tale che $f(0)=0$. Allora
-  \begin{equation}
-    \omega\bigl(f^h(0),f^h(z)\bigr) \le 2\omega(0,z).
-  \end{equation}
-  Inoltre, $2$ è la migliore costante possibile.
-\end{cor}
-
-\begin{proof}
-  Da $f(0)=0$ si ha $f^*(z,0)=f^*(0,z)$. Dalla disuguaglianza triangolare per $\omega$ abbiamo che
-  \begin{align*}
-    \omega\bigl(f^h(0),f^h(z)\bigr) & = \omega\bigl(f^*(0,0),f^*(z,z)\bigr) \\
-    & \le \omega\bigl(f^*(0,0),f^*(z,0)\bigr)+\omega\bigl(f^*(0,z),f^*(z,z)\bigr),
-  \end{align*}
-  inoltre per il Teorema \ref{31} si ha
-  $$\omega\bigl(f^*(0,0),f^*(z,0)\bigr)+\omega\bigl(f^*(0,z),f^*(z,z)\bigr)\le 2\omega(0,z).$$
-  Mettendo assieme troviamo la disuguaglianza della tesi.
-
-  Per dire che $2$ è la migliore costante possibile, basta prendere $f(z)=z^2$ e $z \in \mathbb{D}$ con $|z|=1/3$ per ottenere l'uguaglianza.
-\end{proof}
-
-Il prossimo risultato è quello che ci permetterà di dimostrare la disuguaglianza di Golusin. È valido per ogni coppia di punti nel disco, ma dobbiamo considerare il modulo della derivata iperbolica.
-
-\begin{cor} \label{quasigolusin}
-  Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w \in \mathbb{D}$ vale
-  \begin{equation} \label{quasigol}
-    \omega\bigl(|f^h(z)|, |f^h(w)|\bigr) \le 2\omega(z,w).
-  \end{equation}
-  Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$ e $z$ e $w$ giacciono sulla stessa geodetica, passante per il centro di rotazione di $R_f$.
-\end{cor}
-
-\begin{proof}
-  Siano $z, w \in \mathbb{D}$; senza perdita di generalità possiamo supporre $|f^h(z)| \ge |f^h(w)|$. Allora dalla definizione di $\omega$ abbiamo
-  \begin{align*}
-    \omega\bigl(|f^h(z)|, |f^h(w)|\bigr) & =\frac{1}{2}\log\left(\frac{1+\frac{|f^h(z)|-|f^h(w)|}{1-|f^h(w)||f^h(z)|}}{1-\frac{|f^h(z)|-|f^h(w)|}{1-|f^h(w)||f^h(z)|}}\right) \\
-    & =\frac{1}{2}\log\left(\frac{1-|f^h(w)||f^h(z)|+|f^h(z)|-|f^h(w)|}{1-|f^h(w)||f^h(z)|+|f^h(w)|-|f^h(z)|}\right) \\
-    & =\frac{1}{2}\log\left(\frac{1+|f^h(z)|}{1-|f^h(z)|}\cdot\frac{1-|f^h(w)|}{1+|f^h(w)|}\right) \\
-    & =\frac{1}{2}\log\left(\frac{1+|f^h(z)|}{1-|f^h(z)|}\right)-\frac{1}{2}\log\left(\frac{1+|f^h(w)|}{1-|f^h(w)|}\right)
-  \end{align*}
-  Usando di nuovo la definizione di $\omega$ otteniamo dunque
-  \begin{align*}
-    \omega\bigl(|f^h(z)|, |f^h(w)|\bigr)&=\omega\bigl(0,|f^h(z)|\bigr)-\omega\bigl(0,|f^h(w)|\bigr) \\
-    & =\omega\bigl(0,f^h(z)\bigr)-\omega\bigl(0,f^h(w)\bigr) \le 2\omega(z,w),
-  \end{align*}
-  dove l'ultima disuguaglianza segue dal Corollario \ref{33} prendendo $u=w$ e $v=z$. Il caso di uguaglianza segue facilmente.
-\end{proof}
-
-Concludiamo la sezione con il lemma di Dieudonné \cite[Chapter III, ???]{D}, per il quale l'approccio dell'articolo di Beardon e Minda semplifica le dimostrazioni.
-\marginpar{Chapter o Chapitre? Poi: quale dei tanti? Non sono certo di quale sia quello più pertinente alla nostra versione}
-
-\begin{lm}
-  (lemma di Dieudonné) Sia $f \in \text{Hol}(\mathbb{D},\mathbb{D})$ tale che $f(0)=0$ e sia $z_0 \in \mathbb{D}$ con $|f(z_0)| \le |z_0|$. Allora
-  \begin{equation}
-    |f'(z_0)-f(z_0)/z_0| \le \frac{|z_0|^2-|f(z_0)|^2}{|z_0|(1-|z_0|^2)}.
-  \end{equation}
-\end{lm}
-
-\begin{proof}
-  Per il Teorema \ref{31} con $z=v=z_0$ e $w=0$ abbiamo
-  \begin{align*}
-    \omega\bigl(f^h(z_0),f^*(0,z_0)\bigr) & \le \omega(0,z_0) \\
-    \iff p\bigl(f^h(z_0),f^*(0,z_0)\bigr) & \le p(0,z_0)=|z_0|,
-  \end{align*}
-  dove l'equivalenza fra le due disuguaglianze segue dal fatto che $\text{arctanh}$ è strettamente crescente. Per semplificare, scriviamo $f^h(z_0)=a, f^*(0,z_0)=b$ e $|z_0|=r$. Vogliamo portare la disuguaglianza in forma euclidea. Abbiamo
-  $$\left|\frac{a-b}{1-\bar{b}a}\right|=p(a,b) \le r,$$
-  che si riscrive come
-  \marginpar{trova un modo più leggibile di fare tutta 'sta roba}
-  \begin{align*}
-    (a-b)(\bar{a}-\bar{b}) & \le r^2(1-\bar{b}a)(1-b\bar{a}) \\
-    & \iff |a|^2-a\bar{b}-\bar{a}b+|b|^2 \le r^2-r^2a\bar{b}-r^2\bar{a}b+r^2|b|^2|a|^2 \\
-    & \iff |a|^2(1-r^2|b|^2)-a\bar{b}(1-r^2)-\bar{a}b(1-r^2) \le r^2-|b|^2 \\
-    & \iff |a|^2-a\cdot\frac{\bar{b}(1-r^2)}{1-r^2|b|^2}-\bar{a}\cdot\frac{b(1-r^2)}{1-r^2|b|^2} \le \frac{r^2-|b|^2}{1-r^2|b|^2};
-  \end{align*}
-  ponendo $\alpha=\dfrac{b(1-r^2)}{1-r^2|b|^2}$ e $R^2=\dfrac{r^2-|b|^2}{1-r^2|b|^2}+|b|^2\left(\dfrac{1-r^2}{1-r^2|b|^2}\right)^2$, si ha
-  $$|a|^2-a\bar{\alpha}-\bar{a}\alpha \le R^2-|\alpha|^2 \iff (a-\alpha)(\bar{a}-\bar{\alpha}) \le R^2\iff |a-\alpha| \le R.$$
-  Ricordando che $r=|z_0|$ e osservando che $b=f^*(0,z_0)=\frac{[f(0),f(z_0)]}{[0,z_0]}=\frac{f(z_0)}{z_0}$, troviamo $\alpha=\dfrac{f(z_0)(1-|z_0|^2)}{z_0\bigl(1-|f(z_0)|^2\bigr)}$ e $R=\dfrac{|z_0|^2-|f(z_0)|^2}{|z_0|\bigl(1-|f(z_0)|^2\bigr)}$.
-  Riprendendo infine la definizione di $a$, cioè $a=f^h(z_0)=\frac{f'(z_0)(1-|z_0|^2)}{1-|f(z_0)|^2}$, otteniamo che
-  $$\left|\frac{f'(z_0)(1-|z_0|^2)}{1-|f(z_0)|^2}-\frac{f(z_0)(1-|z_0|^2)}{z_0\bigl(1-|f(z_0)|^2\bigr)}\right| \le \frac{|z_0|^2-|f(z_0)|^2}{|z_0|\bigl(1-|f(z_0)|^2\bigr)},$$
-  che è equivalente alla tesi moltiplicando entrambi i membri per $\frac{1-|f(z_0)|^2}{1-|z_0|^2}$.
-\end{proof}
+\end{frame}

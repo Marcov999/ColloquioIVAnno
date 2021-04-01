@@ -1,35 +1,32 @@
-\begin{thm} \label{burns_krantz}
-  (Burns-Krantz, 1994) Siano $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$ e $\sigma \in \partial\mathbb{D}$ tali che
-  \begin{equation} \label{o^3bis}
-    f(z)=\sigma+(z-\sigma)+o\bigl((z-\sigma)^3\bigr)
-  \end{equation}
-  per $z \longrightarrow 1$ non tangenzialmente. Allora $f$ è l'identità del disco.
-\end{thm}
+\begin{frame}[t]
+  \only<1->{\frametitle{Teorema di Bracci-Kraus-Roth}
+  \begin{thm} \label{boundary_schwarz_pick}
+    (Bracci-Kraus-Roth, 2020) Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$ tale che
+    \begin{equation} \label{n_o^2}
+      |f^h(z_n)|=1+o\bigl((|z_n|-1)^2\bigr)
+    \end{equation}
+    per qualche successione $\{z_n\}_{n \in \mathbb{N}} \subset \mathbb{D}$ con $|z_n| \longrightarrow 1$. Allora $f \in \text{\normalfont{Aut}}(\mathbb{D})$.
+  \end{thm}}
+  \only<2->{\textit{Traccia della dimostrazione:} per assurdo $f\not\in \text{Aut}(\mathbb{D})$. La disuguaglianza di Golusin si riscrive come
+  $$\frac{\bigl(1+|f^h(0)|\bigr)(1+|z_n|)^2}{\bigl(1-|f^h(0)|\bigr)\bigl(1+|f^h(z_n)|\bigr)}\bigl(1-|f^h(z_n)|\bigr) \ge (1-|z_n|)^2.$$}
+  \only<3->{Poiché $f \not\in \text{Aut}(\mathbb{D})$, per Schwarz-Pick $|f^h(0)|<1$ e dunque}
+  \only<4>{$$\lim_{n \longrightarrow +\infty} \frac{\bigl(1+|f^h(0)|\bigr)(1+|z_n|)^2}{\bigl(1-|f^h(0)|\bigr)\bigl(1+|f^h(z_n)|\bigr)}=\frac{2\bigl(1+|f^h(0)|\bigr)}{1-|f^h(0)|} < +\infty,$$
+  contraddizione. \qed}
+\end{frame}
 
-\begin{proof}
-  Come già visto nella dimostrazione della Proposizione \ref{o^3->o^2}, a meno di considerare $\sigma^{-1}f(\sigma z)$ possiamo supporre senza perdita di generalità $\sigma=1$.
-  Dalla Proposizione \ref{o^3->o^2} segue anche che vale
-  $$|f^h(z)|=1+o\bigl((z-1)^2\bigr)$$
-  per $z \longrightarrow 1$ non tangenzialmente, quindi esiste una successione $z_n$ che soddisfa le ipotesi del Teorema \ref{boundary_schwarz_pick} (usiamo di nuovo che, non tangenzialmente, $|z-1|$ e $1-|z|$ possono essere scambiati negli $o$-piccoli); dunque $f$ è un automorfismo.
-  Per la Proposizione \ref{aut} esistono $\theta \in \mathbb{R}$ e $a \in \mathbb{D}$ tali che $f(z)=e^{i\theta}\dfrac{z-a}{1-\bar{a}z}$. Poiché vale \eqref{o^3bis}, dev'essere $f''(1)=0$. Si ha $f''(z)=\dfrac{e^{i\theta}\bar{a}(1-|a|^2)}{(1-\bar{a}z)^3}$;
-  siccome $e^{i\theta}\not=0$ e $|a|<1$, deve necessariamente essere $\bar{a}=0$, perciò $f(z)=e^{i\theta}z$. Il fatto che $f(z)=z$ segue da $\displaystyle \lim_{z \longrightarrow 1} f(z)=1$ sempre per \eqref{o^3bis}.
-\end{proof}
-
-\begin{ex}
-  Sia $f:\mathbb{C}\setminus\{\pm i\sqrt{3}\} \longrightarrow \mathbb{C}$ data da $f(z)=\dfrac{1+3z^2}{3+z^2}$. Verifichiamo che $f(\mathbb{D}) \subset \mathbb{D}$. Se $z \in \mathbb{D}$ allora $|z|<1$ da cui $1-|z|^4>0$.
-  Dunque abbiamo $1-|z|^4 < 9(1-|z|^4)$ che riscriviamo come $1+9|z|^4 < 9+|z|^4$, perciò
-  \begin{align*}
-    (1+3z^2)(1+3\bar{z}^2) &=1+3z^2+3\bar{z}^2+9|z|^4 \\
-    & < 9+3z^2+3\bar{z}^2+|z|^4=(3+z^2)(3+\bar{z}^2),
-  \end{align*}
-  quindi
-  $$|f(z)|^2=\frac{(1+3z^2)(1+3\bar{z}^2)}{(3+z^2)(3+\bar{z}^2)} < 1$$
-  e l'ultima disuguaglianza ci dice che $|f(z)|<1$, cioè $f(z) \in \mathbb{D}$.
-
-  Ovviamente $f$ non può essere iniettiva su $\mathbb{D}$ perché $f(z)=f(-z)$; dunque non è un automorfismo. Adesso mostriamo che $f(z)-1-(z-1)$ è $O\bigl((z-1)^3\bigr)$ ma non $o\bigl((z-1)^3\bigr)$ per $z \longrightarrow 1$:
-  \begin{align*}
-    g(z) & := f(z)-z=\frac{1+3z^2}{3+z^2}-z \\
-    & =\frac{1+3z^2-3z-z^3}{3+z^2}=\frac{(1-z)^3}{3+z^2}.
-  \end{align*}
-  Poiché $\displaystyle \lim_{z \longrightarrow 1} g(z)/(z-1)^3=-1/4$ si ha che $g(z)$ è $O\bigl((z-1)^3\bigr)$ ma non $o\bigl((z-1)^3\bigr)$ per $z \longrightarrow 1$. Allora il termine $o\bigl((z-1)^3\bigr)$ nel Teorema \ref{burns_krantz} non è migliorabile.
-\end{ex}
+\begin{frame}[t]
+  \frametitle{Teorema di Burns-Krantz}
+  \only<1->{\begin{thm} \label{burns_krantz}
+    (Burns-Krantz, 1994) Siano $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$ e $\sigma \in \partial\mathbb{D}$ tali che
+    \begin{equation} \label{o^3bis}
+      f(z)=\sigma+(z-\sigma)+o\bigl((z-\sigma)^3\bigr)
+    \end{equation}
+    per $z \longrightarrow 1$ non tangenzialmente. Allora $f$ è l'identità del disco.
+  \end{thm}}
+  \only<2-4>{\textit{Traccia della dimostrazione:} senza perdita di generalità $\sigma=1$.} \only<3-4>{ Dalla Proposizione sui limiti non tangenziale segue che
+  $$|f^h(z)|=1+o\bigl((z-1)^2\bigr).$$}
+  \only<4>{Per il teorema di Bracci-Kraus-Roth, $f \in \text{Aut}(\mathbb{D})$;} \only<4>{ per ipotesi dev'essere $f(1)=1$ e $f''(1)=0$, perciò $f(z)=z$. \qed}
+  \only<5>{\begin{ex}
+    Se $f(z)=\dfrac{1+3z^2}{3+z^2}$, si ha $\displaystyle \lim_{z \longrightarrow 1}\frac{f(z)-z}{(z-1)^3}=-\frac{1}{4}$; dunque il termine $o\bigl((z-\sigma)^3\big)$ nel teorema di Burns-Krantz non è migliorabile.
+\end{ex}}
+\end{frame}

@@ -35,7 +35,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Lemma di Schwarz-Pick a tre punti}
+  \frametitle{Lemma di Schwarz-Pick a quattro punti}
   \begin{thm} \label{33}
     Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w, v, u \in \mathbb{D}$ vale
     \begin{equation} \label{eq33}
@@ -53,7 +53,52 @@
   \end{align*}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[t]
   \frametitle{Conseguenze dei lemmi di Schwarz-Pick multi-punto}
-  aa
+  \only<1-3>{Prendendo $u=w$ nel lemma di Schwarz-Pick a quattro punti e usando che $\dfrac{1+p^2}{1-p^2}=\cosh(2\omega) \text{ e } \dfrac{2p}{1-p^2}=\sinh(2\omega)$, otteniamo il seguente:}
+  \pause
+  \only<2-3>{\begin{cor} \label{35}
+    Sia $f \in \normalfont{\text{Hol}}(\mathbb{D},\mathbb{D})$ e siano $z, w \in \mathbb{D}$. Sia $\sigma$ una geodetica con $\sigma(t_1)=z, \sigma(t_2)=v$ e sia $w=\sigma(t)$ con $t_1<t<t_2$. Allora
+    \begin{equation} \label<2-3>{geod}
+      2\omega\bigl(f(z),f(v)\bigr) \le \log\Bigl(\cosh\bigl(2\omega(z,v)\bigr)+|f^h(w)|\sinh\bigl(2\omega(z,v)\bigr)\Bigr).
+    \end{equation}
+  \end{cor}}
+  \pause
+  \only<3>{\begin{oss}
+    Poiché $|f^*| \le 1$, anche $|f^h| \le 1$; per stretta crescenza del logaritmo, otteniamo che la disuguaglianza \eqref{geod} è un altro miglioramento rispetto al lemma di Schwarz-Pick.
+  \end{oss}}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Conseguenze dei lemmi di Schwarz-Pick multi-punto}
+  \only<1->{\begin{cor} \label{quasigolusin}
+    Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w \in \mathbb{D}$ vale
+    \begin{equation} \label{quasigol}
+      \omega\bigl(|f^h(z)|, |f^h(w)|\bigr) \le 2\omega(z,w).
+    \end{equation}
+    Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$ e $z$ e $w$ giacciono sulla stessa geodetica, passante per il centro di rotazione di $R_f$.
+  \end{cor}}
+  \pause
+  \only<2->{\textit{Traccia della dimostrazione:}
+  \begin{align*}
+    \action<+->{\omega\bigl(|f^h(z)|, |f^h(w)|\bigr) & =\frac{1}{2}\log\left(\frac{1+\frac{|f^h(z)|-|f^h(w)|}{1-|f^h(w)||f^h(z)|}}{1-\frac{|f^h(z)|-|f^h(w)|}{1-|f^h(w)||f^h(z)|}}\right) \\}
+    \action<+->{& =\frac{1}{2}\log\left(\frac{1+|f^h(z)|}{1-|f^h(z)|}\right)-\frac{1}{2}\log\left(\frac{1+|f^h(w)|}{1-|f^h(w)|}\right) \\}
+    \action<+->{& =\omega\bigl(0,f^h(z)\bigr)-\omega\bigl(0,f^h(w)\bigr) \le 2\omega(z,w). & \qed}
+  \end{align*}}
+\end{frame}
+
+\begin{frame}[t]
+  \only<1->{\frametitle{Disuguaglianza di Golusin}
+  \begin{thm} \label{golusin}
+    (disuguaglianza di Golusin, 1945) Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z \in \mathbb{D}$ vale
+    \begin{equation} \label{gol}
+      |f^h(z)| \le \frac{|f^h(0)|+\frac{2|z|}{1+|z|^2}}{1+|f^h(0)|\frac{2|z|}{1+|z|^2}}.
+    \end{equation}
+  \end{thm}}
+  \only<2->{\textit{Traccia della dimostrazione:} prendendo $w=0$ nella disuguaglianza \eqref{quasigol} otteniamo
+  $$\frac{1}{2}\log\left(\frac{1+|f^h(z)|}{1-|f^h(z)|}\cdot\frac{1-|f^h(0)|}{1+|f^h(0)|}\right) \le \log\left(\frac{1+|z|}{1-|z|}\right),$$}
+  \only<3->{
+  da cui
+  $${1+|f^h(z)|}{1-|f^h(z)|} \le \frac{1+|f^h(0)|}{1-|f^h(0)|}\left(\frac{1+|z|}{1-|z|}\right)^2.$$}
+  \only<4>{La disuguaglianza di Golusin segue da rimaneggiamenti algebrici. \qed}
 \end{frame}

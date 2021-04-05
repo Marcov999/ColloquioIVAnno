@@ -1,0 +1,28 @@
+\begin{frame}[t]
+  \frametitle{Teoremi di Bracci-Kraus-Roth e di Burns-Krantz}
+  \only<1-2>{\begin{thm} \label{boundary_schwarz_pick}
+    (Bracci-Kraus-Roth, 2020) Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$ tale che
+    \begin{equation} \label{n_o^2}
+      |f^h(z_n)|=1+o\bigl((|z_n|-1)^2\bigr)
+    \end{equation}
+    per qualche successione $\{z_n\}_{n \in \mathbb{N}} \subset \mathbb{D}$ con $|z_n| \longrightarrow 1$. Allora $f \in \text{\normalfont{Aut}}(\mathbb{D})$.
+  \end{thm}}
+  \only<2>{\begin{thm} \label{burns_krantz}
+    (Burns-Krantz, 1994) Siano $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$ e $\sigma \in \partial\mathbb{D}$ tali che
+    \begin{equation} \label{o^3bis}
+      f(z)=\sigma+(z-\sigma)+o\bigl((z-\sigma)^3\bigr)
+    \end{equation}
+    per $z \longrightarrow 1$ non tangenzialmente. Allora $f$ è l'identità del disco.
+  \end{thm}}
+  \only<3-5>{Ricordiamo il lemma di Schwarz-Pick.}
+  \only<4-5>{\begin{block}{Lemma di Schwarz-Pick} \label{SP}
+    \begin{itshape}
+      Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$. Allora per ogni $z, w \in \mathbb{D}$ si ha
+      $$|[f(z),f(w)]| \le |[z,w]| \text{ e } |f^h(z)| \le 1.$$
+      Inoltre, se vale l'uguaglianza nella prima per $z_0, w_0$ con $z_0 \not=w_0$ o nella seconda per $z_0$ allora $f \in \text{\normalfont{Aut}}(\mathbb{D})$ e vale sempre l'uguaglianza.
+    \end{itshape}
+  \end{block}}
+  \only<5>{\begin{oss}
+    I due Teoremi sono risultati di rigidità simili alla parte di unicità del lemma di Schwarz-Pick, ma per un punto sul bordo del disco; lo stesso Lemma è il punto di partenza per la dimostrazione elementare dei Teoremi.
+\end{oss}}
+\end{frame}

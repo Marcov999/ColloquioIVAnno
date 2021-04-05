@@ -27,21 +27,3 @@
   $$\omega\bigl(f(z),f(w)\bigr) \le \omega(z,w).$$
   Vale l'uguaglianza in qualche caso se e solo se $f \in \text{Aut}(\mathbb{D})$; in tal caso c'è sempre l'uguaglianza.
 \end{frame}
-
-\begin{frame}
-  \frametitle{Derivata e rapporto iperbolici}
-  \begin{defn}
-    Data $f \in \text{Hol}(\mathbb{D},\mathbb{D})$, la \textit{derivata iperbolica} è definita come
-    $$f^h(w):=\lim_{z \longrightarrow w} \frac{[f(z),f(w)]}{[z,w]}=\frac{f'(w)(1-|w|^2)}{1-|f(w)|^2}.$$
-  \end{defn}
-  \pause
-  \begin{defn}
-    Il \textit{rapporto iperbolico} è definito come
-    $$f^*(z,w):=\begin{cases}
-      \frac{[f(z),f(w)]}{[z,w]} & \mbox{per }z\not=w \\
-      f^h(w) & \mbox{per }z=w
-    \end{cases}$$
-  \end{defn}
-  \pause
-  Fissato $w \in \mathbb{D}$, la funzione $z \longmapsto f^*(z,w)$ è olomorfa sul disco unitario. Se $f \not\in \text{Aut}(\mathbb{D})$, allora $f^*(\cdot,w) \in \text{Hol}(\mathbb{D},\mathbb{D})$.
-\end{frame}

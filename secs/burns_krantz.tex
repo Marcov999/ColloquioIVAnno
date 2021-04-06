@@ -15,6 +15,22 @@
 \end{align*}}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Risultato sui limiti non tangenziali}
+  Per poter dimostrare il teorema di Burns-Krantz passando dal teorema di Bracci-Kraus-Roth, dobbiamo vedere che le ipotesi di quest'ultimo siano verificate sotto le ipotesi del primo; la seguente proposizione ci garantisce che è vero.
+  \begin{prop}
+    Siano $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$ e $\sigma \in \partial\mathbb{D}$ tali che
+    \begin{equation}
+      f(z)=\sigma+(z-\sigma)+o\bigl((z-\sigma)^3\bigr)
+    \end{equation}
+    per $z \longrightarrow \sigma$ non tangenzialmente. Allora
+    \begin{equation}
+      |f^h(z)|=1+o\bigl((z-\sigma)^2\bigr)
+    \end{equation}
+    per $z \longrightarrow \sigma$ non tangenzialmente.
+  \end{prop}
+\end{frame}
+
 \begin{frame}[t]
   \frametitle{Teorema di Burns-Krantz}
   \only<1->{\begin{thm} \label{burns_krantz}
@@ -24,7 +40,7 @@
     \end{equation}
     per $z \longrightarrow 1$ non tangenzialmente. Allora $f$ è l'identità del disco.
   \end{thm}}
-  \only<2-4>{\textit{Traccia della dimostrazione:} senza perdita di generalità $\sigma=1$.} \only<3-4>{ Dalla Proposizione sui limiti non tangenziale segue che
+  \only<2-4>{\textit{Traccia della dimostrazione:} senza perdita di generalità $\sigma=1$.} \only<3-4>{ Dalla Proposizione sui limiti non tangenziali segue che
   $$|f^h(z)|=1+o\bigl((z-1)^2\bigr).$$}
   \only<4>{Per il teorema di Bracci-Kraus-Roth, $f \in \text{Aut}(\mathbb{D})$;} \only<4>{ per ipotesi dev'essere $f(1)=1$ e $f''(1)=0$, perciò $f(z)=z$. \qed}
   \only<5>{\begin{ex}

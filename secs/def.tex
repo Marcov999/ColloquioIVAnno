@@ -1,12 +1,18 @@
 \begin{frame}
-  \frametitle{Derivata iperbolica}
+  \frametitle{Derivata e rapporto iperbolici}
   Scriviamo $[z,w]:=\dfrac{z-w}{1-\bar{w}z}$. \pause
   \begin{defn}
     Data $f \in \text{Hol}(\mathbb{D},\mathbb{D})$, la \textit{derivata iperbolica} è definita come
     $$f^h(w):=\lim_{z \longrightarrow w} \frac{[f(z),f(w)]}{[z,w]}=\frac{f'(w)(1-|w|^2)}{1-|f(w)|^2}.$$
   \end{defn}
   \pause
-  Per il lemma di Schwarz-Pick, $|f^h(w)| \le 1$ per ogni $w \in \mathbb{D}$; inoltre, vale l'uguaglianza in qualche punto se e solo se $f \in \text{Aut}(\mathbb{D})$ e allora vale sempre l'uguaglianza.
+  \begin{defn}
+    Il \textit{rapporto iperbolico} è definito come
+    $$f^*(z,w):=\begin{cases}
+      \frac{[f(z),f(w)]}{[z,w]} & \mbox{per }z\not=w \\
+      f^h(w) & \mbox{per }z=w.
+    \end{cases}$$
+  \end{defn}
 \end{frame}
 
 \begin{frame}[t]

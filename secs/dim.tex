@@ -11,7 +11,7 @@
 
 \begin{frame}
   \frametitle{La distanza di Poincaré}
-  Sia $p(z,w)=|[z,w]|$; ricordiamo la distanza iperbolica. \pause
+  Sia $p(z,w)=\left|\dfrac{z-w}{1-\bar{w}z}\right|$; ricordiamo la distanza iperbolica. \pause
   \begin{defn}
     La \textit{distanza di Poincaré} (o \textit{iperbolica}) sul disco è la funzione $\omega:\mathbb{D}\times \mathbb{D} \longrightarrow [0,+\infty)$ data da
     $$\omega(z,w):=\text{arctanh}\bigl(p(z,w)\bigr)=\frac{1}{2}\log\left(\frac{1+p(z,w)}{1-p(z,w)}\right).$$
@@ -35,16 +35,18 @@
     Valgono le seguenti:
     \begin{enumerate}[(i)]
       \item si ha che $f \in \mathcal{B}_{n+1}$ se e solo se $f^*(\cdot,w) \in \mathcal{B}_n$, con $w \in \mathbb{D}$ fissato;
-      \item se $f \in \mathcal{B}_2$ allora $f^*\bigl(R_f(w),w\bigr)=0$, dove $R_f$ è la rotazione iperbolica attorno al punto in cui $f$ ha molteplicità doppia.
+      \item se $f \in \mathcal{B}_2$ allora esiste un unico punto $c \in \mathbb{D}$ in cui $f$ ha molteplicità doppia.
     \end{enumerate}
   \end{prop}
+  \pause
+  Data $f$, indichiamo con $R_f$ la rotazione iperbolica attorno a $c$.
 \end{frame}
 
 \begin{frame}
   \frametitle{Lemma di Schwarz-Pick a tre punti}
-  \begin{thm} \label{31}
+  \begin{thm}
     (Beardon-Minda, 2004) Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w, v \in \mathbb{D}$ vale
-    \begin{equation} \label{3.1}
+    \begin{equation}
       \omega\bigl(f^*(z,v),f^*(w,v)\bigr) \le \omega(z,w).
     \end{equation}
     Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$.
@@ -57,53 +59,59 @@
   \end{oss}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[t]
   \frametitle{Lemma di Schwarz-Pick a quattro punti}
-  \begin{thm} \label{33}
+  \only<1->{\begin{thm}
     Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w, v, u \in \mathbb{D}$ vale
-    \begin{equation} \label{eq33}
+    \begin{equation}
       \omega\bigl(0, f^*(z,v)\bigr) \le \omega\bigl(0, f^*(u,w)\bigr)+\omega(z,w)+\omega(v,u).
     \end{equation}
     Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$ e $R_f(v), R_f(u), w$ e $z$ giacciono sulla stessa geodetica, in quest'ordine.
-  \end{thm}
+  \end{thm}}
   \pause
-  \textit{Traccia della dimostrazione:}
+  \only<2-5>{\textit{Traccia della dimostrazione:}
   \begin{align*}
     \action<+->{\omega\bigl(0,f^*(z,v)\bigr) & \le \omega\bigl(0,f^*(w,v)\bigr)+\omega\bigl(f^*(w,v),f^*(z,v)\bigr) \\}
     \action<+->{& \le \omega\bigl(0,f^*(w,v)\bigr)+\omega(w,z) \\}
     \action<+->{& = \omega\bigl(0,f^*(v,w)\bigr)+\omega(w,z) \\}
     \action<+->{& \le \omega\bigl(0,f^*(u,w)\bigr)+\omega(u,v)+\omega(w,z). & \qed}
-  \end{align*}
+  \end{align*}}
+  \pause
+  \only<6>{Prendendo $v=z$ e $u=w$ otteniamo
+  $$\omega\bigl(0,f^h(z)\bigr) \le \omega\bigl(0,f^h(w)\bigr)+2\omega(z,w)$$}
 \end{frame}
 
 \begin{frame}[t]
   \frametitle{Conseguenze dei lemmi di Schwarz-Pick multi-punto}
-  \only<1->{\begin{cor} \label{quasigolusin}
+  \only<1->{\begin{cor}
     Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w \in \mathbb{D}$ vale
-    \begin{equation} \label{quasigol}
+    \begin{equation}
       \omega\bigl(|f^h(z)|, |f^h(w)|\bigr) \le 2\omega(z,w).
     \end{equation}
     Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$ e $z$ e $w$ giacciono sulla stessa geodetica, passante per il centro di rotazione di $R_f$.
   \end{cor}}
   \pause
-  \only<2->{\textit{Traccia della dimostrazione:}
+  \only<2-4>{\textit{Traccia della dimostrazione:}
   \begin{align*}
     \action<+->{\omega\bigl(|f^h(z)|, |f^h(w)|\bigr) & =\frac{1}{2}\log\left(\frac{1+\frac{|f^h(z)|-|f^h(w)|}{1-|f^h(w)||f^h(z)|}}{1-\frac{|f^h(z)|-|f^h(w)|}{1-|f^h(w)||f^h(z)|}}\right) \\}
     \action<+->{& =\frac{1}{2}\log\left(\frac{1+|f^h(z)|}{1-|f^h(z)|}\right)-\frac{1}{2}\log\left(\frac{1+|f^h(w)|}{1-|f^h(w)|}\right) \\}
     \action<+->{& =\omega\bigl(0,f^h(z)\bigr)-\omega\bigl(0,f^h(w)\bigr) \le 2\omega(z,w). & \qed}
   \end{align*}}
+  \pause
+  \only<5>{Prendendo $w=0$ e raccogliendo i logaritmi otteniamo
+  $$\frac{1}{2}\log\left(\frac{1+|f^h(z)|}{1-|f^h(z)|}\cdot\frac{1-|f^h(0)|}{1+|f^h(0)|}\right) \le 2\omega(0,z)$$}
 \end{frame}
 
 \begin{frame}[t]
   \frametitle{Disuguaglianza di Golusin}
-  \begin{thm} \label{golusin}
+  \begin{thm}
     (disuguaglianza di Golusin, 1945) Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z \in \mathbb{D}$ vale
-    \begin{equation} \label{gol}
+    \begin{equation}
       |f^h(z)| \le \frac{|f^h(0)|+\frac{2|z|}{1+|z|^2}}{1+|f^h(0)|\frac{2|z|}{1+|z|^2}}.
     \end{equation}
   \end{thm}
   \pause
-  \textit{Traccia della dimostrazione:} prendendo $w=0$ nella disuguaglianza \eqref{quasigol} otteniamo
+  \textit{Traccia della dimostrazione:}
   $$\frac{1}{2}\log\left(\frac{1+|f^h(z)|}{1-|f^h(z)|}\cdot\frac{1-|f^h(0)|}{1+|f^h(0)|}\right) \le \log\left(\frac{1+|z|}{1-|z|}\right),$$
   \pause
   da cui

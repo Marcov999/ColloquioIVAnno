@@ -1,12 +1,36 @@
 \begin{frame}
-  \frametitle{Strada della dimostrazione}
+  \frametitle{Strada della dimostrazione del teorema di BKR}
   \begin{itemize}
-    \item Useremo il lemma di Schwarz-Pick per derivarne due versioni multipunto; l'idea è che se $f \not\in \text{Aut}(\mathbb{D})$, allora $f^*(\cdot,w) \in \text{Hol}(\mathbb{D},\mathbb{D})$.
+    \item Useremo il lemma di Schwarz-Pick per derivarne due versioni multipunto dimostrate da Beardon e Minda.
     \pause
-    \item Dalla versione a quattro punti seguirà un Corollario, che avrà a sua volta, come caso particolare, la disuguaglianza di Golusin.
+    \item Dalla versione a quattro punti segue un Corollario riguardante la derivata iperbolica; esso avrà a sua volta, come caso particolare, una disuguaglianza dovuta a Golusin.
     \pause
-    \item Con Golusin dimostreremo il teorema di Bracci-Kraus-Roth e, sfruttando un risultato sui limiti non tangenziali, ne deriveremo il teorema di Burns-Krantz.
+    \item Dalla disuguaglianza di Golusin, scritta in forma opportuna, il teorema di Bracci-Kraus-Roth segue con una semplice dimostrazione per assurdo.
   \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{L'idea di Beardon-Minda}
+  \only<1-3>{\begin{block}{Lemma di Schwarz-Pick}
+    \begin{itshape}
+      Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$.
+      Allora per ogni $z, w \in \mathbb{D}$ si ha
+      $$\left|\frac{f(z)-f(w)}{1-\overline{f(w)}f(z)}\right| \le \left|\frac{z-w}{1-\bar{w}z}\right| \text{ e } \frac{|f'(z)|}{1-|f(z)|^2} \le \frac{1}{1-|z|^2}.$$
+      Inoltre se vale l'uguaglianza nella prima per $z_0, w_0$ con $z_0 \not=w_0$ o nella seconda per $z_0$ allora $f \in \text{\normalfont{Aut}}(\mathbb{D})$ e vale sempre l'uguaglianza.
+    \end{itshape}
+  \end{block}}
+  \only<2>{\begin{defn}
+    Data $f \in \text{Hol}(\mathbb{D},\mathbb{D})$, il \textit{rapporto iperbolico} è definito come
+    $$f^*(z,w):=\begin{cases}
+      \frac{\frac{f(z)-f(w)}{1-\overline{f(w)}f(z)}}{\frac{z-w}{1-\bar{w}z}} & \mbox{per }z\not=w \\
+      f^h(w) & \mbox{per }z=w.
+    \end{cases}$$
+  \end{defn}}
+  \only<3>{\begin{oss}
+    Fissato $w \in \mathbb{D}$, si ha che $f^*(z,w)$ è olomorfa in $z$.
+    \pause
+    Dal lemma di Schwarz-Pick abbiamo che, se $f \not\in\text{Aut}(\mathbb{D})$, allora $f^*(\cdot,w) \in \text{Hol}(\mathbb{D},\mathbb{D})$.
+  \end{oss}}
 \end{frame}
 
 \begin{frame}
@@ -19,6 +43,23 @@
   \pause
   Per stretta crescenza della tangente iperbolica, in termini di $\omega$ il lemma di Schwarz-Pick si riscrive come
   $$\omega\bigl(f(z),f(w)\bigr) \le \omega(z,w).$$
+\end{frame}
+
+\begin{frame}
+  \frametitle{Lemma di Schwarz-Pick a tre punti}
+  \begin{thm}
+    (Beardon-Minda, 2004) Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w, v \in \mathbb{D}$ vale
+    \begin{equation}
+      \omega\bigl(f^*(z,v),f^*(w,v)\bigr) \le \omega(z,w).
+    \end{equation}
+    Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$.
+  \end{thm}
+  \pause
+  \textit{Traccia della dimostrazione:} basta applicare il lemma di Schwarz-Pick alla funzione $f^*(\cdot,v)$. \qed
+  \pause
+  \begin{oss}
+    Se $f(0)=0$ troviamo $\omega\bigl(f(z)/z,f'(0)\bigr) \le \omega(z,0)$. Il disco iperbolico di centro $f'(0)$ e raggio $\omega(z,0)$ è, in generale, strettamente contenuto in $\mathbb{D}$.
+  \end{oss}
 \end{frame}
 
 \begin{frame}
@@ -40,23 +81,6 @@
   \end{prop}
   \pause
   Data $f$, indichiamo con $R_f$ la rotazione iperbolica attorno a $c$.
-\end{frame}
-
-\begin{frame}
-  \frametitle{Lemma di Schwarz-Pick a tre punti}
-  \begin{thm}
-    (Beardon-Minda, 2004) Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w, v \in \mathbb{D}$ vale
-    \begin{equation}
-      \omega\bigl(f^*(z,v),f^*(w,v)\bigr) \le \omega(z,w).
-    \end{equation}
-    Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$.
-  \end{thm}
-  \pause
-  \textit{Traccia della dimostrazione:} basta applicare il lemma di Schwarz-Pick alla funzione $f^*(\cdot,v)$. \qed
-  \pause
-  \begin{oss}
-    Se $f(0)=0$ troviamo $\omega\bigl(f(z)/z,f'(0)\bigr) \le \omega(z,0)$. Il disco iperbolico di centro $f'(0)$ e raggio $\omega(z,0)$ è, in generale, strettamente contenuto in $\mathbb{D}$.
-  \end{oss}
 \end{frame}
 
 \begin{frame}[t]
@@ -120,4 +144,21 @@
     \frac{1+|f^h(z)|}{1-|f^h(z)|} \le \frac{1+|f^h(0)|}{1-|f^h(0)|}\left(\frac{1+|z|}{1-|z|}\right)^2.\qedhere
   \popQED
   \]
+\end{frame}
+
+\begin{frame}[t]
+  \only<1->{\frametitle{Teorema di Bracci-Kraus-Roth}
+  \begin{thm}
+    (Bracci-Kraus-Roth, 2020) Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$ tale che
+    \begin{equation}
+      |f^h(z_n)|=1+o\bigl((|z_n|-1)^2\bigr)
+    \end{equation}
+    per qualche successione $\{z_n\}_{n \in \mathbb{N}} \subset \mathbb{D}$ con $|z_n| \longrightarrow 1$. Allora $f \in \text{\normalfont{Aut}}(\mathbb{D})$.
+  \end{thm}}
+  \only<2->{\textit{Traccia della dimostrazione:} per assurdo $f\not\in \text{Aut}(\mathbb{D})$. La disuguaglianza di Golusin si riscrive come
+  $$\frac{\bigl(1+|f^h(0)|\bigr)(1+|z_n|)^2}{\bigl(1-|f^h(0)|\bigr)\bigl(1+|f^h(z_n)|\bigr)}\bigl(1-|f^h(z_n)|\bigr) \ge (1-|z_n|)^2.$$}
+  \only<3->{Poiché $f \not\in \text{Aut}(\mathbb{D})$, per Schwarz-Pick $|f^h(0)|<1$ e dunque}
+  \only<4>{\begin{align*}
+  \lim_{n \longrightarrow +\infty} \frac{\bigl(1+|f^h(0)|\bigr)(1+|z_n|)^2}{\bigl(1-|f^h(0)|\bigr)\bigl(1+|f^h(z_n)|\bigr)}=\frac{2\bigl(1+|f^h(0)|\bigr)}{1-|f^h(0)|} < +\infty. & \qed
+\end{align*}}
 \end{frame}

@@ -1,28 +1,29 @@
 \begin{frame}
-  \frametitle{Derivata e rapporto iperbolici}
-  \begin{defn}
-    Data $f \in \text{Hol}(\mathbb{D},\mathbb{D})$, la \textit{derivata iperbolica} è definita come
-    $$f^h(w):=\lim_{z \longrightarrow w} \frac{\frac{f(z)-f(w)}{1-\overline{f(w)}f(z)}}{\frac{z-w}{1-\bar{w}z}}=\frac{f'(w)(1-|w|^2)}{1-|f(w)|^2}.$$
-  \end{defn}
+  \frametitle{Lemma di Schwarz come risultato di rigidità}
+  \begin{block}{Lemma di Schwarz}
+    \begin{itshape}
+      Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$ tale che $f(0)=0$. Allora per ogni $z \in \mathbb{D}$ si ha $|f(z)| \le |z|$ e $|f'(0)| \le 1$; inoltre, se vale l'uguaglianza nella prima per $z_0 \in \mathbb{D}\setminus\{0\}$ oppure nella seconda allora $f(z)=e^{i\theta}z$ per qualche $\theta \in \mathbb{R}$.
+    \end{itshape}
+  \end{block}
   \pause
-  \begin{defn}
-    Data $f \in \text{Hol}(\mathbb{D},\mathbb{D})$, il \textit{rapporto iperbolico} è definito come
-    $$f^*(z,w):=\begin{cases}
-      \frac{\frac{f(z)-f(w)}{1-\overline{f(w)}f(z)}}{\frac{z-w}{1-\bar{w}z}} & \mbox{per }z\not=w \\
-      f^h(w) & \mbox{per }z=w.
-    \end{cases}$$
-  \end{defn}
+  \begin{oss}
+    Dall'unicità seguono i seguenti risultati di rigidità: se $|f'(z)|=1+o(1)$ per $z$ che tende a $0$, allora $f \in \text{Aut}(\mathbb{D})$; se $f(z)=z+o(z-z_0)$ per $z$ che tende a $z_0 \in \mathbb{D}$, allora $f$ è proprio l'identità.
+  \end{oss}
 \end{frame}
 
 \begin{frame}[t]
-  \frametitle{Regioni di Stolz}
-  \only<1-4>{\begin{defn}
+  \frametitle{Teorema di Burns-Krantz e limiti non tangenziali}
+  \only<1>{\begin{thm}
+    (Burns-Krantz, 1994) Siano $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$ e $\sigma \in \partial\mathbb{D}$ tali che
+    \begin{equation}
+      f(z)=\sigma+(z-\sigma)+o\bigl((z-\sigma)^3\bigr)
+    \end{equation}
+    per $z \longrightarrow \sigma$ non tangenzialmente. Allora $f$ è l'identità del disco.
+  \end{thm}}
+  \only<2-5>{\begin{defn}
     Dati $\sigma \in \partial \mathbb{D}$ e $M>1$, chiamiamo \textit{regione di Stolz $K(\sigma,M)$} l'insieme $\left\{z \in \mathbb{D} \mid \dfrac{|\sigma-z|}{1-|z|} < M\right\}$.
   \end{defn}}
-  \only<2-3>{Per ogni $z \in \mathbb{D}$ si ha $1 \le \dfrac{|\sigma-z|}{1-|z|}$; all'interno delle regioni di Stolz vale una sorta di disuguaglianza opposta.}
-
-  \only<3>{Perciò, all'interno di una data regione, le quantità $|\sigma-z|$ e $1-|z|$ sono vicendevolmente una $O$-grande dell'altra.}
-  \only<4>{
+  \only<3>{
   \begin{center}
   \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2cm,y=2cm]
     \draw[->,color=black] (-1.16,0) -- (1.18,0);
@@ -39,20 +40,39 @@
   \end{tikzpicture}
 
   La regione di Stolz $K(1,2)$.\end{center}}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Limiti non tangenziali}
-  \begin{defn}
+  \only<4-5>{\begin{defn}
     Diciamo che una funzione $f:\mathbb{D} \longrightarrow \mathbb{C}$ ha \textit{limite non-tangenziale} $L \in \mathbb{C}$ in $\sigma \in \partial\mathbb{D}$ e scriviamo
     $$\substack{\text{nt--lim} \\ z \longrightarrow \sigma} \, f(z)=L$$
     se  per ogni $M>1$ si ha $\displaystyle \lim_{\substack{z \longrightarrow \sigma, \\ z \in K(\sigma,M)}} f(z)=L$.
-  \end{defn}
-  \pause
-  \begin{defn}
-    Date tre funzioni $f,g,h: \mathbb{D} \longrightarrow \mathbb{C}$ scriviamo che $f(z)=g(z)+o\bigl(h(z)\bigr)$ per $z \longrightarrow \sigma$ \textit{non tangenzialmente} se
-    $$\substack{\text{nt--lim} \\ z \longrightarrow \sigma} \, \frac{f(z)-g(z)}{h(z)}=0.$$
-  \end{defn}
-  \pause
-  Notiamo che la definizione di limite non tangenziale è più debole di quella di limite classico; nel nostro caso rende il risultato più forte.
+  \end{defn}}
+  \only<5>{Notiamo che la definizione di limite non tangenziale è più debole di quella di limite classico; nel nostro caso rende il risultato più forte.}
+  \only<6-7>{\begin{thm}
+    (Burns-Krantz, 1994) Siano $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$ e $\sigma \in \partial\mathbb{D}$ tali che
+    \begin{equation}
+      f(z)=\sigma+(z-\sigma)+o\bigl((z-\sigma)^3\bigr)
+    \end{equation}
+    per $z \longrightarrow \sigma$ non tangenzialmente. Allora $f$ è l'identità del disco.
+  \end{thm}}
+  \only<7>{\begin{ex}
+    Se $f(z)=\dfrac{1+3z^2}{3+z^2}$, si ha $\displaystyle \lim_{z \longrightarrow 1}\frac{f(z)-z}{(z-1)^3}=-\frac{1}{4}$; dunque il termine $o\bigl((z-\sigma)^3\big)$ nel teorema di Burns-Krantz non è migliorabile.
+\end{ex}}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Lemma di Schwarz-Pick e derivata iperbolica}
+  \only<1-3>{\begin{block}{Lemma di Schwarz-Pick}
+    \begin{itshape}
+      Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$.
+      Allora per ogni $z, w \in \mathbb{D}$ si ha
+      $$\left|\frac{f(z)-f(w)}{1-\overline{f(w)}f(z)}\right| \le \left|\frac{z-w}{1-\bar{w}z}\right| \text{ e } \frac{|f'(z)|}{1-|f(z)|^2} \le \frac{1}{1-|z|^2}.$$
+      Inoltre se vale l'uguaglianza nella prima per $z_0, w_0$ con $z_0 \not=w_0$ o nella seconda per $z_0$ allora $f \in \text{\normalfont{Aut}}(\mathbb{D})$ e vale sempre l'uguaglianza.
+    \end{itshape}
+  \end{block}}
+  \only<2>{\begin{defn}
+    Data $f \in \text{Hol}(\mathbb{D},\mathbb{D})$, la \textit{derivata iperbolica} è definita come
+    $$f^h(w):=\lim_{z \longrightarrow w} \frac{\frac{f(z)-f(w)}{1-\overline{f(w)}f(z)}}{\frac{z-w}{1-\bar{w}z}}=\frac{f'(w)(1-|w|^2)}{1-|f(w)|^2}.$$
+  \end{defn}}
+  \only<3>{\begin{oss}
+    Il lemma di Schwarz-Pick può essere visto come un risultato di rigidità per la derivata iperbolica: se $|f^h(z)|=1+o(1)$ per $z$ che tende a $z_0 \in \mathbb{D}$, allora $f \in \text{Aut}(\mathbb{D})$.
+\end{oss}}
 \end{frame}

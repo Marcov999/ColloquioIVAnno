@@ -7,7 +7,7 @@
   \end{block}
   \pause
   \begin{oss}
-    Dai casi di uguaglianza seguono i seguenti risultati di rigidità: se $|f'(z)|=1+o(1)$ per $z$ che tende a $0$, allora $f \in \text{Aut}(\mathbb{D})$; se $f(z)=z+o(z-z_0)$ per $z$ che tende a $z_0 \in \mathbb{D}$, allora $f$ è proprio l'identità.
+    Dai casi di uguaglianza seguono i seguenti risultati di rigidità: se $|f'(z)|=1+o(1)$ per $z$ che tende a $0$, allora $f \in \text{Aut}(\mathbb{D})$; se $f(z)=z+o(z)$ per $z$ che tende a $0$, allora $f$ è proprio l'identità.
   \end{oss}
 \end{frame}
 
@@ -21,11 +21,12 @@
     per $z \longrightarrow \sigma$ non tangenzialmente. Allora $f$ è l'identità del disco.
   \end{thm}}
   \only<2-5>{\begin{defn}
-    Dati $\sigma \in \partial \mathbb{D}$ e $M>1$, chiamiamo \textit{regione di Stolz $K(\sigma,M)$} l'insieme $\left\{z \in \mathbb{D} \mid \dfrac{|\sigma-z|}{1-|z|} < M\right\}$.
+    Dati $\sigma \in \partial \mathbb{D}$ e $M>1$, chiamiamo \textit{regione di Stolz} l'insieme
+    $$K(\sigma,M)=\left\{z \in \mathbb{D} \mid \frac{|\sigma-z|}{1-|z|} < M\right\}.$$
   \end{defn}}
   \only<3>{
   \begin{center}
-  \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2cm,y=2cm]
+  \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.9cm,y=1.9cm]
     \draw[->,color=black] (-1.16,0) -- (1.18,0);
     \foreach \x in {-1,1}
     \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
@@ -33,7 +34,7 @@
     \foreach \y in {-1,1}
     \draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
     \clip(-1.16,-1.13) rectangle (1.18,1.15);
-    \draw(0,0) circle (2cm);
+    \draw(0,0) circle (1.9cm);
     \draw[name path=A, smooth,samples=100,domain=-0.1715705740864879:1] plot(\x,{sqrt(7-4*sqrt(3-2*(\x))-2*(\x)-(\x)^2)});
     \draw[name path=B, smooth,samples=100,domain=-0.1715705740864879:1] plot(\x,{0-sqrt(7-4*sqrt(3-2*(\x))-2*(\x)-(\x)^2)});
     \tikzfillbetween[of=A and B]{red, opacity=0.25};
@@ -41,7 +42,7 @@
 
   La regione di Stolz $K(1,2)$.\end{center}}
   \only<4-5>{\begin{defn}
-    Diciamo che una funzione $f:\mathbb{D} \longrightarrow \mathbb{C}$ ha \textit{limite non-tangenziale} $L \in \mathbb{C}$ in $\sigma \in \partial\mathbb{D}$ e scriviamo
+    Diciamo che una funzione $f:\mathbb{D} \longrightarrow \mathbb{C}$ ha \textit{limite non tangenziale} $L \in \mathbb{C}$ in $\sigma \in \partial\mathbb{D}$ e scriviamo
     $$\substack{\text{nt--lim} \\ z \longrightarrow \sigma} \, f(z)=L$$
     se  per ogni $M>1$ si ha $\displaystyle \lim_{\substack{z \longrightarrow \sigma, \\ z \in K(\sigma,M)}} f(z)=L$.
   \end{defn}}

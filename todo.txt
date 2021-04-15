@@ -22,7 +22,7 @@ Slide 10: per semplificare le dimostrazioni, introduciamo \omega
 
 Slide 11: "vediamo dopo cosa sono i Blaschke e collegamento hanno con gli Aut"; il lemma a 3 punti è effettivamente un miglioramento
 
-Slide 12: prodotti di Blaschke come prodotto di Aut, la prop. Poi: dire a voce cos'è una rotazione iperbolica (si può usare: def formale che la caratterizza univocamente; def come composizione della rotazione con l'Aut che manda c in 0; def intuitiva come rotazione di pi delle geodetiche. Da vedere quali farci stare con i tempi)
+Slide 12: prodotti di Blaschke come prodotto di Aut, la prop. Poi: dire a voce cos'è una rotazione iperbolica (def intuitiva come rotazione di pi delle geodetiche + accenno alla def come coniugazione della rotazione con l'Aut che manda c in 0)
 
 Slide 13: enunciato, dim, poi post-dim passi al limite
 

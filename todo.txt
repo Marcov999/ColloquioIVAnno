@@ -1,5 +1,7 @@
 Screenplay (sort of)
 
+Frase iniziale: "Il nostro obiettivo è dare una dimostrazione elementare di due teoremi di rigidità per funzioni olomorfe nel disco unitario."
+
 Slide 1: frase iniziale + "vediamo perché ci interessa studiarli"
 
 Slide 2: parli del lemma, poi nell'oss ricorda che c'è sempre l'ipotesi f(0)=0. Dopodiché, dici la cosa di f che si comporta quasi come l'identità e che i teoremi passano al bordo del disco
@@ -22,7 +24,7 @@ Slide 10: per semplificare le dimostrazioni, introduciamo \omega
 
 Slide 11: "vediamo dopo cosa sono i Blaschke e collegamento hanno con gli Aut"; il lemma a 3 punti è effettivamente un miglioramento
 
-Slide 12: prodotti di Blaschke come prodotto di Aut, la prop. Poi: dire a voce cos'è una rotazione iperbolica (def intuitiva come rotazione di pi delle geodetiche + accenno alla def come coniugazione della rotazione con l'Aut che manda c in 0)
+Slide 12: prodotti di Blaschke come prodotto di Aut, la prop. Poi: dire a voce cos'è una rotazione iperbolica (def intuitiva come rotazione per la distanza iperbolica)
 
 Slide 13: enunciato, dim, poi post-dim passi al limite
 

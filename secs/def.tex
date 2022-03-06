@@ -1,12 +1,14 @@
-\begin{frame}
+\begin{frame}[t]
   \frametitle{Domini strettamente pseudoconvessi e metrica di Kobayashi}
-  \only<1>{\begin{set}
-      Fissiamo $\Omega \subseteq \mathbb{C}^n, n \ge 2$ un dominio limitato con bordo $C^2$, cioè esiste $\rho \in C^2(\mathbb{C}^n)$ tale che $\Omega=\{\rho(z)<0\}$.
-      Dato $p \in \partial\Omega$, lo \textit{spazio tangente complesso} a $\partial\Omega$ in $p$ è $H_p\partial\Omega=\{Z \in \mathbb{C}^n \mid \langle \bar{\partial}\rho(p),Z\rangle=0\}$. Assumiamo che $\Omega$ sia \textit{strettamente pseudoconvesso}, cioè la \textit{forma di Levi}
+  \only<1-3>{Setting: fissiamo $\Omega \subseteq \mathbb{C}^n, n \ge 2$ un dominio limitato con bordo $C^2$, cioè esiste $\rho \in C^2(\mathbb{C}^n)$ tale che $\Omega=\{\rho(z)<0\}$.}
+  \only<2-3>{
+      \begin{defn}
+        Dato $p \in \partial\Omega$, lo \textit{spazio tangente complesso} a $\partial\Omega$ in $p$ è $H_p\partial\Omega=\{Z \in \mathbb{C}^n \mid \langle \bar{\partial}\rho(p),Z\rangle=0\}$. Diciamo che $\Omega$ è \textit{strettamente pseudoconvesso} se la \textit{forma di Levi}
       $$L_{\rho}(p;Z)=\sum_{\nu,\mu=1}^n \frac{\partial\rho^2}{\partial z_\nu\partial\bar{z}_\mu}(p)Z_\nu\bar{Z}_\mu, \quad Z=(Z_1,\dots,Z_n) \in \mathbb{C}^n$$
       è definita positiva in $H_p\partial\Omega$ per ogni $p \in \Omega$.
-  \end{set}}
-  \only<2>{
+  \end{defn}}
+  \only<3>{Nel seguito, lavoriamo sempre sotto l'ipotesi che $\Omega$ sia strettamente pseudoconvesso.}
+  \only<4>{
   \begin{defn}
     Sia $\mathbb{D}$ il disco unitario in $\mathbb{C}$, data $f:\mathbb{D} \longrightarrow \mathbb{C}^n$ olomorfa indichiamo con $Df(z)$ il differenziale di $f$ in $z \in \mathbb{D}$. La \textit{metrica di Kobayashi} su $\Omega$ è
     $$K(x;Z)=\inf\{|v| \mid v \in \mathbb{C}, \text{ esiste }f:\mathbb{D} \longrightarrow \Omega$$
@@ -18,13 +20,44 @@
 
 \begin{frame}[t]
   \frametitle{Domini strettamente pseudoconvessi e iperbolicità di Gromov}
-  \begin{defn}
+  \only<1-3>{\begin{defn}
     Sia $(X,d)$ uno spazio metrico, dati $x,y \in X$ il \textit{prodotto di Gromov} con punto base $w$ è $(x,y)_w=\frac{1}{2}\big(d(x,w)+d(y,w)-d(x,y)\big)$. Dato $\delta \ge 0$, diciamo che $X$ è \textit{$\delta$-iperbolico} se
-  $$(x,y)_w \ge (x,z)_w\wedge(y,z)_w-\delta\text{ per ogni }x,y,z,w \in X.$$
-  Fissato $w \in X$, il \textit{bordo iperbolico} è $\partial_GX$ costruito come classe di equivalenza delle successioni $(x_i)$ tali che $\displaystyle\lim_{i,j\rightarrow \infty}(x_i,x_j)=\infty$; due tali successioni $(x_i), (y_i)$ sono equivalenti se $\displaystyle\lim_{i\rightarrow \infty}(x_i,y_i)=\infty$.
+    $$(x,y)_w \ge (x,z)_w\wedge(y,z)_w-\delta\text{ per ogni }x,y,z,w \in X.$$
+    \only<2>{Fissato $w \in X$, il \textit{bordo iperbolico} è $\partial_GX$ costruito come classe di equivalenza delle successioni $(x_i)$ che convergono a infinito, cioè tali che $\displaystyle\lim_{i,j\rightarrow \infty}(x_i,x_j)=\infty$; due tali successioni $(x_i), (y_i)$ sono equivalenti se $\displaystyle\lim_{i\rightarrow \infty}(x_i,y_i)=\infty$.}%È proprio equivalente a chiedere che stiano a distanza limitata?
+  \end{defn}}
+  \only<3>{\begin{thm}
+    (Balogh-Bonk) $(\Omega,d_K)$ è Gromov iperbolico, e il bordo iperbolico $\partial_G\Omega$ può essere identificato con il bordo euclideo $\partial\Omega$. Inoltre, la distanza di Carnot-Carathéodory $d_H$ su $\partial\Omega$ (quella indotta dalla forma di Levi) sta nella classe canonica di distanze su $\partial_GX$, cioè esiste $\epsilon>0$ tale che $d_H(a,b)\asymp \exp\big((a,b)_w\big)$ per ogni $a,b \in \partial_GX$.
+  \end{thm}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Conseguenze: estensioni al bordo di funzioni olomorfe}
+  Devo trovare un modo rapido di riassumere la proposizione 5.3, con tutte le definizioni e conseguenze (compresi i corollari 6.1 e 6.2).
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Conseguenze: dinamica olomorfa}
+  \only<1-4>{
+  \begin{defn}
+    Un \textit{orociclo} di centro $\tau \in \partial\mathbb{D}$ e raggio $R>0$ è $E(\tau,R)=\left\{z \in \mathbb{D} \mid \frac{|\tau-z|^2}{1-|z|^2}<R\right\}$.
   \end{defn}
-  \pause
+  \only<2>{Detta $\omega$ la distanza iperbolica su $\mathbb{D}$, si ha $E(\tau,R)=\{z\in \mathbb{D}\mid \lim_{w\rightarrow \tau} \big(\omega(z,w)-\omega(0,w)\big)<\frac{1}{2}\log{R}\}$.}
+  }
+  \only<3-4>{
   \begin{thm}
-    (Balogh-Bonk) $(\Omega,d_K)$ è Gromov iperbolico, e il bordo iperbolico $\partial_G\Omega$ può essere identificato con il bordo euclideo $\partial\Omega$.
+    (Wolff) Sia $f:\mathbb{D} \longrightarrow \mathbb{D}$ olomorfa e senza punti fissi. Allora esiste un unico $\tau \in \partial\mathbb{D}$ tale che per ogni $R>0$ vale che $f\big(E(\tau,R)\big) \subseteq E(\tau,R)$.
   \end{thm}
+  }
+  \only<4>{
+  \begin{thm}
+    (Wolff-Denjoy) Sia $f:\mathbb{D} \longrightarrow \mathbb{D}$ olomorfa e senza punti fissi. Allora esiste un unico $\tau \in \partial\mathbb{D}$ tale che $f^k \longrightarrow \tau$ uniformemente sui compatti.
+  \end{thm}
+  }
+  \only<5->{
+  Karlsson, 2001: sotto opportune ipotesi, che sono soddisfatte dagli spazi iperbolici (è vera quest'affermazione?), valgono dei risultati simili per funzioni $1$-lipschitziane dallo spazio in sé.
+  }
+  
+  \only<6>{
+  Usando il teorema di Balogh-Bonk e il fatto che i biolomorfismi sono delle isometrie rispetto a $d_K$, si ottengono delle generalizzazioni dei teoremi di Wolff e Wolff-Denjoy per i domini strettamente pseudoconvessi.
+  }
 \end{frame}

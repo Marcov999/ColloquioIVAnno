@@ -1,51 +1,63 @@
 \begin{frame}[t]
-  \frametitle{Teorema di Bracci-Kraus-Roth}
+  \frametitle{Strada per la dimostrazione del teorema di BB}
+  \begin{itemize}
+    \item Per una metrica $F$ su $\Omega$ che soddisfa certe ipotesi, si ha che esiste $C \ge 0$ tale che per ogni $x, y \in \Omega$ vale
+    $$g(x,y)-C \le d_F(x,y) \le g(x,y)+C,$$
+    dove $g(x,y)=2\log\left(\dfrac{d_H\big(\pi(x),\pi(y)\big)+h(x)\lor h(y)}{\sqrt{h(x)h(y)}}\right)$.
+    \pause
+    \item La metrica di Kobayashi soddisfa le suddette ipotesi.
+    \pause
+    \item Si ha dunque che possiamo confrontare $d_K$ con la funzione $g$, e da questa disuguaglianza segue il teorema di Balogh-Bonk.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Disuguaglianze per metriche di Finsler}
+  \only<1>{
+  \begin{defn}
+    Una \textit{metrica di Finsler} su $\Omega$ è una funzione continua $F:\Omega\times\mathbb{C}^n \longrightarrow [0,+\infty)$ tale che $F(x;tZ)=|t|F(x;Z)$ per ogni $x \in \Omega, Z \in \mathbb{C}^n, t \in \mathbb{C}$.
+  \end{defn}
+  }
+  \only<2>{
   \begin{thm}
-    (Bracci-Kraus-Roth, 2020) Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$ tale che
-    \begin{equation}
-      |f^h(z_n)|=1+o\bigl((|z_n|-1)^2\bigr)
+    Sia $F$ una metrica di Finsler su $\Omega$ tale che esistono delle costanti $\epsilon_0>0, s>0,C_1>0,C_2 \ge 0$ tali che per ogni $x \in \Omega$ con $\delta(x)<\epsilon_0$ e $Z \in \mathbb{C}^n$ si ha
+    \begin{multline}\label{stimametricafinsler}
+      \big(1-C_1\delta^s(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+(1/C_2)\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2} \le F(x;Z) \\
+      \le \big(1+C_1\delta^s(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+C_2\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2}.
+    \end{multline}
+    Allora esiste $C \ge 0$ tale che per ogni $x, y \in \Omega$ vale
+    \begin{equation} \label{stimadistanzafinsler}
+      g(x,y)-C \le d_F(x,y) \le g(x,y)+C.
     \end{equation}
-    per qualche successione $\{z_n\}_{n \in \mathbb{N}} \subset \mathbb{D}$ con $|z_n| \longrightarrow 1$. Allora $f \in \text{\normalfont{Aut}}(\mathbb{D})$.
   \end{thm}
-  \pause
-  \begin{ex}
-    Prendiamo di nuovo $f(z)=\dfrac{1+3z^2}{3+z^2}$. Si ha $|f^h(z)|=\dfrac{2|z|}{1+|z|^2}$, perciò $\displaystyle \lim_{|z| \longrightarrow 1} \frac{|f^h(z)|-1}{(|z|-1)^2}=-\frac{1}{2}$.
-  \end{ex}
+  }
+  \only<3>{
+  \textit{Idea della dimostrazione:} capire quali sono i punti salienti e riassumerli. Richiede un po' di lavoro.
+  }
 \end{frame}
 
 \begin{frame}[t]
-  \frametitle{Risultato sui limiti non tangenziali}
-  \only<1-4>{\begin{prop}
-    Siano $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$ e $\sigma \in \partial\mathbb{D}$ tali che
-    \begin{equation*}
-      f(z)=\sigma+(z-\sigma)+o\bigl((z-\sigma)^3\bigr)
-    \end{equation*}
-    per $z \longrightarrow \sigma$ non tangenzialmente. Allora
-    \begin{equation*}
-      |f^h(z)|=1+o\bigl((z-\sigma)^2\bigr)
-    \end{equation*}
-    per $z \longrightarrow \sigma$ non tangenzialmente.
+  \frametitle{La metrica di Kobayashi soddisfa la disuguaglianza}
+  \only<1->{\begin{prop}
+    Per ogni $\epsilon>0$ esistono $\epsilon_0>0$ e $C \ge 0$ tali che per ogni $x \in \Omega$ con $\delta(x)<\epsilon_0$ e per ogni $Z \in \mathbb{C}^n$ si ha
+    \begin{multline*}
+      \big(1-C\delta^{1/2}(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+(1-\epsilon)\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2} \le K(x;Z) \\
+      \le \big(1+C\delta^{1/2}(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+(1+\epsilon)\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2}.
+    \end{multline*}
   \end{prop}}
-  \only<2>{\begin{oss}
-    Si ha che, in una data regione di Stolz, $z-\sigma$ e $1-|z|$ sono uno $O$-grande dell'altro, e viceversa; allora, dalla tesi della Proposizione si ottiene che valgono le ipotesi del teorema di Bracci-Kraus-Roth.
-\end{oss}}
-  \only<3>{\textit{Traccia della dimostrazione:} il punto è riuscire a stimare $f'$. Senza perdita di generalità $\sigma=1$. Dalla formula di Cauchy troviamo
-  $$f'(z)=1+\frac{1}{2\pi i} \int_{C(z)} \frac{f(w)-w}{(w-z)^2}\diff w=:1+I(z).$$}
-  \only<4>{All'interno delle regioni di Stolz, con ragionamenti geometrici si possono fare stime per dire che $I(z)=o\bigl((z-1)^2\bigr)$. \qed}
-\end{frame}
+  \only<2-4>{\textit{Traccia della dimostrazione:} si localizza a un intorno di un punto del bordo;
 
-\begin{frame}[t]
-  \frametitle{Teorema di Burns-Krantz}
-  \only<1->{\begin{thm}
-    (Burns-Krantz, 1994) Siano $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$ e $\sigma \in \partial\mathbb{D}$ tali che
-    \begin{equation}
-      f(z)=\sigma+(z-\sigma)+o\bigl((z-\sigma)^3\bigr)
+  }
+  \only<3-4>{con un opportuno biolomorfismo, ci si sposta in $\mathbb{C}^n$;
+
+  }
+  \only<4>{stringendo l'immagine del biolomorfismo tra due ellissoidi complessi, uno contenuto e uno che lo contiene, seguono le stime volute. \qed}
+  \only<5>{
+  \begin{cor}
+    Esiste $C \ge 0$ tale che per ogni $x,y \in \Omega$ si ha
+    \begin{equation}\label{stimadistanzakobayashi}
+      g(x,y)-C \le d_K(x,y) \le g(x,y)+C. \tag{3}
     \end{equation}
-    per $z \longrightarrow \sigma$ non tangenzialmente. Allora $f$ è l'identità del disco.
-  \end{thm}}
-  \only<2-3>{\textit{Traccia della dimostrazione:} senza perdita di generalità $\sigma=1$. Dalla Proposizione sui limiti non tangenziali segue che
-  $$|f^h(z)|=1+o\bigl((z-1)^2\bigr)$$
-  per $z \longrightarrow 1$ non tangenzialmente.}
-
-  \only<3>{Per il teorema di Bracci-Kraus-Roth, $f \in \text{Aut}(\mathbb{D})$; per ipotesi dev'essere $f(1)=1$ e $f''(1)=0$, perciò $f(z)=z$. \qed}
+  \end{cor}
+  }
 \end{frame}

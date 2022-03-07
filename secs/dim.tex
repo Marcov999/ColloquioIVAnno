@@ -1,166 +1,29 @@
-\begin{frame}
-  \frametitle{Strada per la dimostrazione del teorema di BKR}
-  \begin{itemize}
-    \item Useremo il lemma di Schwarz-Pick per derivarne due versioni multipunto dimostrate da Beardon e Minda nel 2004.
-    \pause
-    \item Dalla versione a quattro punti otterremo un Corollario riguardante la derivata iperbolica; esso avrà a sua volta, come caso particolare, una disuguaglianza dimostrata da Golusin nel 1945.
-    \pause
-    \item Dalla disuguaglianza di Golusin, scritta in forma opportuna, il teorema di Bracci-Kraus-Roth seguirà con una semplice dimostrazione per assurdo.
-  \end{itemize}
-\end{frame}
-
 \begin{frame}[t]
-  \frametitle{L'idea di Beardon-Minda}
-  \only<1-3>{\begin{block}{Lemma di Schwarz-Pick}
-    \begin{itshape}
-      Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$.
-      Allora per ogni $z, w \in \mathbb{D}$ si ha
-      $$\left|\frac{f(z)-f(w)}{1-\overline{f(w)}f(z)}\right| \le \left|\frac{z-w}{1-\bar{w}z}\right| \text{ e } \frac{|f'(z)|}{1-|f(z)|^2} \le \frac{1}{1-|z|^2}.$$
-      Inoltre se vale l'uguaglianza nella prima per $z_0, w_0$ con $z_0 \not=w_0$ o nella seconda per $z_0$ allora $f \in \text{\normalfont{Aut}}(\mathbb{D})$ e vale sempre l'uguaglianza.
-    \end{itshape}
-  \end{block}}
-  \only<2>{\begin{defn}
-    Data $f \in \text{Hol}(\mathbb{D},\mathbb{D})$, il \textit{rapporto iperbolico} è definito come
-    $$f^*(z,w):=\begin{cases}
-      \frac{\frac{f(z)-f(w)}{1-\overline{f(w)}f(z)}}{\frac{z-w}{1-\bar{w}z}} & \mbox{per }z\not=w \\
-      f^h(w) & \mbox{per }z=w.
-    \end{cases}$$
-  \end{defn}}
-  \only<3>{\begin{oss}
-    Fissato $w \in \mathbb{D}$, si ha che $f^*(z,w)$ è olomorfa in $z$.
-    \pause
-    Dal lemma di Schwarz-Pick abbiamo che, se $f \not\in\text{Aut}(\mathbb{D})$, allora $f^*(\cdot,w) \in \text{Hol}(\mathbb{D},\mathbb{D})$.
-  \end{oss}}
-\end{frame}
+  \frametitle{Dimostrazione del teorema di BB}
+  \only<1-4>{\textit{Traccia della dimostrazione del teorema di Balogh-Bonk:} dati $r_{ij} \ge 0$ tali che $r_{ij}=r_{ji}$ e $r_{ij} \le r_{ik}+r_{kj}$, allora $r_{12}r_{34} \le 4\big((r_{13}r_{24})\lor (r_{14}r_{23})\big)$.
 
-\begin{frame}
-  \frametitle{La distanza di Poincaré}
-  Sia $p(z,w)=\left|\dfrac{z-w}{1-\bar{w}z}\right|$; ricordiamo la distanza iperbolica. \pause
-  \begin{defn}
-    La \textit{distanza di Poincaré} (o \textit{iperbolica}) sul disco è la funzione $\omega:\mathbb{D}\times \mathbb{D} \longrightarrow [0,+\infty)$ data da
-    $$\omega(z,w):=\text{arctanh}\bigl(p(z,w)\bigr)=\frac{1}{2}\log\left(\frac{1+p(z,w)}{1-p(z,w)}\right).$$
-  \end{defn}
-  \pause
-  Per stretta crescenza della tangente iperbolica, in termini di $\omega$ il lemma di Schwarz-Pick si riscrive come
-  $$\omega\bigl(f(z),f(w)\bigr) \le \omega(z,w).$$
-\end{frame}
+  }
+  \only<2-4>{Siano $x_1,x_2,x_3,x_4 \in \Omega$, poniamo $h_i=\delta(x_i)^{1/2}$, $d_{ij}=d_H\big(\pi(x_i),\pi(x_j)\big)$ e $r_{ij}=d_{ij}+h_i\lor h_j$.} \only<3-4>{Segue che
+  \begin{gather*}
+    (d_{12}+h_1\lor h_2)(d_{34}+h_3\lor h_4) \\
+    \le 4\Big(\big((d_{13}+h_1\lor h_3)(d_{24}+h_2\lor h_4)\big)\big((d_{14}+h_1\lor h_4)(d_{23}+h_2\lor h_3)\big)\Big),
+  \end{gather*}}
+  \only<4>{che grazie al Corollario diventa
+  \begin{gather*}
+    d_K(x_1,x_2)+d_K(x_3,x_4) \\
+    \le \big(d_K(x_1,x_3)+d_K(x_2,x_4)\big)\big(d_K(x_1,x_4)+d_K(x_2,x_3)\big)+C,
+  \end{gather*}
+  da cui segue l'iperbolicità di $(\Omega, d_K)$.}
+  \only<5->{
+  Usando la definizione e il Corollario, troviamo che una sequenza $(x_i)$ in $(\Omega,d_K)$ converge a infinito se e solo se la sequenza $\big(\pi(x_i)\big)$ converge e $h(x_i) \longrightarrow 0$, cioè se e solo se $(x_i)$ converge rispetto alla metrica euclidea a un punto di $\partial\Omega$;}\only<6->{ inoltre, due successioni convergenti a infinito sono equivalenti se e solo se il loro limite euclideo è lo stesso, e ogni punto del bordo è limite di una successione che converge a infinito.
 
-\begin{frame}
-  \frametitle{Lemma di Schwarz-Pick a tre punti}
-  \begin{thm}
-    (Beardon-Minda, 2004) Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w, v \in \mathbb{D}$ vale
-    \begin{equation}
-      \omega\bigl(f^*(z,v),f^*(w,v)\bigr) \le \omega(z,w).
-    \end{equation}
-    Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$.
-  \end{thm}
-  \pause
-  \textit{Traccia della dimostrazione:} basta applicare il lemma di Schwarz-Pick alla funzione $f^*(\cdot,v)$. \qed
-  \pause
-  \begin{oss}
-    Se $f(0)=0$ troviamo $\omega\bigl(f(z)/z,f'(0)\bigr) \le \omega(z,0)$. Il disco iperbolico di centro $f'(0)$ e raggio $\omega(z,0)$ è, in generale, strettamente contenuto in $\mathbb{D}$.
-  \end{oss}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Prodotti di Blaschke}
-  \begin{defn}
-    Dati $a_1,\dots,a_n \in \mathbb{D}$ e $\theta \in \mathbb{R}$, chiamiamo \textit{prodotto di Blaschke} di grado $n$ la funzione
-    $$e^{i\theta}\prod_{j=1}^n \frac{z-a_j}{1-\bar{a}_jz}.$$
-    Indichiamo con $\mathcal{B}_n$ i prodotti di Blaschke di grado $n$.
-  \end{defn}
-  \pause
-  Notiamo che $\mathcal{B}_1=\text{Aut}(\mathbb{D})$.
-  \pause
-  \begin{prop}
-    Valgono le seguenti:
-    \begin{enumerate}[(i)]
-      \item si ha che $f \in \mathcal{B}_{n+1}$ se e solo se $f^*(\cdot,w) \in \mathcal{B}_n$, con $w \in \mathbb{D}$ fissato;
-      \item se $f \in \mathcal{B}_2$ allora esiste un unico punto critico $c \in \mathbb{D}$ per $f$.
-    \end{enumerate}
-  \end{prop}
-  \pause
-  Data $f$, indichiamo con $R_f$ la rotazione iperbolica di $\pi$ attorno a $c$.
-\end{frame}
-
-\begin{frame}[t]
-  \frametitle{Lemma di Schwarz-Pick a quattro punti}
-  \only<1->{\begin{thm}
-    Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w, v, u \in \mathbb{D}$ vale
-    \begin{equation}
-      \omega\bigl(0, f^*(z,v)\bigr) \le \omega\bigl(0, f^*(u,w)\bigr)+\omega(z,w)+\omega(v,u).
-    \end{equation}
-    Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$ e $R_f(v), R_f(u), w$ e $z$ giacciono sulla stessa geodetica, in quest'ordine.
-  \end{thm}}
-  \pause
-  \only<2-5>{\textit{Traccia della dimostrazione:}
+  }
+  \only<7->{
+  Usando di nuovo il Corollario e la definizione di prodotto di Gromov, con semplici calcoli si trova che
   \begin{align*}
-    \action<+->{\omega\bigl(0,f^*(z,v)\bigr) & \le \omega\bigl(0,f^*(w,v)\bigr)+\omega\bigl(f^*(w,v),f^*(z,v)\bigr) \\}
-    \action<+->{& \le \omega\bigl(0,f^*(w,v)\bigr)+\omega(w,z) \\}
-    \action<+->{& = \omega\bigl(0,f^*(v,w)\bigr)+\omega(w,z) \\}
-    \action<+->{& \le \omega\bigl(0,f^*(u,w)\bigr)+\omega(u,v)+\omega(w,z). & \qed}
-  \end{align*}}
-  \pause
-  \only<6>{Prendendo $v=z$ e $u=w$ otteniamo
-  $$\omega\bigl(0,f^h(z)\bigr) \le \omega\bigl(0,f^h(w)\bigr)+2\omega(z,w)$$}
-\end{frame}
-
-\begin{frame}[t]
-  \frametitle{Conseguenze dei lemmi di Schwarz-Pick multi-punto}
-  \only<1->{\begin{cor}
-    Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z, w \in \mathbb{D}$ vale
-    \begin{equation}
-      \omega\bigl(|f^h(z)|, |f^h(w)|\bigr) \le 2\omega(z,w).
-    \end{equation}
-    Si ha l'uguaglianza se e solo se $f \in \mathcal{B}_2$ e $z$ e $w$ giacciono sulla stessa geodetica, passante per il punto critico di $f$.
-  \end{cor}}
-  \pause
-  \only<2-4>{\textit{Traccia della dimostrazione:}
-  \begin{align*}
-    \action<+->{\omega\bigl(|f^h(z)|, |f^h(w)|\bigr) & =\frac{1}{2}\log\left(\frac{1+\frac{|f^h(z)|-|f^h(w)|}{1-|f^h(w)||f^h(z)|}}{1-\frac{|f^h(z)|-|f^h(w)|}{1-|f^h(w)||f^h(z)|}}\right) \\}
-    \action<+->{& =\frac{1}{2}\log\left(\frac{1+|f^h(z)|}{1-|f^h(z)|}\right)-\frac{1}{2}\log\left(\frac{1+|f^h(w)|}{1-|f^h(w)|}\right) \\}
-    \action<+->{& =\omega\bigl(0,f^h(z)\bigr)-\omega\bigl(0,f^h(w)\bigr) \le 2\omega(z,w). & \qed}
-  \end{align*}}
-  \pause
-  \only<5>{Prendendo $w=0$ e raccogliendo i logaritmi otteniamo
-  $$\frac{1}{2}\log\left(\frac{1+|f^h(z)|}{1-|f^h(z)|}\cdot\frac{1-|f^h(0)|}{1+|f^h(0)|}\right) \le 2\omega(0,z)$$}
-\end{frame}
-
-\begin{frame}[t]
-  \frametitle{Disuguaglianza di Golusin}
-  \begin{thm}
-    (disuguaglianza di Golusin, 1945) Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})\setminus\text{\normalfont{Aut}}(\mathbb{D})$. Allora per ogni $z \in \mathbb{D}$ vale
-    \begin{equation}
-      |f^h(z)| \le \frac{|f^h(0)|+\frac{2|z|}{1+|z|^2}}{1+|f^h(0)|\frac{2|z|}{1+|z|^2}}.
-    \end{equation}
-  \end{thm}
-  \pause
-  \textit{Traccia della dimostrazione:}
-  $$\frac{1}{2}\log\left(\frac{1+|f^h(z)|}{1-|f^h(z)|}\cdot\frac{1-|f^h(0)|}{1+|f^h(0)|}\right) \le \log\left(\frac{1+|z|}{1-|z|}\right),$$
-  \pause
-  da cui
-  \[
-  \pushQED{\qed}
-    \frac{1+|f^h(z)|}{1-|f^h(z)|} \le \frac{1+|f^h(0)|}{1-|f^h(0)|}\left(\frac{1+|z|}{1-|z|}\right)^2.\qedhere
-  \popQED
-  \]
-\end{frame}
-
-\begin{frame}[t]
-  \only<1->{\frametitle{Teorema di Bracci-Kraus-Roth}
-  \begin{thm}
-    (Bracci-Kraus-Roth, 2020) Sia $f \in \text{\normalfont{Hol}}(\mathbb{D},\mathbb{D})$ tale che
-    \begin{equation}
-      |f^h(z_n)|=1+o\bigl((|z_n|-1)^2\bigr)
-    \end{equation}
-    per qualche successione $\{z_n\}_{n \in \mathbb{N}} \subset \mathbb{D}$ con $|z_n| \longrightarrow 1$. Allora $f \in \text{\normalfont{Aut}}(\mathbb{D})$.
-  \end{thm}}
-  \only<2->{\textit{Traccia della dimostrazione:} per assurdo $f\not\in \text{Aut}(\mathbb{D})$. La disuguaglianza di Golusin si riscrive come
-  $$\frac{\bigl(1+|f^h(0)|\bigr)(1+|z_n|)^2}{\bigl(1-|f^h(0)|\bigr)\bigl(1+|f^h(z_n)|\bigr)}\bigl(1-|f^h(z_n)|\bigr) \ge (1-|z_n|)^2.$$}
-  \only<3->{Poiché $f \not\in \text{Aut}(\mathbb{D})$, per Schwarz-Pick $|f^h(0)|<1$ e dunque}
-  \only<4>{\begin{align*}
-  \lim_{n \longrightarrow +\infty} \frac{\bigl(1+|f^h(0)|\bigr)(1+|z_n|)^2}{\bigl(1-|f^h(0)|\bigr)\bigl(1+|f^h(z_n)|\bigr)}=\frac{2\bigl(1+|f^h(0)|\bigr)}{1-|f^h(0)|} < +\infty. & \qed
-\end{align*}}
+    d_H(a,b) \asymp \exp\big(-(a,b)_w\big) \quad \text{per ogni }a,b \in\partial\Omega. &\qed
+  \end{align*}
+  }
 \end{frame}
 
 \begin{frame}

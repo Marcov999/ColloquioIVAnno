@@ -24,7 +24,7 @@
   \only<1-3>{\begin{defn}
     Sia $(X,d)$ uno spazio metrico, dati $x,y \in X$ il \textit{prodotto di Gromov} con punto base $w$ è $(x,y)_w=\frac{1}{2}\big(d(x,w)+d(y,w)-d(x,y)\big)$. Dato $\delta \ge 0$, diciamo che $X$ è \textit{$\delta$-iperbolico} se
     $$(x,y)_w \ge (x,z)_w\wedge(y,z)_w-\delta\text{ per ogni }x,y,z,w \in X.$$
-    \only<2>{Fissato $w \in X$, il \textit{bordo iperbolico} è $\partial_GX$ costruito come classe di equivalenza delle successioni $(x_i)$ che convergono a infinito, cioè tali che $\displaystyle\lim_{i,j\rightarrow \infty}(x_i,x_j)=\infty$; due tali successioni $(x_i), (y_i)$ sono equivalenti se $\displaystyle\lim_{i\rightarrow \infty}(x_i,y_i)=\infty$.}%È proprio equivalente a chiedere che stiano a distanza limitata?
+    \only<2>{Fissato $w \in X$, il \textit{bordo iperbolico} è $\partial_GX$ costruito come classe di equivalenza delle successioni $(x_i)$ che convergono a infinito, cioè tali che $\displaystyle\lim_{i,j\rightarrow \infty}(x_i,x_j)_w=\infty$; due tali successioni $(x_i), (y_i)$ sono equivalenti se $\displaystyle\lim_{i\rightarrow \infty}(x_i,y_i)_w=\infty$.}%È proprio equivalente a chiedere che stiano a distanza limitata?
   \end{defn}}
   \only<3>{\begin{thm}
     (Balogh-Bonk) $(\Omega,d_K)$ è Gromov iperbolico, e il bordo iperbolico $\partial_G\Omega$ può essere identificato con il bordo euclideo $\partial\Omega$. Inoltre, la distanza di Carnot-Carathéodory $d_H$ su $\partial\Omega$ (quella indotta dalla forma di Levi) sta nella classe canonica di distanze su $\partial_GX$, cioè esiste $\epsilon>0$ tale che $d_H(a,b)\asymp \exp\big((a,b)_w\big)$ per ogni $a,b \in \partial_GX$.
@@ -33,32 +33,48 @@
 
 \begin{frame}
   \frametitle{Conseguenze: estensioni al bordo di funzioni olomorfe}
-  Devo trovare un modo rapido di riassumere la proposizione 5.3, con tutte le definizioni e conseguenze (compresi i corollari 6.1 e 6.2).
+  \begin{cor}
+    Siano $\Omega_1, \Omega_2 \subseteq \mathbb{C}^n$ che soddisfano le ipotesi del teorema di Balogh-Bonk, e sia $f:\Omega_1 \longrightarrow \Omega_2$ una funzione olomorfa propria. Allora $f$ si estende a $\bar{f}:\overline{\Omega}_1\longrightarrow\overline{\Omega}_2$ tale che $\bar{f}(\partial\Omega_1)\subseteq\partial\Omega_2$ e la restrizione al bordo è lipschitziana rispetto alle metriche di Carnot-Carathéodory sui bordi.
+  \end{cor}
 \end{frame}
 
 \begin{frame}[t]
   \frametitle{Conseguenze: dinamica olomorfa}
+  %\only<1-4>{
+  %\begin{defn}
+  %  Un \textit{orociclo} di centro $\tau \in \partial\mathbb{D}$ e raggio $R>0$ è $E(\tau,R)=\left\{z \in \mathbb{D} \mid \frac{|\tau-z|^2}{1-|z|^2}<R\right\}$.
+  %\end{defn}
+  %\only<2>{Detta $\omega$ la distanza iperbolica su $\mathbb{D}$, si ha $E(\tau,R)=\{z\in \mathbb{D}\mid \lim_{w\rightarrow \tau} \big(\omega(z,w)-\omega(0,w)\big)<\frac{1}{2}\log{R}\}$.}
+  %}
+  %\only<3-4>{
+  %\begin{thm}
+  %  (Wolff) Sia $f:\mathbb{D} \longrightarrow \mathbb{D}$ olomorfa e senza punti fissi. Allora esiste un unico $\tau \in \partial\mathbb{D}$ tale che per ogni $R>0$ vale che $f\big(E(\tau,R)\big) \subseteq E(\tau,R)$.
+  %\end{thm}
+  %}
   \only<1-4>{
-  \begin{defn}
-    Un \textit{orociclo} di centro $\tau \in \partial\mathbb{D}$ e raggio $R>0$ è $E(\tau,R)=\left\{z \in \mathbb{D} \mid \frac{|\tau-z|^2}{1-|z|^2}<R\right\}$.
-  \end{defn}
-  \only<2>{Detta $\omega$ la distanza iperbolica su $\mathbb{D}$, si ha $E(\tau,R)=\{z\in \mathbb{D}\mid \lim_{w\rightarrow \tau} \big(\omega(z,w)-\omega(0,w)\big)<\frac{1}{2}\log{R}\}$.}
-  }
-  \only<3-4>{
-  \begin{thm}
-    (Wolff) Sia $f:\mathbb{D} \longrightarrow \mathbb{D}$ olomorfa e senza punti fissi. Allora esiste un unico $\tau \in \partial\mathbb{D}$ tale che per ogni $R>0$ vale che $f\big(E(\tau,R)\big) \subseteq E(\tau,R)$.
-  \end{thm}
-  }
-  \only<4>{
   \begin{thm}
     (Wolff-Denjoy) Sia $f:\mathbb{D} \longrightarrow \mathbb{D}$ olomorfa e senza punti fissi. Allora esiste un unico $\tau \in \partial\mathbb{D}$ tale che $f^k \longrightarrow \tau$ uniformemente sui compatti.
   \end{thm}
   }
-  \only<5->{
-  Karlsson, 2001: sotto opportune ipotesi, che sono soddisfatte dagli spazi iperbolici (è vera quest'affermazione?), valgono dei risultati simili per funzioni $1$-lipschitziane dallo spazio in sé.
+  \only<2-4>{
+  Karlsson, 2001: sotto opportune ipotesi, che sono soddisfatte dagli spazi iperbolici valgono dei risultati simili per funzioni $1$-lipschitziane dallo spazio in sé.
   }
 
-  \only<6>{
+  \only<3-4>{
   Usando il teorema di Balogh-Bonk e il fatto che i biolomorfismi sono delle isometrie rispetto a $d_K$, si ottengono delle generalizzazioni dei teoremi di Wolff e Wolff-Denjoy per i domini strettamente pseudoconvessi.
   }
+  \only<4>{
+  \begin{cor}
+    Sia $f:\Omega \longrightarrow \Omega$ una funzione olomorfa. Allora vale una delle seguenti: \\
+    \begin{enumerate}
+      \item le orbite di $f$ sono limitate;
+      \item le orbite di $f$ convergono a un punto del bordo.
+    \end{enumerate}
+  \end{cor}
+  }
+\end{frame}
+
+\begin{frame}
+  \frametitle{Conseguenze: altre conseguenze (da decidere)}
+  Inserire l'articolo di Zimmer, ma guarda anche Bracci-nonricordo-Zimmer.
 \end{frame}

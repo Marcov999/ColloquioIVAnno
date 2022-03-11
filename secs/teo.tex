@@ -1,14 +1,51 @@
-\begin{frame}[t]
+\begin{frame}
   \frametitle{Strada per la dimostrazione del teorema di BB}
   \begin{itemize}
-    \item Per una metrica $F$ su $\Omega$ che soddisfa certe ipotesi, si ha che esiste $C \ge 0$ tale che per ogni $x, y \in \Omega$ vale
-    $$g(x,y)-C \le d_F(x,y) \le g(x,y)+C,$$
-    dove $g(x,y)=2\log\left(\dfrac{d_H\big(\pi(x),\pi(y)\big)+h(x)\lor h(y)}{\sqrt{h(x)h(y)}}\right)$.
+    \item Dato $(Z,d)$ spazio metrico completo e limitato, si può costruire uno spazio iperbolico $\big(\text{Con}(Z),r\big)$ tale che $Z$ è identificato con il bordo.
+    \pause
+    \item Per una metrica che soddisfa certe ipotesi, la distanza indotta differisce per una costante da una funzione $g$ simile alla $r$ della suddetta costruzione; questo ci permette di dire che $\Omega$ con tale distanza è iperbolico.
     \pause
     \item La metrica di Kobayashi soddisfa le suddette ipotesi.
-    \pause
-    \item Si ha dunque che possiamo confrontare $d_K$ con la funzione $g$, e da questa disuguaglianza segue il teorema di Balogh-Bonk.
   \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Lo spazio iperbolico $\text{Con}(Z)$}
+  \only<1-3>{
+  \begin{thm}
+    Sia $(Z,d)$ uno spazio metrico completo e limitato e sia $\text{Con}(Z)=Z\times(0\times D(Z)]$, dove $D(Z)$ è il diametro di $Z$.
+    La funzione $r:\text{Con}(Z)\times\text{Con}(Z) \longrightarrow [0,+\infty)$ data da
+    $$r\big((z,h),(z',h')\big)=2\log\left(\frac{d(z,z')+h\lor h'}{\sqrt{hh'}}\right)$$
+    è una distanza su $\text{Con}(Z)$ che lo rende uno spazio iperbolico, il cui bordo può essere identificato con $Z$.
+  \end{thm}
+  }
+  \only<2-3>{
+  \textit{Traccia della dimostrazione:} è facile verificare che $r$ è una distanza.
+
+  }
+  \only<3>{Dati $r_{ij} \ge 0$ tali che $r_{ij}=r_{ji}$ e $r_{ij} \le r_{ik}+r_{kj}$, allora $r_{12}r_{34} \le 4\big((r_{13}r_{24})\lor (r_{14}r_{23})\big)$.
+  }
+  \only<4-6>{Siano $x_i=(z_i,h_i) \in \text{Con}(Z)$ per $i \in \{1,2,3,4\}$, poniamo $d_{ij}=d(z_i,z_j)$ e $r_{ij}=d_{ij}+h_i\lor h_j$.} \only<5-6>{Segue che
+  \begin{gather*}
+    (d_{12}+h_1\lor h_2)(d_{34}+h_3\lor h_4) \\
+    \le 4\Big(\big((d_{13}+h_1\lor h_3)(d_{24}+h_2\lor h_4)\big)\big((d_{14}+h_1\lor h_4)(d_{23}+h_2\lor h_3)\big)\Big),
+  \end{gather*}}
+  \only<6>{che ci dà
+  \begin{gather*}
+    r(x_1,x_2)+r(x_3,x_4) \le \big(r(x_1,x_3)+r(x_2,x_4)\big)\big(r(x_1,x_4)+r(x_2,x_3)\big)+C,
+  \end{gather*}
+  da cui segue l'iperbolicità di $\big(\textit{Con}(Z), r\big)$.}
+  \only<7->{
+  Usando le definizioni, troviamo che una sequenza $(x_i)$ in $\big(\text{Con}(Z),r\big)$ converge a infinito se e solo se la sequenza $(z_i)$ è di Cauchy e $h_i \longrightarrow 0$, ma essendo $Z$ completo segue che il limite di $(x_i)$ può essere identificato con $z \in Z$ limite di $(z_i)$;}\only<8->{ inoltre, due successioni convergenti a infinito sono equivalenti se e solo se il loro limite è lo stesso, e ogni punto del bordo è limite di una successione che converge a infinito.
+
+  }
+  \only<9->{
+  Devo dire che $\partial_G\text{Con}(Z)$ e $Z$ sono isometrici (?) con questa identificazione.
+  %Usando di nuovo il Corollario e la definizione di prodotto di Gromov, con semplici calcoli si trova che
+  %\begin{align*}
+  %  d_H(a,b) \asymp \exp\big(-(a,b)_w\big) \quad \text{per ogni }a,b \in\partial\Omega. &\qed
+  %\end{align*}
+  }
 \end{frame}
 
 \begin{frame}
@@ -31,8 +68,12 @@
     \end{equation}
   \end{thm}
   }
-  \only<3>{
-  \textit{Idea della dimostrazione:} capire quali sono i punti salienti e riassumerli. Richiede un po' di lavoro.
+  \only<3->{
+  \textit{Idea della dimostrazione:} per la maggiorazione, si cercano delle curve che siano quasi geodetiche, cioè danno la distanza a meno di una costante additiva, e si integra lungo quelle curve.
+  }
+  \only<4>{
+
+  Per la minorazione, bisogna mostrare che le curve trovate sono ottimali.
   }
 \end{frame}
 

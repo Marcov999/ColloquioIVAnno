@@ -1,31 +1,3 @@
-\begin{frame}[t]
-  \frametitle{Dimostrazione del teorema di BB}
-  \only<1-4>{\textit{Traccia della dimostrazione del teorema di Balogh-Bonk:} dati $r_{ij} \ge 0$ tali che $r_{ij}=r_{ji}$ e $r_{ij} \le r_{ik}+r_{kj}$, allora $r_{12}r_{34} \le 4\big((r_{13}r_{24})\lor (r_{14}r_{23})\big)$.
-
-  }
-  \only<2-4>{Siano $x_1,x_2,x_3,x_4 \in \Omega$, poniamo $h_i=\delta(x_i)^{1/2}$, $d_{ij}=d_H\big(\pi(x_i),\pi(x_j)\big)$ e $r_{ij}=d_{ij}+h_i\lor h_j$.} \only<3-4>{Segue che
-  \begin{gather*}
-    (d_{12}+h_1\lor h_2)(d_{34}+h_3\lor h_4) \\
-    \le 4\Big(\big((d_{13}+h_1\lor h_3)(d_{24}+h_2\lor h_4)\big)\big((d_{14}+h_1\lor h_4)(d_{23}+h_2\lor h_3)\big)\Big),
-  \end{gather*}}
-  \only<4>{che grazie al Corollario diventa
-  \begin{gather*}
-    d_K(x_1,x_2)+d_K(x_3,x_4) \\
-    \le \big(d_K(x_1,x_3)+d_K(x_2,x_4)\big)\big(d_K(x_1,x_4)+d_K(x_2,x_3)\big)+C,
-  \end{gather*}
-  da cui segue l'iperbolicità di $(\Omega, d_K)$.}
-  \only<5->{
-  Usando la definizione e il Corollario, troviamo che una sequenza $(x_i)$ in $(\Omega,d_K)$ converge a infinito se e solo se la sequenza $\big(\pi(x_i)\big)$ converge e $h(x_i) \longrightarrow 0$, cioè se e solo se $(x_i)$ converge rispetto alla metrica euclidea a un punto di $\partial\Omega$;}\only<6->{ inoltre, due successioni convergenti a infinito sono equivalenti se e solo se il loro limite euclideo è lo stesso, e ogni punto del bordo è limite di una successione che converge a infinito.
-
-  }
-  \only<7->{
-  Usando di nuovo il Corollario e la definizione di prodotto di Gromov, con semplici calcoli si trova che
-  \begin{align*}
-    d_H(a,b) \asymp \exp\big(-(a,b)_w\big) \quad \text{per ogni }a,b \in\partial\Omega. &\qed
-  \end{align*}
-  }
-\end{frame}
-
 \begin{frame}
   \frametitle{Fine}
   \begin{center}

@@ -16,7 +16,8 @@
     Sia $(Z,d)$ uno spazio metrico completo e limitato e sia $\text{Con}(Z)=Z\times(0\times D(Z)]$, dove $D(Z)$ è il diametro di $Z$.
     La funzione $r:\text{Con}(Z)\times\text{Con}(Z) \longrightarrow [0,+\infty)$ data da
     $$r\big((z,h),(z',h')\big)=2\log\left(\frac{d(z,z')+h\lor h'}{\sqrt{hh'}}\right)$$
-    è una distanza su $\text{Con}(Z)$ che lo rende uno spazio iperbolico, il cui bordo può essere identificato con $Z$.
+    è una distanza su $\text{Con}(Z)$ che lo rende uno spazio iperbolico, il cui bordo può essere identificato con $Z$, e inoltre per ogni $x,y \in Z$ si ha
+    $$d(x,y) \asymp \exp\big(-(x,y)_w\big).$$
   \end{thm}
   }
   \only<2-3>{
@@ -36,21 +37,19 @@
   \end{gather*}
   da cui segue l'iperbolicità di $\big(\textit{Con}(Z), r\big)$.}
   \only<7->{
-  Usando le definizioni, troviamo che una sequenza $(x_i)$ in $\big(\text{Con}(Z),r\big)$ converge a infinito se e solo se la sequenza $(z_i)$ è di Cauchy e $h_i \longrightarrow 0$, ma essendo $Z$ completo segue che il limite di $(x_i)$ può essere identificato con $z \in Z$ limite di $(z_i)$;}\only<8->{ inoltre, due successioni convergenti a infinito sono equivalenti se e solo se il loro limite è lo stesso, e ogni punto del bordo è limite di una successione che converge a infinito.
+  Fissiamo $w=\big(z_0,D(Z)\big) \in \text{Con}(Z)$; usando le definizioni, troviamo che dati $x=(z,h),x'=(z,h')\in \text{Con}(Z)$ vale
+  $$(x,x')_w=-\log\big(d(z,z')+h\lor h'\big)+O_{D(Z)}(1).$$}
+  \only<8->{Segue che una sequenza $(x_i)$ in $\big(\text{Con}(Z),r\big)$ converge a infinito se e solo se la sequenza $(z_i)$ è di Cauchy e $h_i \longrightarrow 0$; inoltre, due successioni convergenti a infinito sono equivalenti se e solo se il loro limite è lo stesso, e ogni punto del bordo è limite di una successione che converge a infinito.}\only<9->{ Essendo $Z$ completo, questo ci dà un'identificazione, come insiemi, di $Z$ e $\partial_G\text{Con}(Z)$.
 
   }
-  \only<9->{
-  Devo dire che $\partial_G\text{Con}(Z)$ e $Z$ sono isometrici (?) con questa identificazione.
-  %Usando di nuovo il Corollario e la definizione di prodotto di Gromov, con semplici calcoli si trova che
-  %\begin{align*}
-  %  d_H(a,b) \asymp \exp\big(-(a,b)_w\big) \quad \text{per ogni }a,b \in\partial\Omega. &\qed
-  %\end{align*}
+  \only<10->{
+  La disuguaglianza finale segue da quanto visto finora e delle semplici verifiche.\qed %in realtà no, bisogna sistemarla
   }
 \end{frame}
 
-\begin{frame}
+\begin{frame}[t]
   \frametitle{Disuguaglianze per metriche di Finsler}
-  \only<1>{
+  \only<1-2>{
   \begin{defn}
     Una \textit{metrica di Finsler} su $\Omega$ è una funzione continua $F:\Omega\times\mathbb{C}^n \longrightarrow [0,+\infty)$ tale che $F(x;tZ)=|t|F(x;Z)$ per ogni $x \in \Omega, Z \in \mathbb{C}^n, t \in \mathbb{C}$.
   \end{defn}
@@ -62,16 +61,21 @@
       \big(1-C_1\delta^s(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+(1/C_2)\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2} \le F(x;Z) \\
       \le \big(1+C_1\delta^s(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+C_2\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2}.
     \end{multline}
-    Allora esiste $C \ge 0$ tale che per ogni $x, y \in \Omega$ vale
-    \begin{equation} \label{stimadistanzafinsler}
-      g(x,y)-C \le d_F(x,y) \le g(x,y)+C.
-    \end{equation}
   \end{thm}
   }
   \only<3->{
+  \begin{thm}
+    Allora esiste $C \ge 0$ tale che per ogni $x, y \in \Omega$ vale
+    \begin{equation} \label{stimadistanzafinsler}
+      g(x,y)-C \le d_F(x,y) \le g(x,y)+C,
+    \end{equation}
+    dove $g(x,y)=2\log\left(\frac{d_H\big(\pi(x),\pi(y)\big)+\delta(x)^{1/2 }\lor\delta(y)^{1/2}}{\sqrt{\delta(x)^{1/2 }\delta(y)^{1/2}}}\right)$.
+  \end{thm}
+  }
+  \only<4->{
   \textit{Idea della dimostrazione:} per la maggiorazione, si cercano delle curve che siano quasi geodetiche, cioè danno la distanza a meno di una costante additiva, e si integra lungo quelle curve.
   }
-  \only<4>{
+  \only<5>{
 
   Per la minorazione, bisogna mostrare che le curve trovate sono ottimali.
   }

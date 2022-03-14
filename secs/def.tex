@@ -21,12 +21,19 @@
 
 \begin{frame}[t]
   \frametitle{Domini strettamente pseudoconvessi e iperbolicità di Gromov}
-  \only<1-3>{\begin{defn}
+  \only<1-4>{\begin{defn}
     Sia $(X,d)$ uno spazio metrico, dati $x,y \in X$ il \textit{prodotto di Gromov} con punto base $w$ è $(x,y)_w=\frac{1}{2}\big(d(x,w)+d(y,w)-d(x,y)\big)$. Dato $\delta \ge 0$, diciamo che $X$ è \textit{$\delta$-iperbolico} se
     $$(x,y)_w \ge (x,z)_w\wedge(y,z)_w-\delta\text{ per ogni }x,y,z,w \in X.$$
     \only<2>{Fissato $w \in X$, il \textit{bordo iperbolico} è $\partial_GX$ costruito come classe di equivalenza delle successioni $(x_i)$ che convergono a infinito, cioè tali che $\displaystyle\lim_{i,j\rightarrow \infty}(x_i,x_j)_w=\infty$; due tali successioni $(x_i), (y_i)$ sono equivalenti se $\displaystyle\lim_{i\rightarrow \infty}(x_i,y_i)_w=\infty$.}%È proprio equivalente a chiedere che stiano a distanza limitata?
+    \only<3>{
+    Se $x,y \in \partial_GX$ e $z \in X$, poniamo
+    \begin{gather*}
+      (x,y)_w=\sup\left\{\liminf_{i \rightarrow +\infty} (x_i,y_i)_w \mid (x_i) \in x, (y_i) \in y\right\},\\
+      (x,z)_w=\sup\left\{\liminf_{i \rightarrow +\infty} (x_i,z)_w \mid (x_i) \in x\right\}.
+    \end{gather*}
+    }
   \end{defn}}
-  \only<3>{\begin{thm}
+  \only<4>{\begin{thm}
     (Balogh-Bonk) $(\Omega,d_K)$ è Gromov iperbolico, e il bordo iperbolico $\partial_G\Omega$ può essere identificato con il bordo euclideo $\partial\Omega$. Inoltre, la distanza di Carnot-Carathéodory $d_H$ su $\partial\Omega$ (quella indotta dalla forma di Levi) sta nella classe canonica di distanze su $\partial_GX$, cioè esiste $\epsilon>0$ tale che $d_H(a,b)\asymp \exp\big((a,b)_w\big)$ per ogni $a,b \in \partial_GX$.
   \end{thm}}
 \end{frame}

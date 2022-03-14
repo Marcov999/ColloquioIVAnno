@@ -76,29 +76,3 @@
   Per la minorazione, bisogna mostrare che le curve trovate sono ottimali.
   }
 \end{frame}
-
-\begin{frame}[t]
-  \frametitle{La metrica di Kobayashi soddisfa la disuguaglianza}
-  \only<1->{\begin{prop}
-    Per ogni $\epsilon>0$ esistono $\epsilon_0>0$ e $C \ge 0$ tali che per ogni $x \in \Omega$ con $\delta(x)<\epsilon_0$ e per ogni $Z \in \mathbb{C}^n$ si ha
-    \begin{multline*}
-      \big(1-C\delta^{1/2}(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+(1-\epsilon)\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2} \le K(x;Z) \\
-      \le \big(1+C\delta^{1/2}(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+(1+\epsilon)\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2}.
-    \end{multline*}
-  \end{prop}}
-  \only<2-4>{\textit{Traccia della dimostrazione:} si localizza a un intorno di un punto del bordo;
-
-  }
-  \only<3-4>{con un opportuno biolomorfismo, ci si sposta in $\mathbb{C}^n$;
-
-  }
-  \only<4>{stringendo l'immagine del biolomorfismo tra due ellissoidi complessi, uno contenuto e uno che lo contiene, seguono le stime volute. \qed}
-  \only<5>{
-  \begin{cor}
-    Esiste $C \ge 0$ tale che per ogni $x,y \in \Omega$ si ha
-    \begin{equation}\label{stimadistanzakobayashi}
-      g(x,y)-C \le d_K(x,y) \le g(x,y)+C. \tag{3}
-    \end{equation}
-  \end{cor}
-  }
-\end{frame}

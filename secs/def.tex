@@ -23,8 +23,8 @@
   \frametitle{Domini strettamente pseudoconvessi e iperbolicità di Gromov}
   \only<1-4>{\begin{defn}
     Sia $(X,d)$ uno spazio metrico, dati $x,y \in X$ il \textit{prodotto di Gromov} con punto base $w$ è $(x,y)_w=\frac{1}{2}\big(d(x,w)+d(y,w)-d(x,y)\big)$. Dato $\delta \ge 0$, diciamo che $X$ è \textit{$\delta$-iperbolico} se
-    $$(x,y)_w \ge (x,z)_w\wedge(y,z)_w-\delta\text{ per ogni }x,y,z,w \in X.$$
-    \only<2>{Fissato $w \in X$, il \textit{bordo iperbolico} è $\partial_GX$ costruito come classe di equivalenza delle successioni $(x_i)$ che convergono a infinito, cioè tali che $\displaystyle\lim_{i,j\rightarrow \infty}(x_i,x_j)_w=\infty$; due tali successioni $(x_i), (y_i)$ sono equivalenti se $\displaystyle\lim_{i\rightarrow \infty}(x_i,y_i)_w=\infty$.}%È proprio equivalente a chiedere che stiano a distanza limitata?
+    $$(x,y)_w \ge \min\{(x,z)_w,(y,z)_w\}-\delta\text{ per ogni }x,y,z,w \in X.$$
+    \only<2>{Fissato $w \in X$, il \textit{bordo iperbolico} è $\partial_GX$ costruito come classe di equivalenza delle successioni $(x_i)$ che convergono a infinito, cioè tali che $\displaystyle\lim_{i,j\rightarrow \infty}(x_i,x_j)_w=\infty$; due tali successioni $(x_i), (y_i)$ sono equivalenti se $\displaystyle\lim_{i\rightarrow \infty}(x_i,y_i)_w=\infty$. \%Implica che stanno a distanza limitata (per i raggi geodetici)? Non riesco a dimostrarlo}
     \only<3>{
     Se $x,y \in \partial_GX$ e $z \in X$, poniamo
     \begin{gather*}
@@ -47,24 +47,13 @@
 
 \begin{frame}[t]
   \frametitle{Conseguenze: dinamica olomorfa}
-  %\only<1-4>{
-  %\begin{defn}
-  %  Un \textit{orociclo} di centro $\tau \in \partial\mathbb{D}$ e raggio $R>0$ è $E(\tau,R)=\left\{z \in \mathbb{D} \mid \frac{|\tau-z|^2}{1-|z|^2}<R\right\}$.
-  %\end{defn}
-  %\only<2>{Detta $\omega$ la distanza iperbolica su $\mathbb{D}$, si ha $E(\tau,R)=\{z\in \mathbb{D}\mid \lim_{w\rightarrow \tau} \big(\omega(z,w)-\omega(0,w)\big)<\frac{1}{2}\log{R}\}$.}
-  %}
-  %\only<3-4>{
-  %\begin{thm}
-  %  (Wolff) Sia $f:\mathbb{D} \longrightarrow \mathbb{D}$ olomorfa e senza punti fissi. Allora esiste un unico $\tau \in \partial\mathbb{D}$ tale che per ogni $R>0$ vale che $f\big(E(\tau,R)\big) \subseteq E(\tau,R)$.
-  %\end{thm}
-  %}
   \only<1-4>{
   \begin{thm}
     (Wolff-Denjoy) Sia $f:\mathbb{D} \longrightarrow \mathbb{D}$ olomorfa e senza punti fissi. Allora esiste un unico $\tau \in \partial\mathbb{D}$ tale che $f^k \longrightarrow \tau$ uniformemente sui compatti.
   \end{thm}
   }
   \only<2-4>{
-  Karlsson, 2001: sotto opportune ipotesi, che sono soddisfatte dagli spazi iperbolici, valgono dei risultati simili per funzioni $1$-lipschitziane dallo spazio in sé. %L'assioma 1 del paper è soddisfatto da tutti gli spazi iperbolici? Comunque mi pare che sia soddisfatto dai domini strettamente pseudoconvessi, e tanto ci basta
+  Karlsson, 2001: sotto opportune ipotesi, che sono soddisfatte dagli spazi iperbolici, valgono dei risultati simili per funzioni $1$-lipschitziane dallo spazio in sé. \%L'assioma 1 del paper è soddisfatto da tutti gli spazi iperbolici? Mi pare che sia soddisfatto dai nostri domini
   }
 
   \only<3-4>{

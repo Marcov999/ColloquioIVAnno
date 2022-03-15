@@ -15,7 +15,7 @@
   \begin{thm}
     Sia $(Z,d)$ uno spazio metrico completo e limitato e sia $\text{Con}(Z)=Z\times(0\times D(Z)]$, dove $D(Z)$ è il diametro di $Z$.
     La funzione $r:\text{Con}(Z)\times\text{Con}(Z) \longrightarrow [0,+\infty)$ data da
-    $$r\big((z,h),(z',h')\big)=2\log\left(\frac{d(z,z')+h\lor h'}{\sqrt{hh'}}\right)$$
+    $$r\big((z,h),(z',h')\big)=2\log\left(\frac{d(z,z')+\max\{h, h'\}}{\sqrt{hh'}}\right)$$
     è una distanza su $\text{Con}(Z)$ che lo rende uno spazio iperbolico, il cui bordo può essere identificato con $Z$, e inoltre per ogni $x,y \in Z$ si ha
     $$d(x,y) \asymp \exp\big(-(x,y)_w\big).$$
   \end{thm}
@@ -24,12 +24,13 @@
   \textit{Traccia della dimostrazione:} è facile verificare che $r$ è una distanza.
 
   }
-  \only<3>{Dati $r_{ij} \ge 0$ tali che $r_{ij}=r_{ji}$ e $r_{ij} \le r_{ik}+r_{kj}$, allora $r_{12}r_{34} \le 4\big((r_{13}r_{24})\lor (r_{14}r_{23})\big)$.
+  \only<3>{Dati $r_{ij} \ge 0$ tali che $r_{ij}=r_{ji}$ e $r_{ij} \le r_{ik}+r_{kj}$, allora $r_{12}r_{34} \le 4\big(\max\{(r_{13}r_{24}), (r_{14}r_{23})\}\big)$.
   }
-  \only<4-6>{Siano $x_i=(z_i,h_i) \in \text{Con}(Z)$ per $i \in \{1,2,3,4\}$, poniamo $d_{ij}=d(z_i,z_j)$ e $r_{ij}=d_{ij}+h_i\lor h_j$.} \only<5-6>{Segue che
+  \only<4-6>{Siano $x_i=(z_i,h_i) \in \text{Con}(Z)$ per $i \in \{1,2,3,4\}$, poniamo $d_{ij}=d(z_i,z_j)$ e $r_{ij}=d_{ij}+\max\{h_i, h_j\}$.} \only<5-6>{Segue che
   \begin{gather*}
-    (d_{12}+h_1\lor h_2)(d_{34}+h_3\lor h_4) \\
-    \le 4\Big(\big((d_{13}+h_1\lor h_3)(d_{24}+h_2\lor h_4)\big)\big((d_{14}+h_1\lor h_4)(d_{23}+h_2\lor h_3)\big)\Big),
+    (d_{12}+\max\{h_1, h_2\})(d_{34}+\max\{h_3, h_4\}) \\
+    \le 4\Big(\big((d_{13}+\max\{h_1, h_3\})(d_{24}+\max\{h_2, h_4\})\big)\cdot \\
+    \cdot\big((d_{14}+\max\{h_1, h_4\})(d_{23}+\max\{h_2, h_3\})\big)\Big),
   \end{gather*}}
   \only<6>{che ci dà
   \begin{gather*}
@@ -38,12 +39,12 @@
   da cui segue l'iperbolicità di $\big(\textit{Con}(Z), r\big)$.}
   \only<7->{
   Fissiamo $w=\big(z_0,D(Z)\big) \in \text{Con}(Z)$; usando le definizioni, troviamo che dati $x=(z,h),x'=(z,h')\in \text{Con}(Z)$ vale
-  $$(x,x')_w=-\log\big(d(z,z')+h\lor h'\big)+O_{D(Z)}(1).$$}
+  $$(x,x')_w=-\log\big(d(z,z')+\max\{h, h'\}\big)+O_{D(Z)}(1).$$}
   \only<8->{Segue che una sequenza $(x_i)$ in $\big(\text{Con}(Z),r\big)$ converge a infinito se e solo se la sequenza $(z_i)$ è di Cauchy e $h_i \longrightarrow 0$; inoltre, due successioni convergenti a infinito sono equivalenti se e solo se il loro limite è lo stesso, e ogni punto del bordo è limite di una successione che converge a infinito.}\only<9->{ Essendo $Z$ completo, questo ci dà un'identificazione, come insiemi, di $Z$ e $\partial_G\text{Con}(Z)$.
 
   }
   \only<10->{
-  La disuguaglianza finale segue da quanto visto finora e delle semplici verifiche.\qed %in realtà no, bisogna sistemarla
+  La disuguaglianza finale segue da quanto visto finora e delle semplici verifiche.\qed \%In realtà ci va un minimo di lavoro, non so se c'è spazio per dirlo; la cosa più ragionevole è riformulare la conclusione facendo capire che non è immediato, anche se non è difficile
   }
 \end{frame}
 
@@ -69,7 +70,7 @@
     \begin{equation} \label{stimadistanzafinsler}
       g(x,y)-C \le d_F(x,y) \le g(x,y)+C,
     \end{equation}
-    dove $g(x,y)=2\log\left(\frac{d_H\big(\pi(x),\pi(y)\big)+\delta(x)^{1/2 }\lor\delta(y)^{1/2}}{\sqrt{\delta(x)^{1/2 }\delta(y)^{1/2}}}\right)$.
+    dove $g(x,y)=2\log\left(\frac{d_H\big(\pi(x),\pi(y)\big)+\max\{\delta(x)^{1/2 },\,\delta(y)^{1/2}\}}{\sqrt{\delta(x)^{1/2 }\delta(y)^{1/2}}}\right)$.
   \end{thm}
   }
   \only<4->{

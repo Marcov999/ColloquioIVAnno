@@ -1,41 +1,27 @@
 Screenplay (sort of)
 
-Frase iniziale: "Il nostro obiettivo è dare una dimostrazione elementare di due teoremi di rigidità per funzioni olomorfe nel disco unitario."
+Frase iniziale: "Salve a tutti. L'obiettivo di questa presentazione è illustrare un risultato che lega un certo tipo di domini di C^n alla condizione di iperbolicità, e mostrare alcune interessanti applicazioni."
 
-Slide 1: frase iniziale + "vediamo perché ci interessa studiarli"
+Slide 1: frase iniziale.
 
-Slide 2: parli del lemma, poi nell'oss ricorda che c'è sempre l'ipotesi f(0)=0. Dopodiché, dici la cosa di f che si comporta quasi come l'identità e che i teoremi passano al bordo del disco
+Slide 2: "vediamo che tipo di dominio ci interessa"
 
-Slide 3: discorsetto sugli O-grande nelle regioni di Stolz e perché il limite si chiama "non tangenziale". Introdurre poi il "teorema più forte", che si usa per una dim elementare di BK, dicendo che è ispirato da Schwarz-Pick, per poi parlare di quello
+Slide 3: "richiamiamo rapidamente il concetto di iperbolicità secondo Gromov" "il risultato principale è che i domini strettamente pseudoconvessi sono Gromov iperbolici"
 
-Slide 4: è naturale definire f^h, risultato di rigidità, passiamo al bordo. Ah, quando dici l'enunciato del lemma ricordati di vedere la prima disuguaglianza come una contrazione, che sarà resa più chiara in seguito
+Slide 4: raccontare un po' il corollario + "alla fine vedremo come si dimostra"
 
-Slide 5: ok, passiamo poi a dimostrare BK
+Slide 5: raccontare la dinamica iperbolica e generalizzazioni
 
-Slide 6: quello che c'è scritto
+Slide 6: da rivedere, ma dovrebbe essere raccontare gli enunciati alternativi e spiegare come si inseriscono nel contesto dicendo che l'iperbolicità è bella
 
-Slide 7: pure
+Slide 7: raccontare un po' la strategia, nel secondo punto potrebbe essere il caso di osservare che per l'iperbolicità ci basta controllare vicino al bordo, ma occhio che sia giusto quello che dici
 
-Slide 8: gioca sul fatto che Golusin non è molto nota
+Slide 8: spiega che sta succedendo
 
-Slide 9: l'idea di BM; più o meno come f^h definisci f^*, dici che è olo se fissi w e usando Schwarz-Pick esponi l'idea di BM
+Slide 9: pure, ma un po' meno; ricordati di dire che la quasi geodetiche sono più facili da trovare delle geodetiche
 
-Slide 10: per semplificare le dimostrazioni, introduciamo \omega
+Slide 10: più o meno leggere quello che c'è scritto (probabilmente dovrò riaggiornare questo pezzo quando avrò una vaga idea di cosa fa questa dimostrazione) + "per cui si ha il corollario di confronto tra d_K e g dal quale, come già detto, segue l'iperbolicità di (Omega, d_K)"
 
-Slide 11: "vediamo dopo cosa sono i Blaschke e collegamento hanno con gli Aut"; il lemma a 3 punti è effettivamente un miglioramento
+Slide 11: spiegare un po' la dim che c'è scritta + "e con questo concludiamo,"
 
-Slide 12: prodotti di Blaschke come prodotto di Aut, la prop. Poi: dire a voce cos'è una rotazione iperbolica (def intuitiva come rotazione per la distanza iperbolica)
-
-Slide 13: enunciato, dim, poi post-dim passi al limite
-
-Slide 14: enunciato, dim, dici che prendi w=0 e raccogli i log poi fai vedere cosa viene fuori
-
-Slide 15: enunciato, dim, dici che la forma equivalente alla fine della dim è più facile da maneggiare per i nostri scopi
-
-Slide 16: ricordi l'enunciato, dim. Finiscila con una cosa tipo: "perciò f dev'essere un automorfismo del disco, e così concludiamo."
-
-Slide 17: "Grazie per l'attenzione!"
-
-
-
-Altra cosa: riguardati la tesi e gli articoli preparandoti per potenziali domande
+Slide 12: "grazie per l'attenzione!"

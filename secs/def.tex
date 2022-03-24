@@ -1,12 +1,12 @@
 \begin{frame}[t]
   \frametitle{Domini strettamente pseudoconvessi e metrica di Kobayashi}
-  \only<1-3>{Setting: fissiamo $\Omega \subseteq \mathbb{C}^n, n \ge 2$ un dominio limitato con bordo $C^2$, cioè esiste $\rho \in C^2(\mathbb{C}^n)$ tale che $\Omega=\{\rho(z)<0\}$.
+  \only<1>{Setting: fissiamo $\Omega \subseteq \mathbb{C}^n, n \ge 2$ un dominio limitato con bordo $C^2$, cioè esiste $\rho \in C^2(\mathbb{C}^n)$ tale che $\Omega=\{\rho(z)<0\}$ e $\diff\rho\not=0$ in ogni punto di $\partial\Omega$.
   Come $\rho$ si può prendere $-\delta(x)$ per $x \in \Omega$ e $\delta(x)$ per $x \in \mathbb{C}^n\setminus\Omega$, dove $\delta(x)=\text{dist}(x,\partial\Omega)$.}
   \only<2-3>{
       \begin{defn}
         Dato $p \in \partial\Omega$, lo \textit{spazio tangente complesso} a $\partial\Omega$ in $p$ è $H_p\partial\Omega=\{Z \in \mathbb{C}^n \mid \langle \bar{\partial}\rho(p),Z\rangle=0\}$. Diciamo che $\Omega$ è \textit{strettamente pseudoconvesso} se la \textit{forma di Levi}
-      $$L_{\rho}(p;Z)=\sum_{\nu,\mu=1}^n \frac{\partial\rho^2}{\partial z_\nu\partial\bar{z}_\mu}(p)Z_\nu\bar{Z}_\mu, \quad Z=(Z_1,\dots,Z_n) \in \mathbb{C}^n$$
-      è definita positiva in $H_p\partial\Omega$ per ogni $p \in \Omega$.
+      $$L_{\rho}(p;Z)=\sum_{\nu,\mu=1}^n \frac{\partial^2\rho}{\partial z_\nu\partial\bar{z}_\mu}(p)Z_\nu\bar{Z}_\mu, \quad Z=(Z_1,\dots,Z_n) \in \mathbb{C}^n$$
+      è definita positiva in $H_p\partial\Omega$ per ogni $p \in \partial\Omega$.
   \end{defn}}
   \only<3>{Nel seguito, lavoriamo sempre sotto l'ipotesi che $\Omega$ sia strettamente pseudoconvesso.}
   \only<4>{
@@ -22,9 +22,9 @@
 \begin{frame}[t]
   \frametitle{Domini strettamente pseudoconvessi e iperbolicità di Gromov}
   \only<1-4>{\begin{defn}
-    Sia $(X,d)$ uno spazio metrico, dati $x,y \in X$ il \textit{prodotto di Gromov} con punto base $w$ è $(x,y)_w=\frac{1}{2}\big(d(x,w)+d(y,w)-d(x,y)\big)$. Dato $\delta \ge 0$, diciamo che $X$ è \textit{$\delta$-iperbolico} se
+    Sia $(X,d)$ uno spazio metrico. Dati $x,y \in X$ il \textit{prodotto di Gromov} con punto base $w$ è $(x,y)_w=\frac{1}{2}\big(d(x,w)+d(y,w)-d(x,y)\big)$. Dato $\delta \ge 0$, diciamo che $X$ è \textit{$\delta$-iperbolico} se
     $$(x,y)_w \ge \min\{(x,z)_w,(y,z)_w\}-\delta\text{ per ogni }x,y,z,w \in X.$$
-    \only<2>{Fissato $w \in X$, il \textit{bordo iperbolico} è $\partial_GX$ costruito come classe di equivalenza delle successioni $(x_i)$ che convergono a infinito, cioè tali che $\displaystyle\lim_{i,j\rightarrow \infty}(x_i,x_j)_w=\infty$; due tali successioni $(x_i), (y_i)$ sono equivalenti se $\displaystyle\lim_{i\rightarrow \infty}(x_i,y_i)_w=\infty$. \%Implica che stanno a distanza limitata (per i raggi geodetici)? Non riesco a dimostrarlo}
+    \only<2>{Fissato $w \in X$, il \textit{bordo iperbolico} $\partial_GX$ è costruito come classe di equivalenza delle successioni $(x_i)$ che convergono a infinito, cioè tali che $\displaystyle\lim_{i,j\rightarrow \infty}(x_i,x_j)_w=\infty$; due tali successioni $(x_i), (y_i)$ sono equivalenti se $\displaystyle\lim_{i\rightarrow \infty}(x_i,y_i)_w=\infty$. \%Implica che stanno a distanza limitata (per i raggi geodetici)? Non riesco a dimostrarlo}
     \only<3>{
     Se $x,y \in \partial_GX$ e $z \in X$, poniamo
     \begin{gather*}
@@ -33,44 +33,44 @@
     \end{gather*}
     }
   \end{defn}}
-  \only<4>{\begin{thm}
-    (Balogh-Bonk) $(\Omega,d_K)$ è Gromov iperbolico, e il bordo iperbolico $\partial_G\Omega$ può essere identificato con il bordo euclideo $\partial\Omega$. Inoltre, la distanza di Carnot-Carathéodory $d_H$ su $\partial\Omega$ (quella indotta dalla forma di Levi) sta nella classe canonica di distanze su $\partial_GX$, cioè esiste $\epsilon>0$ tale che $d_H(a,b)\asymp \exp\big((a,b)_w\big)$ per ogni $a,b \in \partial_GX$.
-  \end{thm}}
+  \only<4>{\begin{block}{Teorema (Balogh-Bonk, 2001)}\begin{itshape}
+    $(\Omega,d_K)$ è Gromov iperbolico, e il bordo iperbolico $\partial_G\Omega$ può essere identificato con il bordo euclideo $\partial\Omega$. Inoltre, la distanza di Carnot-Carathéodory $d_H$ su $\partial\Omega$ (quella indotta dalla forma di Levi) sta nella classe canonica di distanze su $\partial_GX$, cioè esiste $\epsilon>0$ tale che $d_H(a,b)\asymp \exp\big((a,b)_w\big)$ per ogni $a,b \in \partial_GX$.
+  \end{itshape}\end{block}}
 \end{frame}
 
 \begin{frame}
   \frametitle{Conseguenze: estensioni al bordo di funzioni olomorfe}
   \begin{cor}
-    Siano $\Omega_1, \Omega_2 \subseteq \mathbb{C}^n$ che soddisfano le ipotesi del teorema di Balogh-Bonk, e sia $f:\Omega_1 \longrightarrow \Omega_2$ una funzione olomorfa propria. Allora $f$ si estende a $\bar{f}:\overline{\Omega}_1\longrightarrow\overline{\Omega}_2$ tale che $\bar{f}(\partial\Omega_1)\subseteq\partial\Omega_2$ e la restrizione al bordo è lipschitziana rispetto alle metriche di Carnot-Carathéodory sui bordi.
+    Siano $\Omega_1, \Omega_2 \subseteq \mathbb{C}^n$ che soddisfano le ipotesi del teorema di Balogh-Bonk, e sia $f:\Omega_1 \longrightarrow \Omega_2$ una funzione olomorfa propria. Allora $f$ si estende con continuità a $\bar{f}:\overline{\Omega}_1\longrightarrow\overline{\Omega}_2$ tale che $\bar{f}(\partial\Omega_1)\subseteq\partial\Omega_2$ e la restrizione al bordo è lipschitziana rispetto alle distanze di Carnot-Carathéodory sui bordi.
   \end{cor}
 \end{frame}
 
 \begin{frame}[t]
   \frametitle{Conseguenze: dinamica olomorfa}
   \only<1-4>{
-  \begin{thm}
+  \begin{block}{Teorema (Wolff-Denjoy, 1926)}\begin{itshape}
     (Wolff-Denjoy) Sia $f:\mathbb{D} \longrightarrow \mathbb{D}$ olomorfa e senza punti fissi. Allora esiste un unico $\tau \in \partial\mathbb{D}$ tale che $f^k \longrightarrow \tau$ uniformemente sui compatti.
-  \end{thm}
+  \end{itshape}\end{block}
   }
   \only<2-4>{
-  Karlsson, 2001: sotto opportune ipotesi, che sono soddisfatte dagli spazi iperbolici, valgono dei risultati simili per funzioni $1$-lipschitziane dallo spazio in sé. \%L'assioma 1 del paper è soddisfatto da tutti gli spazi iperbolici? Mi pare che sia soddisfatto dai nostri domini
+  Karlsson, 2001: sotto opportune ipotesi, che sono soddisfatte dagli spazi Gromov-iperbolici, valgono dei risultati simili per funzioni $1$-lipschitziane dallo spazio in sé. \%L'assioma 1 del paper è soddisfatto da tutti gli spazi iperbolici? Mi pare che sia soddisfatto dai nostri domini
   }
 
   \only<3-4>{
   Usando il teorema di Balogh-Bonk e il fatto che le funzioni olomorfe sono delle semicontrazioni rispetto a $d_K$, si ottiene una generalizzazione del teorema di Wolff-Denjoy per domini strettamente pseudoconvessi.
   }
   \only<4>{
-  \begin{cor}
+  \begin{block}{Corollario (Abate, 1991)}\begin{itshape}
     Sia $f:\Omega \longrightarrow \Omega$ una funzione olomorfa. Allora vale una delle seguenti: \\
     \begin{enumerate}
       \item le orbite di $f$ sono limitate;
       \item le orbite di $f$ convergono a un punto del bordo.
     \end{enumerate}
-  \end{cor}
+  \end{itshape}\end{block}
   }
 \end{frame}
 
 \begin{frame}
   \frametitle{Altri risultati: (titolo da decidere)}
-  \% L'articolo di Zimmer, messo in contesto, mi pare che ci dica questo: se si aggiunge l'ipotesi di convessità, pagando il prezzo del bordo che non è più liscio, si ottengono risultati analoghi a quelli delle precedenti conseguenze. Questi però non sono conseguenze di Balogh-Bonk, ma mostrano come l'iperbolicità è utile per risultati di questo tipo.
+  \% L'articolo di Zimmer, messo in contesto, mi pare che ci dica questo: se si paga il prezzo di aggiungere l'ipotesi di convessità, guadagnando però che il bordo non è più necessariamente liscio, si ottengono risultati analoghi a quelli delle precedenti conseguenze. Questi però non sono conseguenze di Balogh-Bonk, ma mostrano come l'iperbolicità è utile per risultati di questo tipo.
 \end{frame}

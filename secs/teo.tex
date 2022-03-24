@@ -13,10 +13,10 @@
   \frametitle{Lo spazio iperbolico $\text{Con}(Z)$}
   \only<1-3>{
   \begin{thm}
-    Sia $(Z,d)$ uno spazio metrico completo e limitato e sia $\text{Con}(Z)=Z\times(0\times D(Z)]$, dove $D(Z)$ è il diametro di $Z$.
+    Sia $(Z,d)$ uno spazio metrico completo e limitato, e sia $\text{Con}(Z)=Z\times(0\times D(Z)]$, dove $D(Z)$ è il diametro di $Z$.
     La funzione $r:\text{Con}(Z)\times\text{Con}(Z) \longrightarrow [0,+\infty)$ data da
     $$r\big((z,h),(z',h')\big)=2\log\left(\frac{d(z,z')+\max\{h, h'\}}{\sqrt{hh'}}\right)$$
-    è una distanza su $\text{Con}(Z)$ che lo rende uno spazio iperbolico, il cui bordo può essere identificato con $Z$, e inoltre per ogni $x,y \in Z$ si ha
+    è una distanza su $\text{Con}(Z)$ che lo rende uno spazio iperbolico, il cui bordo può essere identificato con $Z$. Inoltre, per ogni $x,y \in Z$ si ha
     $$d(x,y) \asymp \exp\big(-(x,y)_w\big).$$
   \end{thm}
   }
@@ -24,14 +24,14 @@
   \textit{Traccia della dimostrazione:} è facile verificare che $r$ è una distanza.
 
   }
-  \only<3>{Dati $r_{ij} \ge 0$ tali che $r_{ij}=r_{ji}$ e $r_{ij} \le r_{ik}+r_{kj}$, allora $r_{12}r_{34} \le 4\big(\max\{(r_{13}r_{24}), (r_{14}r_{23})\}\big)$.
+  \only<3>{Dati $r_{ij} \ge 0$ per $i,j \in \{1,2,3,4\}$ tali che $r_{ij}=r_{ji}$ e $r_{ij} \le r_{ik}+r_{kj}$, allora $r_{12}r_{34} \le 4\big(\max\{(r_{13}r_{24}), (r_{14}r_{23})\}\big)$.
   }
   \only<4-6>{Siano $x_i=(z_i,h_i) \in \text{Con}(Z)$ per $i \in \{1,2,3,4\}$, poniamo $d_{ij}=d(z_i,z_j)$ e $r_{ij}=d_{ij}+\max\{h_i, h_j\}$.} \only<5-6>{Segue che
-  \begin{gather*}
-    (d_{12}+\max\{h_1, h_2\})(d_{34}+\max\{h_3, h_4\}) \\
-    \le 4\Big(\big((d_{13}+\max\{h_1, h_3\})(d_{24}+\max\{h_2, h_4\})\big)\cdot \\
-    \cdot\big((d_{14}+\max\{h_1, h_4\})(d_{23}+\max\{h_2, h_3\})\big)\Big),
-  \end{gather*}}
+  \begin{align*}
+    (d_{12}+\max\{h_1, h_2\}&)(d_{34}+\max\{h_3, h_4\}) \\
+    &\le 4\Big(\big((d_{13}+\max\{h_1, h_3\})(d_{24}+\max\{h_2, h_4\})\big) \\
+    &\times\big((d_{14}+\max\{h_1, h_4\})(d_{23}+\max\{h_2, h_3\})\big)\Big),
+  \end{align*}}
   \only<6>{che ci dà
   \begin{gather*}
     r(x_1,x_2)+r(x_3,x_4) \le \big(r(x_1,x_3)+r(x_2,x_4)\big)\big(r(x_1,x_4)+r(x_2,x_3)\big)+C,
@@ -44,7 +44,7 @@
 
   }
   \only<10->{
-  La disuguaglianza finale segue da quanto visto finora e delle semplici verifiche.\qed \%In realtà ci va un minimo di lavoro, non so se c'è spazio per dirlo; la cosa più ragionevole è riformulare la conclusione facendo capire che non è immediato, anche se non è difficile
+  La disuguaglianza finale non è difficile, ma richiede un po' di passaggi che non vedremo.}\only<11>{ Mettendo su $\text{Con}(Z)\cup\partial_G\text{Con}(Z)$ un'opportuna topologia, dalla disuguaglianza segue anche che $Z$ e $\partial_G\text{Con}(Z)$ sono identificati come spazi topologici. \qed
   }
 \end{frame}
 
@@ -56,27 +56,36 @@
   \end{defn}
   }
   \only<2>{
+  Poniamo anche
+  $$g(x,y)=2\log\left(\frac{d_H\big(\pi(x),\pi(y)\big)+\max\{\delta(x)^{1/2 },\,\delta(y)^{1/2}\}}{\sqrt{\delta(x)^{1/2 }\delta(y)^{1/2}}}\right).$$
+  }
+  \only<3-4>{
   \begin{thm}
     Sia $F$ una metrica di Finsler su $\Omega$ tale che esistono delle costanti $\epsilon_0>0, s>0,C_1>0,C_2 \ge 0$ tali che per ogni $x \in \Omega$ con $\delta(x)<\epsilon_0$ e $Z \in \mathbb{C}^n$ si ha
     \begin{multline}\label{stimametricafinsler}
       \big(1-C_1\delta^s(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+(1/C_2)\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2} \le F(x;Z) \\
       \le \big(1+C_1\delta^s(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+C_2\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2}.
     \end{multline}
+  \only<4>{
+    Allora esiste $C \ge 0$ tale che per ogni $x, y \in \Omega$ vale
+    \begin{equation} \label{stimadistanzafinsler}
+      g(x,y)-C \le d_F(x,y) \le g(x,y)+C.
+    \end{equation}
+     }
   \end{thm}
   }
-  \only<3->{
+  \only<5->{
   \begin{thm}
     Allora esiste $C \ge 0$ tale che per ogni $x, y \in \Omega$ vale
     \begin{equation} \label{stimadistanzafinsler}
-      g(x,y)-C \le d_F(x,y) \le g(x,y)+C,
+      g(x,y)-C \le d_F(x,y) \le g(x,y)+C. \tag{2}
     \end{equation}
-    dove $g(x,y)=2\log\left(\frac{d_H\big(\pi(x),\pi(y)\big)+\max\{\delta(x)^{1/2 },\,\delta(y)^{1/2}\}}{\sqrt{\delta(x)^{1/2 }\delta(y)^{1/2}}}\right)$.
   \end{thm}
   }
-  \only<4->{
-  \textit{Idea della dimostrazione:} per la maggiorazione, si cercano delle curve che siano quasi geodetiche, cioè danno la distanza a meno di una costante additiva, e si integra lungo quelle curve.
+  \only<6->{
+  \textit{Idea della dimostrazione:} per la maggiorazione, si cercano delle curve che siano quasi geodetiche, cioè che realizzano la distanza a meno di una costante additiva, e si integra lungo quelle curve.
   }
-  \only<5>{
+  \only<7>{
 
   Per la minorazione, bisogna mostrare che le curve trovate sono ottimali.
   }

@@ -14,7 +14,7 @@ Slide 5: raccontare la dinamica iperbolica e generalizzazioni
 
 Slide 6: da rivedere, ma dovrebbe essere raccontare gli enunciati alternativi e spiegare come si inseriscono nel contesto dicendo che l'iperbolicità è bella
 
-Slide 7: raccontare un po' la strategia, nel secondo punto potrebbe essere il caso di osservare che per l'iperbolicità ci basta controllare vicino al bordo, ma occhio che sia giusto quello che dici
+Slide 7: raccontare un po' la strategia, nel secondo punto potrebbe essere il caso di osservare che per l'iperbolicità ci basta controllare vicino al bordo, ma occhio che sia giusto quello che dici. Altra cosa: Abate dice di dire che le metriche di Finsler non sono necessariamente differenziabili
 
 Slide 8: spiega che sta succedendo
 

@@ -8,10 +8,10 @@
       $$L_{\rho}(p;Z)=\sum_{\nu,\mu=1}^n \frac{\partial^2\rho}{\partial z_\nu\partial\bar{z}_\mu}(p)Z_\nu\bar{Z}_\mu, \quad Z=(Z_1,\dots,Z_n) \in \mathbb{C}^n$$
       è definita positiva in $H_p\partial\Omega$ per ogni $p \in \partial\Omega$.
   \end{defn}}
-  \only<3>{Nel seguito, lavoriamo sempre sotto l'ipotesi che $\Omega$ sia strettamente pseudoconvesso.}
+  \only<3>{Nel seguito, lavoriamo sempre sotto l'ipotesi che $\Omega$ sia limitato e strettamente pseudoconvesso.}
   \only<4>{
   \begin{defn}
-    Sia $\mathbb{D}$ il disco unitario in $\mathbb{C}$, data $f:\mathbb{D} \longrightarrow \mathbb{C}^n$ olomorfa indichiamo con $Df(z)$ il differenziale di $f$ in $z \in \mathbb{D}$. La \textit{metrica di Kobayashi} su $\Omega$ è
+    Sia $\mathbb{D}$ il disco unitario in $\mathbb{C}$, data $f:\mathbb{D} \longrightarrow \mathbb{C}^n$ olomorfa indichiamo con $Df(z)$ il differenziale di $f$ in $z \in \mathbb{D}$. La \textit{metrica di Kobayashi} su $\Omega$ limitato è
     $$K(x;Z)=\inf\{|v| \mid v \in \mathbb{C}, \text{ esiste }f:\mathbb{D} \longrightarrow \Omega$$
     $$\text{ olomorfa con } f(0)=x, Df(0)v=Z\},$$
     che induce la \textit{distanza di Kobayashi} $d_K$.
@@ -21,7 +21,7 @@
 
 \begin{frame}[t]
   \frametitle{Domini strettamente pseudoconvessi e iperbolicità di Gromov}
-  \only<1-4>{\begin{defn}
+  \only<1-3>{\begin{defn}
     Sia $(X,d)$ uno spazio metrico. Dati $x,y \in X$ il \textit{prodotto di Gromov} con punto base $w$ è $(x,y)_w=\frac{1}{2}\big(d(x,w)+d(y,w)-d(x,y)\big)$. Dato $\delta \ge 0$, diciamo che $X$ è \textit{$\delta$-iperbolico} se
     $$(x,y)_w \ge \min\{(x,z)_w,(y,z)_w\}-\delta\text{ per ogni }x,y,z,w \in X.$$
     \only<2>{Fissato $w \in X$, il \textit{bordo iperbolico} $\partial_GX$ è costruito come classe di equivalenza delle successioni $(x_i)$ che convergono a infinito, cioè tali che $\displaystyle\lim_{i,j\rightarrow \infty}(x_i,x_j)_w=\infty$; due tali successioni $(x_i), (y_i)$ sono equivalenti se $\displaystyle\lim_{i\rightarrow \infty}(x_i,y_i)_w=\infty$.}
@@ -30,18 +30,16 @@
     \begin{gather*}
       (x,y)_w=\sup\left\{\liminf_{i \rightarrow +\infty} (x_i,y_i)_w \mid (x_i) \in x, (y_i) \in y\right\},\\
       (x,z)_w=\sup\left\{\liminf_{i \rightarrow +\infty} (x_i,z)_w \mid (x_i) \in x\right\}.
-    \end{gather*}
-    }
+    \end{gather*}}
   \end{defn}}
-  \only<4>{\begin{block}{Teorema (Balogh-Bonk, 2001)}\begin{itshape}
-    $(\Omega,d_K)$ è Gromov iperbolico, e il bordo iperbolico $\partial_G\Omega$ può essere identificato con il bordo euclideo $\partial\Omega$. Inoltre, la distanza di Carnot-Carathéodory $d_H$ su $\partial\Omega$ (quella indotta dalla forma di Levi) sta nella classe canonica di distanze su $\partial_GX$, cioè esiste $\epsilon>0$ tale che $d_H(a,b)\asymp \exp\big((a,b)_w\big)$ per ogni $a,b \in \partial_GX$.
+  \only<4>{\begin{block}{Teorema (Balogh-Bonk, 2001)}\begin{itshape} Sia $\Omega$ un dominio con bordo $C^2$ limitato e pseudoconvesso, e sia $d_K$ la distanza di Kobayashi su $\Omega$. Allora $(\Omega,d_K)$ è Gromov-iperbolico, e il bordo iperbolico $\partial_G\Omega$ può essere identificato con il bordo euclideo $\partial\Omega$. Inoltre, la distanza di Carnot-Carathéodory $d_H$ su $\partial\Omega$ (quella indotta dalla forma di Levi) sta nella classe canonica di distanze su $\partial_GX$, cioè esiste $\epsilon>0$ tale che $d_H(a,b)\asymp \exp\big((a,b)_w\big)$ per ogni $a,b \in \partial_GX$.
   \end{itshape}\end{block}}
 \end{frame}
 
 \begin{frame}
   \frametitle{Conseguenze: estensioni al bordo di funzioni olomorfe}
   \begin{cor}
-    Siano $\Omega_1, \Omega_2 \subseteq \mathbb{C}^n$ che soddisfano le ipotesi del teorema di Balogh-Bonk, e sia $f:\Omega_1 \longrightarrow \Omega_2$ una funzione olomorfa propria. Allora $f$ si estende con continuità a $\bar{f}:\overline{\Omega}_1\longrightarrow\overline{\Omega}_2$ tale che $\bar{f}(\partial\Omega_1)\subseteq\partial\Omega_2$ e la restrizione al bordo è lipschitziana rispetto alle distanze di Carnot-Carathéodory sui bordi.
+    Siano $\Omega_1, \Omega_2 \subseteq \mathbb{C}^n$ domini con bordo $C^2$ limitati e pseudoconvessi, e sia $f:\Omega_1 \longrightarrow \Omega_2$ una funzione olomorfa propria. Allora $f$ si estende con continuità a $\bar{f}:\overline{\Omega}_1\longrightarrow\overline{\Omega}_2$ tale che $\bar{f}(\partial\Omega_1)\subseteq\partial\Omega_2$ e la restrizione al bordo è lipschitziana rispetto alle distanze di Carnot-Carathéodory sui bordi.
   \end{cor}
 \end{frame}
 

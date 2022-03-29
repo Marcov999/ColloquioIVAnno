@@ -10,7 +10,7 @@ Slide 3: "richiamiamo rapidamente il concetto di iperbolicità secondo Gromov" "
 
 Slide 4: raccontare un po' il corollario + "alla fine vedremo come si dimostra"
 
-Slide 5: raccontare la dinamica iperbolica e generalizzazioni
+Slide 5: raccontare la dinamica iperbolica e generalizzazioni. Dire a voce che la dim di Abate era con tecniche diverse
 
 Slide 6: da rivedere, ma dovrebbe essere raccontare gli enunciati alternativi e spiegare come si inseriscono nel contesto dicendo che l'iperbolicità è bella
 

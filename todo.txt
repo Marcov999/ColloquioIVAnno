@@ -1,6 +1,6 @@
 Screenplay (sort of)
 
-Frase iniziale: "Salve a tutti. L'obiettivo di questa presentazione è illustrare un risultato che lega un certo tipo di domini di C^n alla condizione di iperbolicità, e mostrare alcune interessanti applicazioni."
+Frase iniziale: "Salve a tutti. L'obiettivo di questa presentazione è illustrare un risultato che ci dice che un certo tipo di domini di C^n è iperbolico secondo Gromov, e mostrarne alcune interessanti applicazioni."
 
 Slide 1: frase iniziale.
 

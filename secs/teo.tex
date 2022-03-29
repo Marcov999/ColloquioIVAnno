@@ -13,7 +13,7 @@
   \frametitle{Lo spazio iperbolico $\text{Con}(Z)$}
   \only<1-3>{
   \begin{thm}
-    Sia $(Z,d)$ uno spazio metrico completo e limitato, e sia $\text{Con}(Z)=Z\times(0\times D(Z)]$, dove $D(Z)$ è il diametro di $Z$.
+    Sia $(Z,d)$ uno spazio metrico completo e limitato, e sia $\text{Con}(Z)=Z\times(0, D(Z)]$, dove $D(Z)$ è il diametro di $Z$.
     La funzione $r:\text{Con}(Z)\times\text{Con}(Z) \longrightarrow [0,+\infty)$ data da
     $$r\big((z,h),(z',h')\big)=2\log\left(\frac{d(z,z')+\max\{h, h'\}}{\sqrt{hh'}}\right)$$
     è una distanza su $\text{Con}(Z)$ che lo rende uno spazio iperbolico, il cui bordo può essere identificato con $Z$. Inoltre, per ogni $x,y \in Z$ si ha
@@ -38,7 +38,7 @@
   \end{gather*}
   da cui segue l'iperbolicità di $\big(\textit{Con}(Z), r\big)$.}
   \only<7->{
-  Fissiamo $w=\big(z_0,D(Z)\big) \in \text{Con}(Z)$; usando le definizioni, troviamo che dati $x=(z,h),x'=(z,h')\in \text{Con}(Z)$ vale
+  Fissiamo $w=\big(z_0,D(Z)\big) \in \text{Con}(Z)$; usando le definizioni, troviamo che dati $x=(z,h),x'=(z',h')\in \text{Con}(Z)$ vale
   $$(x,x')_w=-\log\big(d(z,z')+\max\{h, h'\}\big)+O_{D(Z)}(1).$$}
   \only<8->{Segue che una sequenza $(x_i)$ in $\big(\text{Con}(Z),r\big)$ converge a infinito se e solo se la sequenza $(z_i)$ è di Cauchy e $h_i \longrightarrow 0$; inoltre, due successioni convergenti a infinito sono equivalenti se e solo se il loro limite è lo stesso, e ogni punto del bordo è limite di una successione che converge a infinito.}\only<9->{ Essendo $Z$ completo, questo ci dà un'identificazione, come insiemi, di $Z$ e $\partial_G\text{Con}(Z)$.
 

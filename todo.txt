@@ -12,7 +12,7 @@ Slide 4: raccontare un po' il corollario + "alla fine vedremo come si dimostra"
 
 Slide 5: raccontare la dinamica iperbolica e generalizzazioni. Dire a voce che la dim di Abate era con tecniche diverse
 
-Slide 6: da rivedere, ma dovrebbe essere raccontare gli enunciati alternativi e spiegare come si inseriscono nel contesto dicendo che l'iperbolicità è bella
+Slide 6: più o meno quello che c'è scritto. Evidenzia come aggiungendo 'poco' (?) nelle ipotesi, ma potendo così rimuovere il bordo liscio, si ottengano non solo gli stessi risultati, ma anche cose che non ci si aspetterebbe con bordo qualsiasi.
 
 Slide 7: raccontare un po' la strategia, nel secondo punto potrebbe essere il caso di osservare che per l'iperbolicità ci basta controllare vicino al bordo, ma occhio che sia giusto quello che dici. Altra cosa: Abate dice di dire che le metriche di Finsler non sono necessariamente differenziabili
 

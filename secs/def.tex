@@ -7,6 +7,8 @@
         Dato $p \in \partial\Omega$, lo \textit{spazio tangente complesso} a $\partial\Omega$ in $p$ è $H_p\partial\Omega=\{Z \in \mathbb{C}^n \mid \langle \bar{\partial}\rho(p),Z\rangle=0\}$. Diciamo che $\Omega$ è \textit{strettamente pseudoconvesso} se la \textit{forma di Levi}
       $$L_{\rho}(p;Z)=\sum_{\nu,\mu=1}^n \frac{\partial^2\rho}{\partial z_\nu\partial\bar{z}_\mu}(p)Z_\nu\bar{Z}_\mu, \quad Z=(Z_1,\dots,Z_n) \in \mathbb{C}^n$$
       è definita positiva in $H_p\partial\Omega$ per ogni $p \in \partial\Omega$.
+
+      La distanza indotta su $\partial\Omega$ è la \textit{distanza di Carnot-Carathéodory} $d_H$.
   \end{defn}}
   \only<3>{Nel seguito, lavoriamo sempre sotto l'ipotesi che $\Omega$ sia limitato e strettamente pseudoconvesso.}
   \only<4>{
@@ -32,7 +34,7 @@
       (x,z)_w=\sup\left\{\liminf_{i \rightarrow +\infty} (x_i,z)_w \mid (x_i) \in x\right\}.
     \end{gather*}}
   \end{defn}}
-  \only<4>{\begin{block}{Teorema (Balogh-Bonk, 2001)}\begin{itshape} Sia $\Omega$ un dominio limitato e strettamente pseudoconvesso, e sia $d_K$ la distanza di Kobayashi su $\Omega$. Allora $(\Omega,d_K)$ è Gromov-iperbolico, e il bordo iperbolico $\partial_G\Omega$ può essere identificato con il bordo euclideo $\partial\Omega$. Inoltre, la distanza di Carnot-Carathéodory $d_H$ su $\partial\Omega$ (quella indotta dalla forma di Levi) sta nella classe canonica di distanze su $\partial_G\Omega$, cioè esiste $\epsilon>0$ tale che $d_H(a,b)\asymp \exp\big(-\epsilon(a,b)_w\big)$ per ogni $a,b \in \partial_G\Omega$.
+  \only<4>{\begin{block}{Teorema (Balogh-Bonk, 2001)}\begin{itshape} Sia $\Omega$ un dominio limitato e strettamente pseudoconvesso, e sia $d_K$ la distanza di Kobayashi su $\Omega$. Allora $(\Omega,d_K)$ è Gromov-iperbolico, e il bordo iperbolico $\partial_G\Omega$ può essere identificato con il bordo euclideo $\partial\Omega$. Inoltre, la distanza di Carnot-Carathéodory sta nella classe canonica di distanze su $\partial_G\Omega$, cioè esiste $\epsilon>0$ tale che $d_H(a,b)\asymp \exp\big(-\epsilon(a,b)_w\big)$ per ogni $a,b \in \partial_G\Omega$.
   \end{itshape}\end{block}}
 \end{frame}
 

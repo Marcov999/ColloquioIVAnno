@@ -4,7 +4,7 @@ Frase iniziale: "Salve a tutti. L'obiettivo di questa presentazione è illustrar
 
 Slide 1: frase iniziale.
 
-Slide 2: "vediamo che tipo di dominio ci interessa"
+Slide 2: "vediamo che tipo di dominio ci interessa", dire che il bordo è connesso per curve orizzontali
 
 Slide 3: "richiamiamo rapidamente il concetto di iperbolicità secondo Gromov" "il risultato principale è che i domini strettamente pseudoconvessi sono Gromov iperbolici"
 

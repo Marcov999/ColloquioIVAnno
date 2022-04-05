@@ -1,5 +1,5 @@
 \begin{frame}[t]
-  \frametitle{La metrica di Kobayashi soddisfa la disuguaglianza}
+  \frametitle{3. La metrica di Kobayashi soddisfa la disuguaglianza}
   \only<1->{\begin{prop}
     Per ogni $\epsilon>0$ esistono $\epsilon_0>0$ e $C \ge 0$ tali che per ogni $x \in \Omega$ con $\delta(x)<\epsilon_0$ e per ogni $Z \in \mathbb{C}^n$ si ha
     \begin{multline*}
@@ -21,19 +21,24 @@
 \begin{frame}[t]
   \frametitle{Dimostrazione dell'estensione al bordo}
   \only<1->{
+  \begin{cor}
+    Siano $\Omega_1, \Omega_2 \subseteq \mathbb{C}^n$ domini limitati e strettamente pseudoconvessi, e sia $f:\Omega_1 \longrightarrow \Omega_2$ una funzione olomorfa propria. Allora $f$ si estende con continuità a $\bar{f}:\overline{\Omega}_1\longrightarrow\overline{\Omega}_2$ tale che $\bar{f}(\partial\Omega_1)\subseteq\partial\Omega_2$ e la restrizione al bordo è lipschitziana rispetto alle distanze di Carnot-Carathéodory sui bordi.
+  \end{cor}
+  }
+  \only<2-3>{
   \textit{Traccia della dimostrazione:} siano $d_1,d_2$ le metriche di Kobayashi su $\Omega_1, \Omega_2$, allora per ogni $x,y \in \Omega_1$ si ha
   $$d_2\big(f(x),f(y)\big)\le d_1(x,y);$$
   }
-  \only<2->{
+  \only<3>{
   inoltre, poiché $f$ è propria esiste $C_1 \ge 1$ tale che per ogni $x \in \Omega_1$ abbiamo
   $$\delta_1(x)/C_1 \le \delta_2\big(f(x)\big) \le C_1\delta_1(x),$$
   dove $\delta_j$ è la distanza dal bordo in $\Omega_j$.
   }
-  \only<3->{
+  \only<4->{
   Mettendo assieme queste due disuguaglianze e il Corollario, dette $d_H^j$ le rispettive distanze di Carnot-Carathéodory, troviamo che esiste $C_2 \ge 0$ tale che per ogni $x,y \in \Omega_1$ si ha
   $$d_H^2\Big(\pi\big(f(x)\big),\pi\big(f(y)\big)\Big) \le C_2\Big(d_H^1\big(\pi(x),\pi(y)\big)+\max\{\delta_1^{1/2}(x),\delta_1^{1/2}(y)\}\Big).$$
   }
-  \only<4>{Da queste disuguaglianze è facile concludere. \qed}
+  \only<5>{Da queste disuguaglianze è facile concludere. \qed}
 \end{frame}
 
 \begin{frame}

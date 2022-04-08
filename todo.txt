@@ -4,25 +4,26 @@ Frase iniziale: "Salve a tutti. L'obiettivo di questa presentazione è illustrar
 
 Slide 1: frase iniziale.
 
-Slide 2: "vediamo che tipo di dominio ci interessa", dire che il bordo è connesso per curve orizzontali
+Slide 2: "vediamo che tipo di dominio ci interessa", ricorda che affinche sia una metrica serve \Omega limitato, "è l'analogo complesso della stretta convergenza" (fatto 2.8.16 ECA); dire che il bordo è connesso per curve orizzontali; la metrica di Kobayashi è un modo per generalizzare la metrica iperbolica in \mathbb{D}; le funzioni olomorfe sono contrazioni per d_K
 
-Slide 3: "richiamiamo rapidamente il concetto di iperbolicità secondo Gromov" "il risultato principale è che i domini strettamente pseudoconvessi sono Gromov iperbolici"
+Slide 3: "richiamiamo rapidamente il concetto di iperbolicità secondo Gromov" + esempi (alberi, (\mathbb{D},\omega)); "il risultato principale è che i domini strettamente pseudoconvessi sono Gromov iperbolici"
 
 Slide 4: raccontare un po' il corollario + "alla fine vedremo come si dimostra"
 
-Slide 5: raccontare la dinamica iperbolica e generalizzazioni. Dire a voce che la dim di Abate era con tecniche diverse
+Slide 5: raccontare la dinamica iperbolica e generalizzazioni. Dire a voce che la dim di Abate era con tecniche diverse, analitiche (?)
 
-Slide 6: più o meno quello che c'è scritto. Evidenzia come aggiungendo 'poco' (?) nelle ipotesi, ma potendo così rimuovere il bordo liscio, si ottengano non solo gli stessi risultati, ma anche cose che non ci si aspetterebbe con bordo qualsiasi.
+Slide 6: più o meno quello che c'è scritto; osserva che si ottengono stime analitiche da risultati geometrici.
 
-Slide 7: raccontare un po' la strategia, nel secondo punto potrebbe essere il caso di osservare che per l'iperbolicità ci basta controllare vicino al bordo, ma occhio che sia giusto quello che dici. Altra cosa: Abate dice di dire che le metriche di Finsler non sono necessariamente differenziabili
-Perché funziona con g definita solo al bordo: devo controllare solo fuori da un compatto
+Slide 7: raccontare un po' la strategia, per l'iperbolicità ci basta controllare vicino al bordo (d'altronde, g è definita solo vicino al bordo): devo controllare solo fuori da un compatto
 
 Slide 8: spiega che sta succedendo
 
-Slide 9: pure, ma un po' meno; ricordati di dire che la quasi geodetiche sono più facili da trovare delle geodetiche
+Slide 9: da fare
 
-Slide 10: più o meno leggere quello che c'è scritto (probabilmente dovrò riaggiornare questo pezzo quando avrò una vaga idea di cosa fa questa dimostrazione) + "per cui si ha il corollario di confronto tra d_K e g dal quale, come già detto, segue l'iperbolicità di (Omega, d_K)"
+Slide 10: più o meno leggere quello che c'è scritto, dire che la conclusione segue perché la metrica K (e di conseguenza d_K) è (ovviamente) monotona decrescente rispetto all'inclusione di insiemi
 
-Slide 11: spiegare un po' la dim che c'è scritta + "e con questo concludiamo,"
+Slide 11: spiega che sta succedendo, ma non troppo; ricordati di dire che la quasi geodetiche sono più facili da trovare delle geodetiche; nota: ricorda che Balogh-Bonk è corollario del teorema appena dimostrato + Bonk-Schramm
 
-Slide 12: "grazie per l'attenzione!"
+Slide 12: spiegare un po' la dim che c'è scritta + "e con questo concludiamo,"
+
+Slide 13: "grazie per l'attenzione!"

@@ -1,24 +1,24 @@
 \begin{frame}
   \frametitle{Strada per la dimostrazione del teorema di BB}
   \begin{enumerate}
-    \item Dato $(Z,d)$ spazio metrico completo e limitato, si può costruire uno spazio iperbolico $\big(\text{Con}(Z),r\big)$ tale che $Z$ è identificato con il bordo.
+    \item Dato $(Z,d)$ spazio metrico completo e limitato, si può costruire uno spazio Gromov-iperbolico $\big(\text{Con}(Z),r\big)$ tale che $Z$ è identificato con il bordo.
     \pause
-    \item Per una metrica che soddisfa certe ipotesi, la distanza indotta differisce per una costante da una funzione $g$ simile alla $r$ della suddetta costruzione; questo ci permette di dire che $\Omega$ con tale distanza è iperbolico.
+    \item La metrica di Kobayashi soddisfa una particolare catena di disuguaglianze; \pause usando tali disuguaglianze si può dimostrare che $d_K$, vicino al bordo, differisce per una costante da una certa funzione $g$ che è sostanzialmente l'equivalente di $r$ per $\Omega$ (si dice che $d_K$ e $g$ sono quasi-isometriche).
     \pause
-    \item La metrica di Kobayashi soddisfa le suddette ipotesi.
+    \item Poiché la Gromov-iperbolicità è invariante per quasi-isometrie, questo ci permette di dire che $(\Omega,d_K)$ è Gromov-iperbolico.
   \end{enumerate}
 \end{frame}
 
 \begin{frame}[t]
   \frametitle{1. Lo spazio iperbolico $\text{Con}(Z)$}
   \only<1-3>{
-  \begin{thm}
+  \begin{block}{Teorema (Bonk-Schramm, 2000)}\begin{itshape}
     Sia $(Z,d)$ uno spazio metrico completo e limitato, e sia $\text{Con}(Z)=Z\times(0, D(Z)]$, dove $D(Z)$ è il diametro di $Z$.
     La funzione $r:\text{Con}(Z)\times\text{Con}(Z) \longrightarrow [0,+\infty)$ data da
     $$r\big((z,h),(z',h')\big)=2\log\left(\frac{d(z,z')+\max\{h, h'\}}{\sqrt{hh'}}\right)$$
-    è una distanza su $\text{Con}(Z)$ che lo rende uno spazio iperbolico, il cui bordo può essere identificato con $Z$. Inoltre, per ogni $x,y \in Z$ si ha
+    è una distanza su $\text{Con}(Z)$ che lo rende uno spazio Gromov-iperbolico, il cui bordo può essere identificato con $Z$. Inoltre, per ogni $x,y \in Z$ si ha
     $$d(x,y) \asymp \exp\big(-(x,y)_w\big).$$
-  \end{thm}
+  \end{itshape}\end{block}
   }
   \only<2-3>{
   \textit{Traccia della dimostrazione:} è facile verificare che $r$ è una distanza.
@@ -36,7 +36,7 @@
   \begin{gather*}
     r(x_1,x_2)+r(x_3,x_4) \le \big(r(x_1,x_3)+r(x_2,x_4)\big)\big(r(x_1,x_4)+r(x_2,x_3)\big)+C,
   \end{gather*}
-  da cui segue l'iperbolicità di $\big(\textit{Con}(Z), r\big)$.}
+  da cui segue la Gromov-iperbolicità di $\big(\textit{Con}(Z), r\big)$.}
   \only<7->{
   Fissiamo $w=\big(z_0,D(Z)\big) \in \text{Con}(Z)$; usando le definizioni, troviamo che dati $x=(z,h),x'=(z',h')\in \text{Con}(Z)$ vale
   $$(x,x')_w=-\log\big(d(z,z')+\max\{h, h'\}\big)+O_{D(Z)}(1).$$}
@@ -49,44 +49,48 @@
 \end{frame}
 
 \begin{frame}[t]
-  \frametitle{2. Disuguaglianze per metriche di Finsler}
+  \frametitle{Un po' di def (titolo da decidere)}
   \only<1-2>{
   \begin{defn}
-    Una \textit{metrica di Finsler} su $\Omega$ è una funzione continua $F:\Omega\times\mathbb{C}^n \longrightarrow [0,+\infty)$ tale che $F(x;tZ)=|t|F(x;Z)$ per ogni $x \in \Omega, Z \in \mathbb{C}^n, t \in \mathbb{C}$.
+    \%Devi definire $\pi$ e da qualche parte nella slide mettere il disegno.
   \end{defn}
   }
   \only<2>{
-  Poniamo anche
+  Poniamo
   $$g(x,y)=2\log\left(\frac{d_H\big(\pi(x),\pi(y)\big)+\max\{\delta(x)^{1/2 },\,\delta(y)^{1/2}\}}{\sqrt{\delta(x)^{1/2 }\delta(y)^{1/2}}}\right).$$
   }
-  \only<3-4>{
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{2. Disuguaglianze per la metrica di Kobayashi}
+  \only<1->{\begin{prop}
+    Per ogni $\epsilon>0$ esistono $\epsilon_0>0$ e $C \ge 0$ tali che per ogni $x \in \Omega$ con $\delta(x)<\epsilon_0$ e per ogni $Z \in \mathbb{C}^n$ si ha
+    \begin{multline*}
+      \big(1-C\delta^{1/2}(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+(1-\epsilon)\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2} \le K(x;Z) \\
+      \le \big(1+C\delta^{1/2}(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+(1+\epsilon)\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2}.
+    \end{multline*}
+  \end{prop}}
+  \only<2-4>{\textit{Traccia della dimostrazione:} si localizza a un intorno di un punto del bordo.}\only<3-4>{ Con un opportuno biolomorfismo, ci si sposta in un insieme che può essere stretto fra due ellissoidi complessi, uno contenuto e uno che lo contiene.}\only<4>{ Per gli ellissoidi complessi, la metrica di Kobayashi può essere calcolata esplicitamente. \qed}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{2. Vicino al bordo, $d_K$ e $g$ sono quasi-isometriche}
+  \only<1->{
   \begin{thm}
-    Sia $F$ una metrica di Finsler su $\Omega$ tale che esistono delle costanti $\epsilon_0>0, s>0,C_1>0,C_2 \ge 0$ tali che per ogni $x \in \Omega$ con $\delta(x)<\epsilon_0$ e $Z \in \mathbb{C}^n$ si ha
-    \begin{multline}\label{stimametricafinsler}
-      \big(1-C_1\delta^s(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+(1/C_2)\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2} \le F(x;Z) \\
-      \le \big(1+C_1\delta^s(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+C_2\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2}.
-    \end{multline}
-  \only<4>{
-    Allora esiste $C \ge 0$ tale che per ogni $x, y \in \Omega$ vale
-    \begin{equation} \label{stimadistanzafinsler}
-      g(x,y)-C \le d_F(x,y) \le g(x,y)+C.
+    Sia $\Omega$ un dominio strettamente pseudoconvesso limitato, e sia $d_K$ la distanza di Kobayashi su $\Omega$. Allora esiste $C \ge 0$ tale che per ogni $x, y \in \Omega$ vale
+    \begin{equation} \label{stimadistanzakobayashi}
+      g(x,y)-C \le d_K(x,y) \le g(x,y)+C.
     \end{equation}
-     }
   \end{thm}
   }
-  \only<5->{
-  \begin{thm}
-    Allora esiste $C \ge 0$ tale che per ogni $x, y \in \Omega$ vale
-    \begin{equation} \label{stimadistanzafinsler}
-      g(x,y)-C \le d_F(x,y) \le g(x,y)+C. \tag{2}
-    \end{equation}
-  \end{thm}
-  }
-  \only<6->{
+  \only<2-3>{
   \textit{Idea della dimostrazione:} per la maggiorazione, si cercano delle curve che siano quasi geodetiche, cioè che realizzano la distanza a meno di una costante additiva, e si integra lungo quelle curve.
   }
-  \only<7>{
+  \only<3>{
 
   Per la minorazione, bisogna mostrare che la stima trovata dall'alto è ottimale, cioè che vale la stima dal basso per tutte le curve.
+  }
+  \only<4>{
+  3. Come già osservato, l'invarianza della Gromov-iperbolicità per quasi-isometrie ci permette di ottenere come corollario il teorema di Balogh-Bonk.
   }
 \end{frame}

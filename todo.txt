@@ -15,6 +15,7 @@ Slide 5: raccontare la dinamica iperbolica e generalizzazioni. Dire a voce che l
 Slide 6: più o meno quello che c'è scritto. Evidenzia come aggiungendo 'poco' (?) nelle ipotesi, ma potendo così rimuovere il bordo liscio, si ottengano non solo gli stessi risultati, ma anche cose che non ci si aspetterebbe con bordo qualsiasi.
 
 Slide 7: raccontare un po' la strategia, nel secondo punto potrebbe essere il caso di osservare che per l'iperbolicità ci basta controllare vicino al bordo, ma occhio che sia giusto quello che dici. Altra cosa: Abate dice di dire che le metriche di Finsler non sono necessariamente differenziabili
+Perché funziona con g definita solo al bordo: devo controllare solo fuori da un compatto
 
 Slide 8: spiega che sta succedendo
 

@@ -50,13 +50,16 @@
 
 \begin{frame}[t]
   \frametitle{Un po' di def (titolo da decidere)}
-  \only<1-2>{
-  \begin{defn}
-    \%Devi definire $\pi$ e da qualche parte nella slide mettere il disegno.
-  \end{defn}
+  \only<1->{
+  Sia $N_{\epsilon}(\partial\Omega)=\{x \in \mathbb{C}^n \mid \delta(x)<\epsilon\}$. Si può dimostrare che esiste $\epsilon>0$ tale che per ogni $x \in N_{\epsilon}(\partial\Omega)$ esiste un unico $\pi(x) \in \partial \Omega$ tale che $|x-\pi(x)|=\delta(x)$; inoltre, possiamo chiedere altre proprietà di utilità tecnica.
   }
-  \only<2>{
-  Poniamo
+  \only<2->{
+
+  \%Da fare: qua credo che andrebbe messo il disegno
+
+  }
+  \only<3>{
+  Dati $x,y \in N_{\epsilon}(\partial\Omega)\cap\Omega$, poniamo
   $$g(x,y)=2\log\left(\frac{d_H\big(\pi(x),\pi(y)\big)+\max\{\delta(x)^{1/2 },\,\delta(y)^{1/2}\}}{\sqrt{\delta(x)^{1/2 }\delta(y)^{1/2}}}\right).$$
   }
 \end{frame}

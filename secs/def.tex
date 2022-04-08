@@ -1,8 +1,11 @@
 \begin{frame}[t]
   \frametitle{Domini strettamente pseudoconvessi e metrica di Kobayashi}
-  \only<1>{Setting: fissiamo $\Omega \subseteq \mathbb{C}^n, n \ge 2$ un dominio limitato con bordo $C^2$, cioè esiste $\rho \in C^2(\mathbb{C}^n)$ tale che $\Omega=\{\rho(z)<0\}$ e $\diff\rho\not=0$ in ogni punto di $\partial\Omega$.
+  \only<1>{
+  Sia $\mathbb{D}$ il disco unitario su $\mathbb{C}$. Su $\mathbb{D}$ possiamo mettere la distanza iperbolica $\omega$, indotta dalla metrica di Poincaré $\frac{|\diff z|}{1-|z|^2}$ (\%controllare i coefficienti), che lo rende uno spazio iperbolico.
+  }
+  \only<2>{Setting: fissiamo $\Omega \subseteq \mathbb{C}^n, n \ge 2$ un dominio limitato con bordo $C^2$, cioè esiste $\rho \in C^2(\mathbb{C}^n)$ tale che $\Omega=\{\rho(z)<0\}$ e $\diff\rho\not=0$ in ogni punto di $\partial\Omega$.
   Come $\rho$ si può prendere $-\delta(x)$ per $x \in \Omega$ e $\delta(x)$ per $x \in \mathbb{C}^n\setminus\Omega$, dove $\delta(x)=\text{dist}(x,\partial\Omega)$.}
-  \only<2-3>{
+  \only<3-4>{
       \begin{defn}
         Dato $p \in \partial\Omega$, lo \textit{spazio tangente complesso} a $\partial\Omega$ in $p$ è $H_p\partial\Omega=\{Z \in \mathbb{C}^n \mid \langle \bar{\partial}\rho(p),Z\rangle=0\}$. Diciamo che $\Omega$ è \textit{strettamente pseudoconvesso} se la \textit{forma di Levi}
       $$L_{\rho}(p;Z)=\sum_{\nu,\mu=1}^n \frac{\partial^2\rho}{\partial z_\nu\partial\bar{z}_\mu}(p)Z_\nu\bar{Z}_\mu, \quad Z=(Z_1,\dots,Z_n) \in \mathbb{C}^n$$
@@ -10,10 +13,10 @@
 
       La distanza indotta su $\partial\Omega$ è la \textit{distanza di Carnot-Carathéodory} $d_H$.
   \end{defn}}
-  \only<3>{Nel seguito, lavoriamo sempre sotto l'ipotesi che $\Omega$ sia limitato e strettamente pseudoconvesso.}
-  \only<4>{
+  \only<4>{Nel seguito, lavoriamo sempre sotto l'ipotesi che $\Omega$ sia limitato e strettamente pseudoconvesso.}
+  \only<5>{
   \begin{defn}
-    Sia $\mathbb{D}$ il disco unitario in $\mathbb{C}$, data $f:\mathbb{D} \longrightarrow \mathbb{C}^n$ olomorfa indichiamo con $Df(z)$ il differenziale di $f$ in $z \in \mathbb{D}$. La \textit{metrica di Kobayashi} su $\Omega$ limitato è
+    Data $f:\mathbb{D} \longrightarrow \mathbb{C}^n$ olomorfa indichiamo con $Df(z)$ il differenziale di $f$ in $z \in \mathbb{D}$. La \textit{metrica di Kobayashi} su $\Omega$ limitato è
     $$K(x;Z)=\inf\{|v| \mid v \in \mathbb{C}, \text{ esiste }f:\mathbb{D} \longrightarrow \Omega$$
     $$\text{ olomorfa con } f(0)=x, Df(0)v=Z\},$$
     che induce la \textit{distanza di Kobayashi} $d_K$.

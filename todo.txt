@@ -4,7 +4,7 @@ Frase iniziale: "Salve a tutti. L'obiettivo di questa presentazione è illustrar
 
 Slide 1: frase iniziale.
 
-Slide 2: "vediamo che tipo di dominio ci interessa", ricorda che affinche sia una metrica serve \Omega limitato, "è l'analogo complesso della stretta convergenza" (fatto 2.8.16 ECA); dire che il bordo è connesso per curve orizzontali; la metrica di Kobayashi è un modo per generalizzare la metrica iperbolica in \mathbb{D}; le funzioni olomorfe sono contrazioni per d_K
+Slide 2: motivazione partendo dal disco, "vedremo tra poco cosa intendiamo con spazio iperbolico", vogliamo generalizzare l'iperbolicità; "vediamo come vogliamo generalizzare", "la stretta pseudoconvessità è l'analogo complesso della stretta convessità" (fatto 2.8.16 ECA), dire che il bordo è connesso per curve orizzontali; la metrica di Kobayashi (affinché sia metrica serve \Omega limitato) è un modo per generalizzare la metrica iperbolica in \mathbb{D}; le funzioni olomorfe sono contrazioni per d_K
 
 Slide 3: "richiamiamo rapidamente il concetto di iperbolicità secondo Gromov" + esempi (alberi, (\mathbb{D},\omega)); "il risultato principale è che i domini strettamente pseudoconvessi sono Gromov iperbolici"
 
@@ -18,7 +18,7 @@ Slide 7: raccontare un po' la strategia, per l'iperbolicità ci basta controllar
 
 Slide 8: spiega che sta succedendo
 
-Slide 9: da fare
+Slide 9: da scrivere bene dopo averne parlato con Abate
 
 Slide 10: più o meno leggere quello che c'è scritto, dire che la conclusione segue perché la metrica K (e di conseguenza d_K) è (ovviamente) monotona decrescente rispetto all'inclusione di insiemi
 

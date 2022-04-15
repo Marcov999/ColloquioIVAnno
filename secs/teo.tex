@@ -43,7 +43,7 @@
   \only<7->{
   Fissiamo $w=\big(z_0,D(Z)\big) \in \text{Con}(Z)$; usando le definizioni, troviamo che dati $x=(z,h),x'=(z',h')\in \text{Con}(Z)$ vale
   $$(x,x')_w=-\log\big(d(z,z')+\max\{h, h'\}\big)+O_{D(Z)}(1).$$}
-  \only<8->{Segue che una sequenza $(x_i)$ in $\big(\text{Con}(Z),r\big)$ converge a infinito se e solo se la sequenza $(z_i)$ è di Cauchy e $h_i \longrightarrow 0$; inoltre, due successioni convergenti a infinito sono equivalenti se e solo se il loro limite è lo stesso, e ogni punto del bordo è limite di una successione che converge a infinito.}\only<9->{ Essendo $Z$ completo, questo ci dà un'identificazione, come insiemi, di $Z$ e $\partial_G\text{Con}(Z)$.
+  \only<8->{Segue che una successione $(x_i)$ in $\big(\text{Con}(Z),r\big)$ converge a infinito se e solo se la successione $(z_i)$ è di Cauchy e $h_i \longrightarrow 0$; inoltre, due successioni convergenti a infinito sono equivalenti se e solo se il loro limite è lo stesso, e ogni punto del bordo è limite di una successione che converge a infinito.}\only<9->{ Essendo $Z$ completo, questo ci dà un'identificazione, come insiemi, di $Z$ e $\partial_G\text{Con}(Z)$.
 
   }
   \only<10->{
@@ -62,7 +62,7 @@
   \end{center}
   }
   \only<3->{
-  Sia $\pi$ la proiezione su $\partial\Omega$; dati $x,y \in N_{\epsilon}(\partial\Omega)\cap\Omega$, poniamo
+  Sia $\pi$ la proiezione su $\partial\Omega$; dati $x,y \in \Omega\cap N_{\epsilon}(\partial\Omega)$, poniamo
   $$g(x,y)=2\log\left(\frac{d_H\big(\pi(x),\pi(y)\big)+\max\{\delta(x)^{1/2 },\,\delta(y)^{1/2}\}}{\sqrt{\delta(x)^{1/2 }\delta(y)^{1/2}}}\right).$$
   }
   \only<4>{
@@ -74,7 +74,7 @@
 \begin{frame}[t]
   \frametitle{2. Disuguaglianze per la metrica di Kobayashi}
   \only<1->{\begin{prop}
-    Per ogni $\epsilon>0$ esistono $\epsilon_0>0$ e $C \ge 0$ tali che per ogni $x \in \Omega$ con $\delta(x)<\epsilon_0$ e per ogni $Z \in \mathbb{C}^n$ si ha
+    Per ogni $\epsilon>0$ esistono $\epsilon_0>0$ e $C \ge 0$ tali che per ogni $x \in \Omega\cap N_{\epsilon_0}(\partial\Omega)$ e per ogni $Z \in \mathbb{C}^n$ si ha
     \begin{multline*}
       \big(1-C\delta^{1/2}(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+(1-\epsilon)\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2} \le K(x;Z) \\
       \le \big(1+C\delta^{1/2}(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+(1+\epsilon)\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2}.
@@ -94,7 +94,7 @@
   \end{thm}
   }
   \only<2-3>{
-  \textit{Idea della dimostrazione:} per la maggiorazione, si cercano delle curve che siano quasi geodetiche, cioè che realizzano la distanza a meno di una costante additiva, e si integra lungo quelle curve.
+  \textit{Idea della dimostrazione:} per la maggiorazione, si cercano delle curve che siano quasi-geodetiche, cioè che realizzano la distanza a meno di una costante additiva, e si integra lungo quelle curve.
   }
   \only<3>{
 

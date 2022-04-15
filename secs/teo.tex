@@ -11,22 +11,25 @@
 
 \begin{frame}[t]
   \frametitle{1. Lo spazio iperbolico $\text{Con}(Z)$}
-  \only<1-3>{
+  \only<1-4>{
   \begin{block}{Teorema (Bonk-Schramm, 2000)}\begin{itshape}
     Sia $(Z,d)$ uno spazio metrico completo e limitato, e sia $\text{Con}(Z)=Z\times(0, D(Z)]$, dove $D(Z)$ è il diametro di $Z$.
     La funzione $r:\text{Con}(Z)\times\text{Con}(Z) \longrightarrow [0,+\infty)$ data da
     $$r\big((z,h),(z',h')\big)=2\log\left(\frac{d(z,z')+\max\{h, h'\}}{\sqrt{hh'}}\right)$$
-    è una distanza su $\text{Con}(Z)$ che lo rende uno spazio Gromov-iperbolico, il cui bordo può essere identificato con $Z$. Inoltre, per ogni $x,y \in Z$ si ha
-    $$d(x,y) \asymp \exp\big(-(x,y)_w\big).$$
+    è una distanza su $\text{Con}(Z)$ che lo rende uno spazio Gromov-iperbolico, il cui bordo può essere identificato con $Z$.
   \end{itshape}\end{block}
   }
-  \only<2-3>{
+  \only<2-4>{
   \textit{Traccia della dimostrazione:} è facile verificare che $r$ è una distanza.
 
   }
-  \only<3>{Dati $r_{ij} \ge 0$ per $i,j \in \{1,2,3,4\}$ tali che $r_{ij}=r_{ji}$ e $r_{ij} \le r_{ik}+r_{kj}$, allora $r_{12}r_{34} \le 4\big(\max\{(r_{13}r_{24}), (r_{14}r_{23})\}\big)$.
+  \only<3-4>{Dati $r_{ij} \ge 0$ per $i,j \in \{1,2,3,4\}$ tali che $r_{ij}=r_{ji}$ e $r_{ij} \le r_{ik}+r_{kj}$, allora $r_{12}r_{34} \le 4\big(\max\{(r_{13}r_{24}), (r_{14}r_{23})\}\big)$.
+
   }
-  \only<4-6>{Siano $x_i=(z_i,h_i) \in \text{Con}(Z)$ per $i \in \{1,2,3,4\}$, poniamo $d_{ij}=d(z_i,z_j)$ e $r_{ij}=d_{ij}+\max\{h_i, h_j\}$.} \only<5-6>{Segue che
+  \only<4>{
+  Poniamo $x_i=(z_i,h_i) \in \text{Con}(Z)$ per $i \in \{1,2,3,4\}$, $d_{ij}=d(z_i,z_j)$ e $r_{ij}=d_{ij}+\max\{h_i, h_j\}$.
+  }
+  \only<5-6>{Segue che
   \begin{align*}
     (d_{12}+\max\{h_1, h_2\}&)(d_{34}+\max\{h_3, h_4\}) \\
     &\le 4\Big(\big((d_{13}+\max\{h_1, h_3\})(d_{24}+\max\{h_2, h_4\})\big) \\
@@ -44,23 +47,27 @@
 
   }
   \only<10->{
-  La disuguaglianza finale non è difficile, ma richiede un po' di passaggi che non vedremo.}\only<11>{ Mettendo su $\text{Con}(Z)\cup\partial_G\text{Con}(Z)$ un'opportuna topologia (di compattificazione), dalla disuguaglianza segue anche che $Z$ e $\partial_G\text{Con}(Z)$ sono identificati come spazi topologici. \qed
+  Mettendo su $\text{Con}(Z)\cup\partial_G\text{Con}(Z)$ un'opportuna topologia (di compattificazione), segue anche che $Z$ e $\partial_G\text{Con}(Z)$ sono identificati come spazi topologici; \only<11>{questo non è difficile, ma richiede un po' di passaggi che non vedremo. \qed}
   }
 \end{frame}
 
 \begin{frame}[t]
-  \frametitle{Un po' di def (titolo da decidere)}
+  \frametitle{Intorno tubolare e tangente ortogonale complesso}
   \only<1->{
-  Sia $N_{\epsilon}(\partial\Omega)=\{x \in \mathbb{C}^n \mid \delta(x)<\epsilon\}$. Si può dimostrare che esiste $\epsilon>0$ tale che per ogni $x \in N_{\epsilon}(\partial\Omega)$ esiste un unico $\pi(x) \in \partial \Omega$ tale che $|x-\pi(x)|=\delta(x)$; inoltre, possiamo chiedere altre proprietà di utilità tecnica.
+  Sia $N_{\epsilon}(\partial\Omega)=\{x \in \mathbb{C}^n \mid \delta(x)<\epsilon\}$. Si può dimostrare che esiste $\epsilon>0$ tale che $N_{\epsilon}(\partial\Omega)$ è un intorno tubolare di $\partial\Omega$.
   }
   \only<2->{
-
-  \%Da fare: qua credo che andrebbe messo il disegno
-
+  \begin{center}
+    \includegraphics[width=0.36\textwidth]{intornotubolare.png}
+  \end{center}
   }
-  \only<3>{
-  Dati $x,y \in N_{\epsilon}(\partial\Omega)\cap\Omega$, poniamo
+  \only<3->{
+  Sia $\pi$ la proiezione su $\partial\Omega$; dati $x,y \in N_{\epsilon}(\partial\Omega)\cap\Omega$, poniamo
   $$g(x,y)=2\log\left(\frac{d_H\big(\pi(x),\pi(y)\big)+\max\{\delta(x)^{1/2 },\,\delta(y)^{1/2}\}}{\sqrt{\delta(x)^{1/2 }\delta(y)^{1/2}}}\right).$$
+  }
+  \only<4>{
+  Fissato $p \in \partial\Omega$ e detta $\nu(p)$ la normale reale uscente da $\partial\Omega$ in $p$, possiamo decomporre $\mathbb{C}^n=H_p\partial\Omega\oplus \text{Span}_{\mathbb{C}}\{\nu(p)\}$;
+  dato $Z \in \mathbb{C}^n$, scriviamo in modo unico $Z=Z_H+Z_N$ con $Z_H \in H_p\partial\Omega$ e $Z_N \in \text{Span}_{\mathbb{C}}\{\nu(p)\}$.
   }
 \end{frame}
 

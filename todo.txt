@@ -1,26 +1,26 @@
 Screenplay (sort of)
 
-Frase iniziale: "Salve a tutti. L'obiettivo di questa presentazione è illustrare un risultato che ci dice che un certo tipo di domini di C^n è iperbolico secondo Gromov, e mostrarne alcune interessanti applicazioni."
+Frase iniziale: "Salve a tutti. L'obiettivo di questa presentazione è illustrare un risultato di iperbolicità secondo Gromov per un certo tipo di domini di C^n, e mostrarne alcune interessanti applicazioni."
 
 Slide 1: frase iniziale.
 
-Slide 2: motivazione partendo dal disco, "vedremo tra poco cosa intendiamo con spazio iperbolico", vogliamo generalizzare l'iperbolicità; "vediamo come vogliamo generalizzare", "la stretta pseudoconvessità è l'analogo complesso della stretta convessità" (fatto 2.8.16 ECA), dire che il bordo è connesso per curve orizzontali; la metrica di Kobayashi (affinché sia metrica serve \Omega limitato) è un modo per generalizzare la metrica iperbolica in \mathbb{D}; le funzioni olomorfe sono contrazioni per d_K
+Slide 2: motivazione partendo dal disco, "vedremo tra poco cosa intendiamo con spazio iperbolico", vogliamo generalizzare l'iperbolicità; "vediamo come vogliamo generalizzare", "la stretta pseudoconvessità è l'analogo complesso della stretta convessità" (Narasimhan, fatto 2.8.16 ECA), dire che il bordo è connesso per curve orizzontali (e dire cosa sono le curve orizzontali...); la metrica di Kobayashi (affinché sia metrica serve \Omega limitato) è un modo per generalizzare la metrica iperbolica in \mathbb{D}
 
-Slide 3: "richiamiamo rapidamente il concetto di iperbolicità secondo Gromov" + esempi (alberi, (\mathbb{D},\omega)); "il risultato principale è che i domini strettamente pseudoconvessi sono Gromov iperbolici"
+Slide 3: "richiamiamo rapidamente il concetto di iperbolicità secondo Gromov" + disegnino della versione con i triangoli + esempi (alberi, (\mathbb{D},\omega)); "il risultato principale è che i domini strettamente pseudoconvessi sono Gromov iperbolici"
 
 Slide 4: raccontare un po' il corollario + "alla fine vedremo come si dimostra"
 
-Slide 5: raccontare la dinamica iperbolica e generalizzazioni. Dire a voce che la dim di Abate era con tecniche diverse, analitiche (?)
+Slide 5: raccontare la dinamica iperbolica e generalizzazioni. Dire a voce che la dim di Abate era con tecniche diverse
 
 Slide 6: più o meno quello che c'è scritto; osserva che si ottengono stime analitiche da risultati geometrici.
 
 Slide 7: raccontare un po' la strategia, per l'iperbolicità ci basta controllare vicino al bordo (d'altronde, g è definita solo vicino al bordo): devo controllare solo fuori da un compatto
 
-Slide 8: spiega che sta succedendo
+Slide 8: spiega che sta succedendo. Nota: "è facile verificare" ---> "con qualche conticino"
 
-Slide 9: da scrivere bene dopo averne parlato con Abate
+Slide 9: "adesso ci servirà dare qualche definizione...", descrivi un po' l'intorno tubolare
 
-Slide 10: più o meno leggere quello che c'è scritto, dire che la conclusione segue perché la metrica K (e di conseguenza d_K) è (ovviamente) monotona decrescente rispetto all'inclusione di insiemi
+Slide 10: più o meno leggere quello che c'è scritto, dire che la conclusione segue perché la metrica K (e di conseguenza d_K) è monotona decrescente rispetto all'inclusione di insiemi, poiché questa è olomorfa e dunque semicontrazione
 
 Slide 11: spiega che sta succedendo, ma non troppo; ricordati di dire che la quasi geodetiche sono più facili da trovare delle geodetiche; nota: ricorda che Balogh-Bonk è corollario del teorema appena dimostrato + Bonk-Schramm
 

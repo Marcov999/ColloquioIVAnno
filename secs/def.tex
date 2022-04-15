@@ -1,9 +1,13 @@
 \begin{frame}[t]
   \frametitle{Domini strettamente pseudoconvessi e metrica di Kobayashi}
-  \only<1>{
-  Sia $\mathbb{D}$ il disco unitario su $\mathbb{C}$. Su $\mathbb{D}$ possiamo mettere la distanza iperbolica $\omega$, indotta dalla metrica di Poincaré $\frac{|\diff z|}{1-|z|^2}$ (\%controllare i coefficienti), che lo rende uno spazio iperbolico.
+  \only<1-2>{
+  Sia $\mathbb{D}$ il disco unitario su $\mathbb{C}$. Su $\mathbb{D}$ possiamo mettere la distanza iperbolica $\omega$, indotta dalla metrica di Poincaré $\frac{|\diff z|}{1-|z|^2}$, che lo rende uno spazio iperbolico. \\
+
   }
-  \only<2>{Setting: fissiamo $\Omega \subseteq \mathbb{C}^n, n \ge 2$ un dominio limitato con bordo $C^2$, cioè esiste $\rho \in C^2(\mathbb{C}^n)$ tale che $\Omega=\{\rho(z)<0\}$ e $\diff\rho\not=0$ in ogni punto di $\partial\Omega$.
+  \only<2>{
+  \,
+
+  Setting: fissiamo $\Omega \subseteq \mathbb{C}^n, n \ge 2$ un dominio limitato con bordo $C^2$, cioè esiste $\rho \in C^2(\mathbb{C}^n)$ tale che $\Omega=\{\rho(z)<0\}$ e $\diff\rho\not=0$ in ogni punto di $\partial\Omega$.
   Come $\rho$ si può prendere $-\delta(x)$ per $x \in \Omega$ e $\delta(x)$ per $x \in \mathbb{C}^n\setminus\Omega$, dove $\delta(x)=\text{dist}(x,\partial\Omega)$.}
   \only<3-4>{
       \begin{defn}
@@ -11,15 +15,19 @@
       $$L_{\rho}(p;Z)=\sum_{\nu,\mu=1}^n \frac{\partial^2\rho}{\partial z_\nu\partial\bar{z}_\mu}(p)Z_\nu\bar{Z}_\mu, \quad Z=(Z_1,\dots,Z_n) \in \mathbb{C}^n$$
       è definita positiva in $H_p\partial\Omega$ per ogni $p \in \partial\Omega$.
 
-      La distanza indotta su $\partial\Omega$ è la \textit{distanza di Carnot-Carathéodory} $d_H$.
+      \only<4>{La distanza indotta su $\partial\Omega$ è la \textit{distanza di Carnot-Carathéodory}
+      \begin{gather*}
+        d_H(p,q)=\inf\left\{\int_0^1L_{\rho}\big(\alpha(t);\dot{\alpha}(t)\big)^{1/2}\diff t \mid \alpha \text{ curva orizzontale tra $p$ e $q$}\right\}.
+    \end{gather*}}
   \end{defn}}
-  \only<4>{Nel seguito, lavoriamo sempre sotto l'ipotesi che $\Omega$ sia limitato e strettamente pseudoconvesso.}
   \only<5>{
   \begin{defn}
     Data $f:\mathbb{D} \longrightarrow \mathbb{C}^n$ olomorfa indichiamo con $Df(z)$ il differenziale di $f$ in $z \in \mathbb{D}$. La \textit{metrica di Kobayashi} su $\Omega$ limitato è
     $$K(x;Z)=\inf\{|v| \mid v \in \mathbb{C}, \text{ esiste }f:\mathbb{D} \longrightarrow \Omega$$
     $$\text{ olomorfa con } f(0)=x, Df(0)v=Z\},$$
     che induce la \textit{distanza di Kobayashi} $d_K$.
+
+    Le funzioni olomorfe sono semicontrazioni rispetto a $d_K$.
   \end{defn}
   }
 \end{frame}
@@ -30,14 +38,8 @@
     Sia $(X,d)$ uno spazio metrico. Dati $x,y \in X$ il \textit{prodotto di Gromov} con punto base $w$ è $(x,y)_w=\frac{1}{2}\big(d(x,w)+d(y,w)-d(x,y)\big)$. Dato $\delta \ge 0$, diciamo che $X$ è \textit{$\delta$-iperbolico} se
     $$(x,y)_w \ge \min\{(x,z)_w,(y,z)_w\}-\delta\text{ per ogni }x,y,z,w \in X.$$
     \only<2>{Fissato $w \in X$, il \textit{bordo iperbolico} $\partial_GX$ è costruito come classe di equivalenza delle successioni $(x_i)$ che convergono a infinito, cioè tali che $\displaystyle\lim_{i,j\rightarrow \infty}(x_i,x_j)_w=\infty$; due tali successioni $(x_i), (y_i)$ sono equivalenti se $\displaystyle\lim_{i\rightarrow \infty}(x_i,y_i)_w=\infty$.}
-    \only<3>{
-    Se $x,y \in \partial_GX$ e $z \in X$, poniamo
-    \begin{gather*}
-      (x,y)_w=\sup\left\{\liminf_{i \rightarrow +\infty} (x_i,y_i)_w \mid (x_i) \in x, (y_i) \in y\right\},\\
-      (x,z)_w=\sup\left\{\liminf_{i \rightarrow +\infty} (x_i,z)_w \mid (x_i) \in x\right\}.
-    \end{gather*}}
   \end{defn}}
-  \only<4>{\begin{block}{Teorema (Balogh-Bonk, 2001)}\begin{itshape} Sia $\Omega$ un dominio limitato e strettamente pseudoconvesso, e sia $d_K$ la distanza di Kobayashi su $\Omega$. Allora $(\Omega,d_K)$ è Gromov-iperbolico, e il bordo iperbolico $\partial_G\Omega$ può essere identificato con il bordo euclideo $\partial\Omega$. Inoltre, la distanza di Carnot-Carathéodory sta nella classe canonica di distanze su $\partial_G\Omega$, cioè esiste $\epsilon>0$ tale che $d_H(a,b)\asymp \exp\big(-\epsilon(a,b)_w\big)$ per ogni $a,b \in \partial_G\Omega$.
+  \only<3>{\begin{block}{Teorema (Balogh-Bonk, 2001)}\begin{itshape} Sia $\Omega$ un dominio limitato e strettamente pseudoconvesso, e sia $d_K$ la distanza di Kobayashi su $\Omega$. Allora $(\Omega,d_K)$ è Gromov-iperbolico, e il bordo iperbolico $\partial_G\Omega$ può essere identificato con il bordo euclideo $\partial\Omega$.
   \end{itshape}\end{block}}
 \end{frame}
 
@@ -56,7 +58,7 @@
   \end{itshape}\end{block}
   }
   \only<2-4>{
-  Karlsson, 2001: sotto opportune ipotesi, che sono soddisfatte dagli spazi Gromov-iperbolici, valgono dei risultati simili per funzioni $1$-lipschitziane dallo spazio in sé.
+  Karlsson, 2001: sotto opportune ipotesi, che sono soddisfatte dagli spazi Gromov-iperbolici, valgono dei risultati simili per semicontrazioni dallo spazio in sé.
   }
 
   \only<3-4>{
@@ -78,7 +80,8 @@
   L'iperbolicità di Gromov per domini $\Omega$ segue anche da ipotesi diverse da quelle che abbiamo usato.
   \pause
 
-   Zimmer, 2016: caratterizzazione dei domini convessi che sono Gromov-iperbolici con la metrica di Kobayashi; \pause seguono risultati, analoghi a quelli visti, di estensione al bordo e dinamica olomorfa.
-   \pause
-   Zimmer, 2022: per domini limitati convessi (non necessariamente con bordo liscio) valgono anche delle stime subellittiche per le soluzioni del problema $\bar{\partial}$-Neumann, già estensivamente studiate per i domini strettamente pseudoconvessi (quindi con bordo liscio).
+  Zimmer, 2016: caratterizzazione dei domini convessi che sono Gromov-iperbolici con la metrica di Kobayashi; \pause seguono risultati, analoghi a quelli visti, di estensione al bordo e dinamica olomorfa.
+  \pause
+
+  Zimmer, 2022: per i domini limitati convessi Gromov-iperbolici (non necessariamente con bordo liscio) valgono delle stime subellittiche per le soluzioni del problema $\bar{\partial}$-Neumann, già estensivamente studiate per i domini strettamente pseudoconvessi (quindi con bordo liscio).
 \end{frame}

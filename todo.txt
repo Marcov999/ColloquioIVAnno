@@ -4,9 +4,9 @@ Frase iniziale: "Salve a tutti. L'obiettivo di questa presentazione è illustrar
 
 Slide 1: frase iniziale.
 
-Slide 2: motivazione partendo dal disco, "vedremo tra poco cosa intendiamo con spazio iperbolico", vogliamo generalizzare l'iperbolicità; "vediamo come vogliamo generalizzare", "la stretta pseudoconvessità è l'analogo complesso della stretta convessità" (Narasimhan, fatto 2.8.16 ECA), dire che il bordo è connesso per curve orizzontali (e dire cosa sono le curve orizzontali...); la metrica di Kobayashi (affinché sia metrica serve \Omega limitato) è un modo per generalizzare la metrica iperbolica in \mathbb{D}
+Slide 2: motivazione partendo dal disco, "vedremo tra poco cosa intendiamo con spazio iperbolico", vogliamo generalizzare l'iperbolicità; "vediamo come vogliamo generalizzare"; \delta come candidata \rho va bene solo vicino al bordo; la condizione di essere strettamente convesso non dipende dalla \rho scelta + "la stretta pseudoconvessità è l'analogo complesso della stretta convessità" (Narasimhan, fatto 2.8.16 ECA), dire che il bordo è connesso per curve orizzontali (e dire cosa sono le curve orizzontali...); la metrica di Kobayashi (affinché sia metrica serve \Omega limitato, altrimenti in generale è solo pseudometrica) è un modo per generalizzare la metrica iperbolica in \mathbb{D}
 
-Slide 3: "richiamiamo rapidamente il concetto di iperbolicità secondo Gromov" + disegnino della versione con i triangoli + esempi (alberi, (\mathbb{D},\omega)); "il risultato principale è che i domini strettamente pseudoconvessi sono Gromov iperbolici"
+Slide 3: "richiamiamo rapidamente il concetto di iperbolicità secondo Gromov" + disegnino della versione con i triangoli; "il risultato principale è che i domini strettamente pseudoconvessi sono Gromov iperbolici" + "vediamo perché è interessante"
 
 Slide 4: raccontare un po' il corollario + "alla fine vedremo come si dimostra"
 
@@ -20,7 +20,7 @@ Slide 8: spiega che sta succedendo. Nota: "è facile verificare" ---> "con qualc
 
 Slide 9: "adesso ci servirà dare qualche definizione...", descrivi un po' l'intorno tubolare
 
-Slide 10: più o meno leggere quello che c'è scritto, dire che la conclusione segue perché la metrica K (e di conseguenza d_K) è monotona decrescente rispetto all'inclusione di insiemi, poiché questa è olomorfa e dunque semicontrazione
+Slide 10: più o meno leggere quello che c'è scritto, dire che la conclusione segue perché la metrica K_{\Omega} (e di conseguenza k_{\Omega}) è monotona decrescente rispetto all'inclusione di insiemi, poiché questa è olomorfa e dunque semicontrazione
 
 Slide 11: spiega che sta succedendo, ma non troppo; ricordati di dire che la quasi geodetiche sono più facili da trovare delle geodetiche; nota: ricorda che Balogh-Bonk è corollario del teorema appena dimostrato + Bonk-Schramm
 

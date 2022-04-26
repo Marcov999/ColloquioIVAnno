@@ -3,9 +3,9 @@
   \begin{enumerate}
     \item Dato $(Z,d)$ spazio metrico completo e limitato, si può costruire uno spazio Gromov-iperbolico $\big(\text{Con}(Z),r\big)$ tale che $Z$ è identificato con il bordo.
     \pause
-    \item La metrica di Kobayashi soddisfa una particolare catena di disuguaglianze; \pause usando tali disuguaglianze si può dimostrare che $d_K$, vicino al bordo, differisce per una costante da una certa funzione $g$ che è sostanzialmente l'equivalente di $r$ per $\Omega$ (si dice che $d_K$ e $g$ sono quasi-isometriche).
+    \item La metrica di Kobayashi soddisfa una particolare catena di disuguaglianze; \pause usando tali disuguaglianze si può dimostrare che $k_{\Omega}$, vicino al bordo, differisce per una costante da una certa funzione $g$ che è sostanzialmente l'equivalente di $r$ per $\Omega$ (si dice che $k_{\Omega}$ e $g$ sono quasi-isometriche).
     \pause
-    \item Poiché la Gromov-iperbolicità è invariante per quasi-isometrie, questo ci permette di dire che $(\Omega,d_K)$ è Gromov-iperbolico.
+    \item Poiché la Gromov-iperbolicità è invariante per quasi-isometrie, questo ci permette di dire che $(\Omega,k_{\Omega})$ è Gromov-iperbolico.
   \end{enumerate}
 \end{frame}
 
@@ -76,7 +76,7 @@
   \only<1->{\begin{prop}
     Per ogni $\epsilon>0$ esistono $\epsilon_0>0$ e $C \ge 0$ tali che per ogni $x \in \Omega\cap N_{\epsilon_0}(\partial\Omega)$ e per ogni $Z \in \mathbb{C}^n$ si ha
     \begin{multline*}
-      \big(1-C\delta^{1/2}(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+(1-\epsilon)\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2} \le K(x;Z) \\
+      \big(1-C\delta^{1/2}(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+(1-\epsilon)\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2} \le K_{\Omega}(x;Z) \\
       \le \big(1+C\delta^{1/2}(x)\big)\left(\frac{|Z_N|^2}{4\delta^2(x)}+(1+\epsilon)\frac{L_\rho\big(\pi(x);Z_H\big)}{\delta(x)}\right)^{1/2}.
     \end{multline*}
   \end{prop}}
@@ -84,12 +84,12 @@
 \end{frame}
 
 \begin{frame}[t]
-  \frametitle{2. Vicino al bordo, $d_K$ e $g$ sono quasi-isometriche}
+  \frametitle{2. Vicino al bordo, $k_{\Omega}$ e $g$ sono quasi-isometriche}
   \only<1->{
   \begin{thm}
-    Sia $\Omega$ un dominio strettamente pseudoconvesso limitato, e sia $d_K$ la distanza di Kobayashi su $\Omega$. Allora esiste $C \ge 0$ tale che per ogni $x, y \in \Omega$ vale
+    Sia $\Omega$ un dominio strettamente pseudoconvesso limitato, e sia $k_{\Omega}$ la distanza di Kobayashi su $\Omega$. Allora esiste $C \ge 0$ tale che per ogni $x, y \in \Omega$ vale
     \begin{equation} \label{stimadistanzakobayashi}
-      g(x,y)-C \le d_K(x,y) \le g(x,y)+C.
+      g(x,y)-C \le k_{\Omega}(x,y) \le g(x,y)+C.
     \end{equation}
   \end{thm}
   }

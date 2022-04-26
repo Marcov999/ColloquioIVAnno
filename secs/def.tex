@@ -23,12 +23,12 @@
   \only<5-6>{
   \begin{defn}
     Data $f:\mathbb{D} \longrightarrow \mathbb{C}^n$ olomorfa indichiamo con $Df(z)$ il differenziale di $f$ in $z \in \mathbb{D}$. La \textit{metrica di Kobayashi} su $\Omega$ limitato è
-    $$K(x;Z)=\inf\{|v| \mid v \in \mathbb{C}, \text{ esiste }f:\mathbb{D} \longrightarrow \Omega$$
+    $$K_{\Omega}(x;Z)=\inf\{|v| \mid v \in \mathbb{C}, \text{ esiste }f:\mathbb{D} \longrightarrow \Omega$$
     $$\text{ olomorfa con } f(0)=x, Df(0)v=Z\},$$
-    che induce la \textit{distanza di Kobayashi} $d_K$.
+    che induce la \textit{distanza di Kobayashi} $k_{\Omega}$.
   \end{defn}
   }
-  \only<6>{Le funzioni olomorfe sono semicontrazioni rispetto a $d_K$.}
+  \only<6>{Le funzioni olomorfe sono semicontrazioni rispetto a $K_{\Omega}$ e $k_{\Omega}$.}
 \end{frame}
 
 \begin{frame}[t]
@@ -38,7 +38,7 @@
     $$(x,y)_w \ge \min\{(x,z)_w,(y,z)_w\}-\delta\text{ per ogni }x,y,z,w \in X.$$
     \only<2>{Fissato $w \in X$, il \textit{bordo iperbolico} $\partial_GX$ è costruito come classe di equivalenza delle successioni $(x_i)$ che convergono a infinito, cioè tali che $\displaystyle\lim_{i,j\rightarrow \infty}(x_i,x_j)_w=\infty$; due tali successioni $(x_i), (y_i)$ sono equivalenti se $\displaystyle\lim_{i\rightarrow \infty}(x_i,y_i)_w=\infty$.}
   \end{defn}}
-  \only<3>{\begin{block}{Teorema (Balogh-Bonk, 2001)}\begin{itshape} Sia $\Omega$ un dominio limitato e strettamente pseudoconvesso, e sia $d_K$ la distanza di Kobayashi su $\Omega$. Allora $(\Omega,d_K)$ è Gromov-iperbolico, e il bordo iperbolico $\partial_G\Omega$ può essere identificato con il bordo euclideo $\partial\Omega$.
+  \only<3>{\begin{block}{Teorema (Balogh-Bonk, 2001)}\begin{itshape} Sia $\Omega$ un dominio limitato e strettamente pseudoconvesso, e sia $k_{\Omega}$ la distanza di Kobayashi su $\Omega$. Allora $(\Omega,k_{\Omega})$ è Gromov-iperbolico, e il bordo iperbolico $\partial_G\Omega$ può essere identificato con il bordo euclideo $\partial\Omega$.
   \end{itshape}\end{block}}
 \end{frame}
 
@@ -61,14 +61,14 @@
   }
 
   \only<3-4>{
-  Usando il teorema di Balogh-Bonk e il fatto che le funzioni olomorfe sono delle semicontrazioni rispetto a $d_K$, si ottiene una generalizzazione di Wolff-Denjoy per domini $\Omega$ limitati e strettamente pseudoconvessi.
+  Usando il teorema di Balogh-Bonk e il fatto che le funzioni olomorfe sono delle semicontrazioni rispetto a $k_{\Omega}$, si ottiene una generalizzazione di Wolff-Denjoy per domini $\Omega$ limitati e strettamente pseudoconvessi.
   }
   \only<4>{
   \begin{block}{Corollario (Abate, 1991)}\begin{itshape}
     Sia $f:\Omega \longrightarrow \Omega$ una funzione olomorfa. Allora vale una delle seguenti: \\
     \begin{enumerate}
-      \item le orbite di $f$ sono limitate;
-      \item le orbite di $f$ convergono a un punto del bordo.
+      \item le orbite di $f$ sono limitate; oppure,
+      \item le orbite di $f$ convergono tutte a un unico punto del bordo.
     \end{enumerate}
   \end{itshape}\end{block}
   }

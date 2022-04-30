@@ -23,7 +23,7 @@
   \textit{Traccia della dimostrazione:} è facile verificare che $r$ è una distanza.
 
   }
-  \only<3-4>{Dati $r_{ij} \ge 0$ per $i,j \in \{1,2,3,4\}$ tali che $r_{ij}=r_{ji}$ e $r_{ij} \le r_{ik}+r_{kj}$, allora $r_{12}r_{34} \le 4\big(\max\{(r_{13}r_{24}), (r_{14}r_{23})\}\big)$.
+  \only<3-4>{Dati $r_{ij} \ge 0$ per $i,j \in \{1,2,3,4\}$ tali che $r_{ij}=r_{ji}$ e $r_{ij} \le r_{ik}+r_{kj}$, allora $r_{12}r_{34} \le 4\cdot\max\{r_{13}r_{24}, r_{14}r_{23}\}$.
 
   }
   \only<4>{
@@ -43,7 +43,9 @@
   \only<7->{
   Fissiamo $w=\big(z_0,D(Z)\big) \in \text{Con}(Z)$; usando le definizioni, troviamo che dati $x=(z,h),x'=(z',h')\in \text{Con}(Z)$ vale
   $$(x,x')_w=-\log\big(d(z,z')+\max\{h, h'\}\big)+O_{D(Z)}(1).$$}
-  \only<8->{Segue che una successione $(x_i)$ in $\big(\text{Con}(Z),r\big)$ converge a infinito se e solo se la successione $(z_i)$ è di Cauchy e $h_i \longrightarrow 0$; inoltre, due successioni convergenti a infinito sono equivalenti se e solo se il loro limite è lo stesso, e ogni punto del bordo è limite di una successione che converge a infinito.}\only<9->{ Essendo $Z$ completo, questo ci dà un'identificazione, come insiemi, di $Z$ e $\partial_G\text{Con}(Z)$.
+  \only<8->{Segue che una successione $(x_i)$ in $\big(\text{Con}(Z),r\big)$ converge a infinito se e solo se la successione $(z_i)$ è di Cauchy e $h_i \longrightarrow 0$; essendo $Z$ completo, possiamo quindi associare a $(x_i)$, come ``limite'', un unico $z \in Z$.}
+  \only<9->{
+  Inoltre, due successioni convergenti a infinito sono equivalenti se e solo se il loro limite è lo stesso, e ogni punto di $Z$ è limite di una successione che converge a infinito; questo ci dà un'identificazione, come insiemi, di $Z$ e $\partial_G\text{Con}(Z)$.
 
   }
   \only<10->{

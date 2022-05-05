@@ -32,13 +32,14 @@
   \only<5-6>{Segue che
   \begin{align*}
     (d_{12}+\max\{h_1, h_2\}&)(d_{34}+\max\{h_3, h_4\}) \\
-    &\le 4\Big(\big((d_{13}+\max\{h_1, h_3\})(d_{24}+\max\{h_2, h_4\})\big) \\
-    &\times\big((d_{14}+\max\{h_1, h_4\})(d_{23}+\max\{h_2, h_3\})\big)\Big),
+    &\le 4\max\{(d_{13}+\max\{h_1, h_3\})(d_{24}+\max\{h_2, h_4\}), \\
+    &(d_{14}+\max\{h_1, h_4\})(d_{23}+\max\{h_2, h_3\})\},
   \end{align*}}
   \only<6>{che ci dà
-  \begin{gather*}
-    r(x_1,x_2)+r(x_3,x_4) \le \big(r(x_1,x_3)+r(x_2,x_4)\big)\big(r(x_1,x_4)+r(x_2,x_3)\big)+C,
-  \end{gather*}
+  \begin{align*}
+    r(x_1,x_2)&+r(x_3,x_4) \\
+    & \le \max\{r(x_1,x_3)+r(x_2,x_4), r(x_1,x_4)+r(x_2,x_3)\}+C,
+  \end{align*}
   da cui segue la Gromov-iperbolicità di $\big(\textit{Con}(Z), r\big)$.}
   \only<7->{
   Fissiamo $w=\big(z_0,D(Z)\big) \in \text{Con}(Z)$; usando le definizioni, troviamo che dati $x=(z,h),x'=(z',h')\in \text{Con}(Z)$ vale
